@@ -1,0 +1,405 @@
+/* ================================
+   CLINIC FOOTER
+================================ */
+
+.clinic-footer {
+  position: relative;
+  background:
+    radial-gradient(
+      circle at 10% 20%,
+      rgba(184, 154, 98, 0.12),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 90% 80%,
+      rgba(111, 137, 123, 0.12),
+      transparent 30%
+    ),
+    #303A34;
+
+  color: #F5F1EA;
+  margin-top: 90px;
+  padding: 75px 0 25px;
+  overflow: hidden;
+}
+
+/* Decorative glow */
+
+.clinic-footer::before {
+  content: "";
+  position: absolute;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  background: rgba(184, 154, 98, 0.08);
+  top: -150px;
+  left: -100px;
+}
+
+.clinic-footer::after {
+  content: "";
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background: rgba(111, 137, 123, 0.08);
+  bottom: -120px;
+  right: -70px;
+}
+
+/* ================================
+   MAIN
+================================ */
+
+.footer-main {
+  position: relative;
+  z-index: 2;
+}
+
+/* ================================
+   BRAND
+================================ */
+
+.footer-brand {
+  padding-right: 50px;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 22px;
+}
+
+.footer-logo-icon {
+  width: 55px;
+  height: 55px;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(184, 154, 98, 0.15);
+  border: 1px solid rgba(184, 154, 98, 0.35);
+
+  color: #B89A62;
+  font-size: 25px;
+
+  transition: all 0.35s ease;
+}
+
+.footer-logo:hover .footer-logo-icon {
+  transform: translateY(-5px) rotate(-5deg);
+  background: rgba(184, 154, 98, 0.25);
+}
+
+.footer-logo h3 {
+  margin: 0;
+  color: #F5F1EA;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+.footer-logo span {
+  display: block;
+  margin-top: 3px;
+  color: #6F897B;
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.footer-description {
+  max-width: 470px;
+  margin: 0;
+  color: rgba(245, 241, 234, 0.72);
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+/* ================================
+   SOCIAL
+================================ */
+
+.footer-socials {
+  display: flex;
+  gap: 10px;
+  margin-top: 25px;
+}
+
+.footer-socials a {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+
+  color: #F5F1EA;
+  text-decoration: none;
+
+  background: rgba(111, 137, 123, 0.16);
+  border: 1px solid rgba(111, 137, 123, 0.28);
+
+  transition: all 0.3s ease;
+}
+
+.footer-socials a:hover {
+  transform: translateY(-4px);
+  background: #B89A62;
+  border-color: #B89A62;
+  color: #252525;
+}
+
+/* ================================
+   TITLES
+================================ */
+
+.footer-contact h4,
+.footer-links h4 {
+  position: relative;
+  display: inline-block;
+  margin: 0 0 25px;
+
+  color: #F5F1EA;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.footer-contact h4::after,
+.footer-links h4::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -9px;
+  width: 28px;
+  height: 2px;
+  border-radius: 10px;
+  background: #B89A62;
+}
+
+/* ================================
+   CONTACT
+================================ */
+
+.footer-contact-item {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin-bottom: 18px;
+
+  color: rgba(245, 241, 234, 0.72);
+  text-decoration: none;
+
+  transition: all 0.3s ease;
+}
+
+.footer-contact-item:hover {
+  color: #F5F1EA;
+  transform: translateX(5px);
+}
+
+.contact-icon {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 12px;
+
+  background: rgba(111, 137, 123, 0.16);
+  border: 1px solid rgba(111, 137, 123, 0.2);
+
+  color: #B89A62;
+  font-size: 14px;
+}
+
+.footer-contact-item small {
+  display: block;
+  margin-bottom: 2px;
+
+  color: #6F897B;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* ================================
+   LINKS
+================================ */
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.footer-links a {
+  position: relative;
+  margin-bottom: 13px;
+
+  color: rgba(245, 241, 234, 0.68);
+  text-decoration: none;
+  font-size: 14px;
+
+  transition: all 0.3s ease;
+}
+
+.footer-links a::before {
+  content: "→";
+  margin-right: 8px;
+  opacity: 0;
+  transform: translateX(-8px);
+  display: inline-block;
+
+  color: #B89A62;
+
+  transition: all 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #F5F1EA;
+  transform: translateX(3px);
+}
+
+.footer-links a:hover::before {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ================================
+   DIVIDER
+================================ */
+
+.footer-divider {
+  position: relative;
+  z-index: 2;
+
+  height: 1px;
+  margin: 50px 0 22px;
+
+  background: rgba(245, 241, 234, 0.14);
+}
+
+/* ================================
+   BOTTOM
+================================ */
+
+.footer-bottom {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+}
+
+.footer-bottom p {
+  margin: 0;
+
+  color: rgba(245, 241, 234, 0.45);
+  font-size: 13px;
+}
+
+.footer-bottom p strong {
+  color: rgba(245, 241, 234, 0.75);
+}
+
+.footer-bottom-links {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-bottom-links a {
+  color: rgba(245, 241, 234, 0.45);
+  font-size: 12px;
+  text-decoration: none;
+
+  transition: color 0.3s ease;
+}
+
+.footer-bottom-links a:hover {
+  color: #B89A62;
+}
+
+/* ================================
+   BACK TO TOP
+================================ */
+
+.back-to-top {
+  width: 43px;
+  height: 43px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(184, 154, 98, 0.35);
+  border-radius: 50%;
+
+  background: rgba(184, 154, 98, 0.12);
+  color: #B89A62;
+
+  cursor: pointer;
+
+  transition: all 0.35s ease;
+}
+
+.back-to-top:hover {
+  transform: translateY(-5px);
+  background: #B89A62;
+  color: #252525;
+}
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 991px) {
+  .footer-brand {
+    padding-right: 15px;
+    margin-bottom: 45px;
+  }
+
+  .footer-links {
+    margin-top: 35px;
+  }
+}
+
+@media (max-width: 767px) {
+  .clinic-footer {
+    padding: 55px 0 20px;
+    margin-top: 60px;
+  }
+
+  .footer-brand {
+    margin-bottom: 40px;
+  }
+
+  .footer-contact {
+    margin-bottom: 15px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-bottom-links {
+    order: 2;
+  }
+
+  .back-to-top {
+    order: 1;
+  }
+
+  .footer-bottom p {
+    order: 3;
+  }
+}

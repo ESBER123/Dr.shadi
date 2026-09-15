@@ -1,0 +1,573 @@
+/* =========================================================
+   DATENSCHUTZ PAGE
+   Isolated styles - all classes start with ds-
+========================================================= */
+
+.ds-page {
+  --ds-bg: #f5f1ea;
+  --ds-surface: #fbf9f5;
+  --ds-primary: #303a34;
+  --ds-text: #292d2a;
+  --ds-muted: #707871;
+  --ds-gold: #b89a62;
+  --ds-sage: #718579;
+  --ds-border: rgba(48, 58, 52, 0.13);
+
+  min-height: 100vh;
+  background: var(--ds-bg);
+  color: var(--ds-text);
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.ds-container {
+  width: min(1180px, calc(100% - 48px));
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.ds-hero {
+  position: relative;
+  padding: 150px 0 95px;
+  background: var(--ds-primary);
+  overflow: hidden;
+}
+
+.ds-hero::before {
+  content: "";
+  position: absolute;
+  width: 430px;
+  height: 430px;
+  border: 1px solid rgba(184, 154, 98, 0.2);
+  border-radius: 50%;
+  top: -250px;
+  right: -80px;
+}
+
+.ds-hero::after {
+  content: "";
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 50%;
+  bottom: -170px;
+  left: -70px;
+}
+
+.ds-eyebrow {
+  position: relative;
+  z-index: 1;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+
+  margin-bottom: 24px;
+
+  color: var(--ds-gold);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.ds-eyebrow::before {
+  content: "";
+  width: 32px;
+  height: 1px;
+  background: var(--ds-gold);
+}
+
+.ds-hero h1 {
+  position: relative;
+  z-index: 1;
+
+  max-width: 800px;
+  margin: 0;
+
+  color: #fff;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(3rem, 6vw, 5.5rem);
+  font-weight: 400;
+  line-height: 0.98;
+  letter-spacing: -0.04em;
+}
+
+.ds-hero h1 span {
+  display: block;
+  color: #c7ad7c;
+}
+
+.ds-hero p {
+  position: relative;
+  z-index: 1;
+
+  max-width: 650px;
+  margin: 32px 0 0;
+
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 1rem;
+  line-height: 1.85;
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.ds-content {
+  padding: 90px 0 110px;
+}
+
+.ds-layout {
+  display: grid;
+  grid-template-columns: 270px minmax(0, 1fr);
+  gap: 85px;
+  align-items: start;
+}
+
+
+/* =========================================================
+   SIDEBAR
+========================================================= */
+
+.ds-sidebar {
+  position: sticky;
+  top: 35px;
+}
+
+.ds-sidebar-card {
+  display: flex;
+  flex-direction: column;
+
+  padding: 30px 26px;
+
+  background: var(--ds-surface);
+  border: 1px solid var(--ds-border);
+  border-top: 2px solid var(--ds-gold);
+
+  box-shadow: 0 15px 45px rgba(48, 58, 52, 0.06);
+}
+
+.ds-sidebar-label {
+  margin-bottom: 20px;
+
+  color: var(--ds-gold);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.ds-sidebar-card strong {
+  margin-bottom: 7px;
+
+  color: var(--ds-primary);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.15rem;
+  font-weight: 500;
+}
+
+.ds-sidebar-card span:not(.ds-sidebar-label) {
+  color: var(--ds-muted);
+  font-size: 0.85rem;
+  line-height: 1.7;
+}
+
+.ds-sidebar-card a {
+  margin-top: 15px;
+
+  color: var(--ds-primary);
+  font-size: 0.82rem;
+  text-decoration: none;
+
+  word-break: break-word;
+}
+
+.ds-sidebar-card a:hover {
+  color: var(--ds-gold);
+}
+
+
+/* =========================================================
+   MAIN
+========================================================= */
+
+.ds-main {
+  min-width: 0;
+}
+
+.ds-section {
+  display: grid;
+  grid-template-columns: 55px minmax(0, 1fr);
+  gap: 25px;
+
+  padding: 0 0 58px;
+  margin-bottom: 58px;
+
+  border-bottom: 1px solid var(--ds-border);
+}
+
+.ds-number {
+  color: var(--ds-gold);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  padding-top: 9px;
+}
+
+.ds-section h2 {
+  margin: 0 0 22px;
+
+  color: var(--ds-primary);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.65rem, 2.5vw, 2.25rem);
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.ds-section h3 {
+  margin: 32px 0 10px;
+
+  color: var(--ds-primary);
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+
+.ds-section p {
+  max-width: 760px;
+  margin: 0 0 18px;
+
+  color: var(--ds-muted);
+  font-size: 0.94rem;
+  line-height: 1.9;
+}
+
+.ds-section p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* =========================================================
+   LIST
+========================================================= */
+
+.ds-section ul {
+  max-width: 760px;
+
+  margin: 22px 0;
+
+  padding: 0;
+
+  list-style: none;
+}
+
+.ds-section li {
+  position: relative;
+
+  padding: 0 0 12px 25px;
+
+  color: var(--ds-muted);
+  font-size: 0.94rem;
+  line-height: 1.8;
+}
+
+.ds-section li::before {
+  content: "";
+
+  position: absolute;
+  top: 0.75em;
+  left: 2px;
+
+  width: 6px;
+  height: 6px;
+
+  border-radius: 50%;
+  background: var(--ds-gold);
+}
+
+
+/* =========================================================
+   CONTACT CARD
+========================================================= */
+
+.ds-contact-card {
+  display: flex;
+  flex-direction: column;
+
+  max-width: 550px;
+
+  margin-top: 28px;
+  padding: 28px 30px;
+
+  background: var(--ds-surface);
+  border-left: 3px solid var(--ds-gold);
+
+  box-shadow: 0 12px 35px rgba(48, 58, 52, 0.05);
+}
+
+.ds-contact-card strong {
+  margin-bottom: 7px;
+
+  color: var(--ds-primary);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.15rem;
+  font-weight: 500;
+}
+
+.ds-contact-card span {
+  color: var(--ds-muted);
+  font-size: 0.86rem;
+  line-height: 1.75;
+}
+
+.ds-contact-card a {
+  color: var(--ds-primary);
+  font-size: 0.86rem;
+  line-height: 1.8;
+  text-decoration: none;
+}
+
+.ds-contact-card a:first-of-type {
+  margin-top: 13px;
+}
+
+.ds-contact-card a:hover {
+  color: var(--ds-gold);
+}
+
+
+/* =========================================================
+   LINKS
+========================================================= */
+
+.ds-email-link,
+.ds-external-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  color: var(--ds-primary);
+
+  font-size: 0.86rem;
+  font-weight: 600;
+  text-decoration: none;
+
+  border-bottom: 1px solid rgba(184, 154, 98, 0.5);
+  padding-bottom: 4px;
+
+  transition:
+    color 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.ds-email-link:hover,
+.ds-external-link:hover {
+  color: var(--ds-gold);
+  border-color: var(--ds-gold);
+}
+
+.ds-external-link span {
+  font-size: 0.9rem;
+}
+
+
+/* =========================================================
+   UPDATED
+========================================================= */
+
+.ds-updated {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 20px;
+
+  padding: 25px 0;
+
+  color: var(--ds-muted);
+
+  font-size: 0.76rem;
+  letter-spacing: 0.04em;
+}
+
+.ds-updated strong {
+  color: var(--ds-primary);
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   BOTTOM
+========================================================= */
+
+.ds-bottom {
+  padding: 28px 0;
+
+  background: var(--ds-primary);
+}
+
+.ds-bottom-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  color: rgba(255, 255, 255, 0.55);
+
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.ds-bottom-inner span:first-child {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 991px) {
+
+  .ds-hero {
+    padding: 125px 0 80px;
+  }
+
+  .ds-content {
+    padding: 70px 0 85px;
+  }
+
+  .ds-layout {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+  .ds-sidebar {
+    position: static;
+  }
+
+  .ds-sidebar-card {
+    max-width: 500px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 767px) {
+
+  .ds-container {
+    width: min(100% - 32px, 1180px);
+  }
+
+  .ds-hero {
+    padding: 105px 0 65px;
+  }
+
+  .ds-eyebrow {
+    margin-bottom: 20px;
+    font-size: 0.64rem;
+  }
+
+  .ds-hero h1 {
+    font-size: clamp(2.65rem, 14vw, 4rem);
+  }
+
+  .ds-hero p {
+    margin-top: 25px;
+    font-size: 0.9rem;
+    line-height: 1.75;
+  }
+
+  .ds-content {
+    padding: 55px 0 65px;
+  }
+
+  .ds-layout {
+    gap: 40px;
+  }
+
+  .ds-sidebar-card {
+    padding: 25px 22px;
+  }
+
+  .ds-section {
+    grid-template-columns: 35px minmax(0, 1fr);
+    gap: 15px;
+
+    padding-bottom: 42px;
+    margin-bottom: 42px;
+  }
+
+  .ds-number {
+    font-size: 0.65rem;
+    padding-top: 6px;
+  }
+
+  .ds-section h2 {
+    margin-bottom: 17px;
+    font-size: 1.55rem;
+  }
+
+  .ds-section p,
+  .ds-section li {
+    font-size: 0.88rem;
+    line-height: 1.8;
+  }
+
+  .ds-contact-card {
+    padding: 23px 20px;
+  }
+
+  .ds-updated {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .ds-bottom-inner {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+
+    font-size: 0.64rem;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 420px) {
+
+  .ds-container {
+    width: calc(100% - 28px);
+  }
+
+  .ds-hero {
+    padding-top: 90px;
+  }
+
+  .ds-section {
+    grid-template-columns: 28px minmax(0, 1fr);
+    gap: 10px;
+  }
+
+  .ds-section h2 {
+    font-size: 1.4rem;
+  }
+
+}

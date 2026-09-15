@@ -1,0 +1,842 @@
+/* =========================================================
+   PALETTE & VARIABLES
+   ========================================================= */
+:root {
+  --color-fg: #252525; /* Deep charcoal */
+  --color-bg: #f5f1ea; /* Warm ivory/cream */
+  --color-primary: #303a34; /* Deep olive-charcoal */
+  --color-secondary: #b89a62; /* Champagne/gold */
+  --color-bg-alt: #e8e1d8; /* Soft greige */
+  --color-fg-alt: #6f897b; /* Muted sage */
+
+  /* Neutral helper colors */
+  --color-white: #ffffff;
+  --color-muted: #555555;
+  --transition-smooth: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  --shadow-subtle: 0 10px 30px rgba(37, 37, 37, 0.05);
+  --shadow-hover: 0 18px 40px rgba(48, 58, 52, 0.12);
+  --radius-lg: 16px;
+  --radius-md: 10px;
+  --radius-sm: 6px;
+}
+
+/* =========================================================
+   GLOBAL BASE & LAYOUT
+   ========================================================= */
+.hm-page {
+  background-color: var(--color-bg);
+  color: var(--color-fg);
+  font-family:
+    "Playfair Display",
+    Georgia,
+    system-ui,
+    -apple-system,
+    sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden;
+  padding: 0;
+  margin: 0;
+}
+
+.hm-page p,
+.hm-page span,
+.hm-page button {
+  font-family:
+    "Plus Jakarta Sans",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    sans-serif;
+}
+
+/* =========================================================
+   SCROLL REVEAL ANIMATIONS
+   ========================================================= */
+.hm-reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition:
+    opacity 0.8s ease-out,
+    transform 0.8s ease-out;
+}
+
+.hm-reveal.hm-is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =========================================================
+   COMMON LABELS & BUTTONS
+   ========================================================= */
+.hm-section-label {
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--color-secondary);
+  margin-bottom: 12px;
+}
+
+.hm-light-label {
+  color: var(--color-bg-alt);
+}
+
+.hm-primary-button {
+  background-color: var(--color-primary);
+  color: var(--color-bg);
+  border: 1px solid var(--color-primary);
+  padding: 14px 28px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: var(--transition-smooth);
+}
+
+.hm-primary-button:hover {
+  background-color: var(--color-secondary);
+  border-color: var(--color-secondary);
+  color: var(--color-white);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(184, 154, 98, 0.3);
+}
+
+.hm-secondary-button {
+  background-color: transparent;
+  color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+  padding: 14px 28px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.hm-secondary-button:hover {
+  background-color: var(--color-primary);
+  color: var(--color-bg);
+  transform: translateY(-2px);
+}
+
+/* =========================================================
+   HERO SECTION
+   ========================================================= */
+.hm-hero {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 50px;
+  padding: 80px 8%;
+  background-color: var(--color-bg);
+  min-height: 85vh;
+}
+
+.hm-hero-background-circle {
+  position: absolute;
+  top: -10%;
+  left: -5%;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    var(--color-bg-alt) 0%,
+    rgba(245, 241, 234, 0) 70%
+  );
+  z-index: 0;
+  pointer-events: none;
+}
+
+.hm-hero-image-wrapper {
+  order: 1;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.hm-hero-image {
+  width: 100%;
+  max-width: 680px;
+  height: 680px;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 20px 45px rgba(37, 37, 37, 0.15);
+}
+
+.hm-hero-image-decoration,
+.hm-hero-badge {
+  display: none !important;
+}
+
+.hm-hero-content {
+  order: 2;
+  position: relative;
+  z-index: 1;
+}
+
+.hm-hero-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.85rem;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--color-fg-alt);
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.hm-hero-label span {
+  display: inline-block;
+  width: 30px;
+  height: 2px;
+  background-color: var(--color-fg-alt);
+}
+
+.hm-hero-title {
+  font-size: 3.4rem;
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--color-primary);
+  margin-bottom: 24px;
+}
+
+.hm-hero-title em {
+  font-style: normal;
+  color: var(--color-secondary);
+  position: relative;
+}
+
+.hm-hero-text {
+  font-size: 1.1rem;
+  color: var(--color-muted);
+  max-width: 520px;
+  margin-bottom: 36px;
+}
+
+.hm-hero-buttons {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* =========================================================
+   INTRO SECTION
+   ========================================================= */
+.hm-intro {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 10%;
+  gap: 30px;
+  background-color: var(--color-bg);
+}
+
+.hm-intro-line {
+  flex: 1;
+  height: 1px;
+  background-color: var(--color-bg-alt);
+}
+
+.hm-intro p {
+  max-width: 700px;
+  text-align: center;
+  font-size: 1.25rem;
+  color: var(--color-primary);
+  font-style: italic;
+  font-family: "Playfair Display", Georgia, serif;
+}
+
+/* =========================================================
+   PERSONAL IMAGE (DOCTOR SECTION)
+   ========================================================= */
+.hm-personal-image-section {
+  padding: 40px 8%;
+  display: flex;
+  justify-content: center;
+}
+
+.hm-personal-image-wrapper {
+  position: relative;
+  max-width: 900px;
+  width: 100%;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-subtle);
+}
+
+.hm-personal-image {
+  width: 100%;
+  max-height: 500px;
+  object-fit: cover;
+  filter: brightness(0.97);
+  transition: var(--transition-smooth);
+}
+
+.hm-personal-image-wrapper:hover .hm-personal-image {
+  transform: scale(1.02);
+}
+
+/* =========================================================
+   ORTHODONTICS & TREATMENTS
+   ========================================================= */
+.hm-orthodontics {
+  padding: 100px 8%;
+  background-color: var(--color-bg-alt);
+}
+
+.hm-orthodontics-intro {
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto 60px auto;
+}
+
+.hm-orthodontics-title {
+  font-size: 2.6rem;
+  color: var(--color-primary);
+  margin-bottom: 16px;
+}
+
+.hm-orthodontics-title span {
+  color: var(--color-secondary);
+}
+
+.hm-orthodontics-text {
+  color: var(--color-muted);
+  font-size: 1rem;
+}
+
+.hm-treatment-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-bottom: 80px;
+}
+
+/* Treatment Card Styling (مطابقة لنمط Treatment.css) */
+.hm-treatment-card {
+  background-color: var(--color-white);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: var(--transition-smooth);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  position: relative;
+}
+
+.hm-treatment-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-hover);
+}
+
+.hm-treatment-image-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background-color: var(--color-bg-alt);
+}
+
+.hm-treatment-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hm-treatment-card:hover .hm-treatment-image {
+  transform: scale(1.05);
+}
+
+/* Arrow Badge floating on top of the image */
+.hm-card-arrow {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: var(--color-fg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  font-weight: bold;
+  backdrop-filter: blur(4px);
+  transition: var(--transition-smooth);
+  z-index: 2;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.hm-treatment-card:hover .hm-card-arrow {
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+  transform: translate(2px, -2px);
+}
+
+.hm-treatment-content {
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.hm-treatment-number {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--color-secondary);
+  margin-bottom: 10px;
+  display: block;
+  letter-spacing: 1px;
+}
+
+.hm-treatment-title {
+  font-size: 1.3rem;
+  color: var(--color-primary);
+  margin-bottom: 12px;
+  font-weight: 700;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.hm-treatment-text {
+  font-size: 0.95rem;
+  color: var(--color-muted);
+  line-height: 1.6;
+  margin: 0;
+  flex-grow: 1;
+}
+
+/* =========================================================
+   DIAGNOSTICS SECTION
+   ========================================================= */
+.hm-diagnostics-section {
+  margin-top: 40px;
+  padding: 80px 8%;
+  background-color: #1a2321;
+  border-radius: var(--radius-lg);
+}
+
+.hm-diagnostics-heading {
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto 50px auto;
+}
+
+.hm-ortho-small-label {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--color-secondary);
+  font-weight: 600;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.hm-diagnostics-title {
+  font-size: 2.2rem;
+  color: var(--color-white);
+  margin-bottom: 16px;
+  font-weight: 700;
+}
+
+.hm-diagnostics-text {
+  color: #a0aec0;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.hm-diagnostics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+/* Diagnostic Card Styling */
+.hm-diagnostic-card {
+  background-color: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition-smooth);
+}
+
+.hm-diagnostic-card:hover {
+  transform: translateY(-8px);
+  background-color: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.35);
+  border-color: rgba(184, 154, 98, 0.4);
+}
+
+.hm-diagnostic-image-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background-color: #212623;
+}
+
+.hm-diagnostic-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hm-diagnostic-card:hover .hm-diagnostic-image {
+  transform: scale(1.05);
+}
+
+.hm-diagnostic-content {
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.hm-diagnostic-number {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--color-secondary);
+  margin-bottom: 10px;
+  display: block;
+  letter-spacing: 1px;
+}
+
+.hm-diagnostic-title {
+  font-size: 1.25rem;
+  color: var(--color-white);
+  margin-bottom: 12px;
+  font-weight: 700;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.hm-diagnostic-text {
+  font-size: 0.95rem;
+  color: #cbd5e0;
+  line-height: 1.6;
+  margin: 0;
+  flex-grow: 1;
+}
+
+/* =========================================================
+   MIDDLE BOOKING BUTTON
+   ========================================================= */
+.hm-booking-area {
+  padding: 60px 8%;
+  display: flex;
+  justify-content: center;
+  background-color: var(--color-bg-alt);
+}
+
+.hm-booking-button {
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+  border: none;
+  padding: 18px 42px;
+  border-radius: var(--radius-sm);
+  font-size: 1.05rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  transition: var(--transition-smooth);
+  box-shadow: 0 4px 15px rgba(184, 154, 98, 0.2);
+}
+
+.hm-booking-button:hover {
+  background-color: var(--color-primary);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-hover);
+}
+
+.hm-booking-arrow {
+  transition: transform 0.3s ease;
+}
+
+.hm-booking-button:hover .hm-booking-arrow {
+  transform: translateX(6px);
+}
+
+/* =========================================================
+   PROMISE / THREE VALUES (FEATURES)
+   ========================================================= */
+.hm-features {
+  padding: 100px 8%;
+  background-color: var(--color-bg);
+}
+
+.hm-features-heading {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 60px auto;
+}
+
+.hm-features-heading p {
+  font-size: 1.8rem;
+  color: var(--color-primary);
+  font-family: "Playfair Display", Georgia, serif;
+}
+
+.hm-feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.hm-feature {
+  padding: 40px 30px;
+  background-color: var(--color-bg-alt);
+  border-radius: var(--radius-md);
+  transition: var(--transition-smooth);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.hm-feature:hover {
+  background-color: var(--color-primary);
+  color: var(--color-bg);
+  transform: translateY(-5px);
+}
+
+.hm-feature-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.hm-feature-icon {
+  font-size: 1.8rem;
+  color: var(--color-secondary);
+}
+
+.hm-feature-number {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--color-fg-alt);
+}
+
+.hm-feature h3 {
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+  color: var(--color-primary);
+  transition: var(--transition-smooth);
+}
+
+.hm-feature p {
+  font-size: 0.95rem;
+  color: var(--color-muted);
+  transition: var(--transition-smooth);
+  flex-grow: 1;
+}
+
+.hm-feature-arrow {
+  margin-top: 20px;
+  color: var(--color-secondary);
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+.hm-feature:hover h3 {
+  color: var(--color-bg);
+}
+
+.hm-feature:hover p {
+  color: var(--color-bg-alt);
+}
+
+.hm-feature:hover .hm-feature-arrow {
+  transform: translateX(8px);
+  color: var(--color-secondary);
+}
+
+/* =========================================================
+   PERSONAL CARE & LANGUAGES SECTIONS
+   ========================================================= */
+.hm-personal-care,
+.hm-languages {
+  padding: 80px 8%;
+  background-color: var(--color-bg);
+}
+
+.hm-personal-care-content,
+.hm-languages-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 50px 40px;
+  background-color: var(--color-white);
+  border-radius: var(--radius-lg);
+  border-left: 5px solid var(--color-fg-alt);
+  box-shadow: var(--shadow-subtle);
+}
+
+.hm-languages-content {
+  border-left-color: var(--color-secondary);
+}
+
+.hm-personal-care h2,
+.hm-languages h2 {
+  font-size: 2.2rem;
+  color: var(--color-primary);
+  margin-bottom: 16px;
+}
+
+.hm-personal-care p,
+.hm-languages p {
+  font-size: 1.05rem;
+  color: var(--color-muted);
+}
+
+/* =========================================================
+   FINAL CTA SECTION
+   ========================================================= */
+.hm-cta {
+  position: relative;
+  padding: 110px 8%;
+  background-color: var(--color-primary);
+  color: var(--color-bg);
+  text-align: center;
+  overflow: hidden;
+}
+
+.hm-cta-decoration {
+  position: absolute;
+  top: -50%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 800px;
+  height: 800px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(184, 154, 98, 0.15) 0%,
+    rgba(48, 58, 52, 0) 70%
+  );
+  pointer-events: none;
+}
+
+.hm-cta-content {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.hm-cta h2 {
+  font-size: 3rem;
+  margin-bottom: 16px;
+  color: var(--color-bg);
+}
+
+.hm-cta h2 span {
+  color: var(--color-secondary);
+}
+
+.hm-cta p {
+  font-size: 1.1rem;
+  color: var(--color-bg-alt);
+  margin-bottom: 36px;
+}
+
+.hm-cta-button {
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+  border: none;
+  padding: 16px 36px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  transition: var(--transition-smooth);
+}
+
+.hm-cta-button:hover {
+  background-color: var(--color-bg);
+  color: var(--color-primary);
+  transform: translateY(-3px);
+}
+
+/* =========================================================
+   RESPONSIVE DESIGN
+   ========================================================= */
+@media (max-width: 992px) {
+  .hm-hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding-top: 60px;
+  }
+
+  .hm-hero-image-wrapper {
+    order: 2;
+    margin-top: 40px;
+  }
+
+  .hm-hero-content {
+    order: 1;
+  }
+
+  .hm-hero-label {
+    justify-content: center;
+  }
+
+  .hm-hero-text {
+    margin: 0 auto 36px auto;
+  }
+
+  .hm-hero-buttons {
+    justify-content: center;
+  }
+
+  .hm-cta h2 {
+    font-size: 2.3rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .hm-hero-title {
+    font-size: 2.3rem;
+  }
+
+  .hm-hero-image {
+    height: 400px;
+  }
+
+  .hm-orthodontics-title,
+  .hm-features-heading p {
+    font-size: 1.8rem;
+  }
+
+  .hm-primary-button,
+  .hm-secondary-button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .hm-personal-care-content,
+  .hm-languages-content {
+    padding: 30px 20px;
+  }
+}

@@ -1,0 +1,430 @@
+/* ==========================================================================
+   FAQ Stylesheet
+   Theme: Warm Ivory & Deep Olive (Luxury / Natural)
+   ========================================================================== */
+
+:root {
+  /* Color Palette Variables */
+  --bg-main: #f5f1ea; /* Warm ivory/cream */
+  --bg-alt: #e8e1d8; /* Soft greige */
+  --fg-main: #252525; /* Deep charcoal */
+  --fg-alt: #6f897b; /* Muted sage */
+  --primary: #303a34; /* Deep olive-charcoal */
+  --secondary: #b89a62; /* Champagne/gold */
+  --border-light: #d8d0c5;
+  --white: #ffffff;
+
+  /* Typography & Transitions */
+  --font-family:
+    system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, sans-serif;
+  --transition-smooth: all 0.35s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Base Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--fg-main);
+  font-family: var(--font-family);
+  line-height: 1.6;
+}
+
+.good-page {
+  background-color: var(--bg-main);
+  color: var(--fg-main);
+  overflow-x: hidden;
+}
+
+/* Shared Typography Components */
+.small-label {
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--secondary);
+  margin-bottom: 0.75rem;
+}
+
+.small-label.dark-label {
+  color: var(--fg-alt);
+}
+
+h1,
+h2 {
+  font-weight: 400;
+  letter-spacing: -0.5px;
+  line-height: 1.2;
+}
+
+h1 span,
+h2 span {
+  font-weight: 600;
+  color: var(--secondary);
+}
+
+/* ==========================================================================
+   1. HERO SECTION
+   ========================================================================== */
+.good-hero {
+  position: relative;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 2rem;
+  background-color: var(--primary);
+  color: var(--bg-main);
+  text-align: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at center,
+    transparent 0%,
+    rgba(0, 0, 0, 0.2) 100%
+  );
+  pointer-events: none;
+}
+
+.good-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 750px;
+}
+
+.good-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  color: var(--bg-main);
+}
+
+.good-hero p {
+  font-size: 1.15rem;
+  color: var(--bg-alt);
+  margin-bottom: 2.5rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 2rem;
+  background-color: var(--secondary);
+  color: var(--white);
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  transition: var(--transition-smooth);
+}
+
+.hero-button:hover {
+  background-color: #a38550;
+  transform: translateY(-2px);
+}
+
+.hero-scroll {
+  position: absolute;
+  bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  color: var(--fg-alt);
+}
+
+.hero-scroll div {
+  width: 1px;
+  height: 30px;
+  background-color: var(--fg-alt);
+  animation: bounce 2s infinite;
+}
+
+/* ==========================================================================
+   2. INTRO SECTION
+   ========================================================================== */
+.good-intro {
+  padding: 6rem 2rem;
+  background-color: var(--bg-main);
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.intro-text {
+  max-width: 700px;
+}
+
+.intro-text h2 {
+  font-size: 2.25rem;
+  color: var(--primary);
+}
+
+.gold-line {
+  width: 60px;
+  height: 2px;
+  background-color: var(--secondary);
+  margin: 1.5rem auto 2rem;
+}
+
+.intro-text p {
+  color: var(--fg-main);
+  font-size: 1.05rem;
+  margin-bottom: 1rem;
+}
+
+/* ==========================================================================
+   3. FAQ SECTION & ACCORDION
+   ========================================================================== */
+.faq-section {
+  padding: 6rem 2rem;
+  background-color: var(--bg-alt);
+}
+
+.faq-top {
+  max-width: 900px;
+  margin: 0 auto 4rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .faq-top {
+    grid-template-columns: 1fr 1fr;
+    align-items: end;
+  }
+}
+
+.faq-top h2 {
+  font-size: 2.25rem;
+  color: var(--primary);
+}
+
+.faq-top p {
+  color: var(--fg-main);
+  font-size: 1rem;
+}
+
+.faq-list {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.faq-item {
+  background-color: var(--bg-main);
+  border: 1px solid var(--border-light);
+  border-radius: 6px;
+  overflow: hidden;
+  transition: var(--transition-smooth);
+}
+
+.faq-item.active {
+  border-color: var(--secondary);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.faq-question {
+  width: 100%;
+  padding: 1.5rem 2rem;
+  background: none;
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+  cursor: pointer;
+  color: var(--primary);
+  font-size: 1.1rem;
+  font-weight: 600;
+  font-family: inherit;
+  gap: 1rem;
+}
+
+.faq-left {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.faq-number {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--secondary);
+}
+
+.faq-icon {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+.faq-icon span {
+  position: absolute;
+  background-color: var(--primary);
+  transition: var(--transition-smooth);
+}
+
+.faq-icon span:nth-child(1) {
+  top: 7px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+}
+
+.faq-icon span:nth-child(2) {
+  top: 0;
+  left: 7px;
+  width: 2px;
+  height: 100%;
+}
+
+.faq-item.active .faq-icon span:nth-child(2) {
+  transform: rotate(90deg);
+  opacity: 0;
+}
+
+.faq-answer {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.35s ease-out;
+}
+
+.faq-answer.answer-open {
+  grid-template-rows: 1fr;
+}
+
+.answer-inner {
+  overflow: hidden;
+}
+
+.answer-inner p {
+  padding: 0 2rem 1.5rem 4.4rem;
+  color: var(--fg-main);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+/* ==========================================================================
+   4. CTA SECTION
+   ========================================================================== */
+.good-cta {
+  position: relative;
+  padding: 6rem 2rem;
+  background-color: var(--primary);
+  color: var(--bg-main);
+  text-align: center;
+  overflow: hidden;
+}
+
+.cta-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(
+    circle,
+    rgba(184, 154, 98, 0.15) 0%,
+    transparent 70%
+  );
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.cta-content {
+  position: relative;
+  z-index: 2;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.cta-content h2 {
+  font-size: 2.25rem;
+  margin-bottom: 1rem;
+  color: var(--bg-main);
+}
+
+.cta-content p {
+  color: var(--bg-alt);
+  margin-bottom: 2rem;
+}
+
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 2.25rem;
+  background-color: var(--secondary);
+  color: var(--white);
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: var(--transition-smooth);
+}
+
+.cta-button:hover {
+  background-color: #a38550;
+  transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   5. ANIMATIONS & RTL
+   ========================================================================== */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+}
+
+.animate-on-scroll.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-8px);
+  }
+  60% {
+    transform: translateY(-4px);
+  }
+}
+
+/* RTL Support for Arabic Language */
+[dir="rtl"] .faq-question {
+  text-align: right;
+}
+
+[dir="rtl"] .answer-inner p {
+  padding: 0 4.4rem 1.5rem 2rem;
+}

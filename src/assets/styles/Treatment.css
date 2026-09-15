@@ -1,0 +1,490 @@
+/* =========================================================
+   VARIABLES & COLOR PALETTE (Matching exact requested Hex)
+========================================================= */
+:root {
+  --tr-fg: #252525; /* Deep charcoal */
+  --tr-bg: #f5f1ea; /* Warm ivory/cream */
+  --tr-primary: #303a34; /* Deep olive-charcoal */
+  --tr-primary-hover: #222925; /* Darker olive */
+  --tr-secondary: #b89a62; /* Champagne/gold */
+  --tr-bg-alt: #e8e1d8; /* Soft greige */
+  --tr-fg-alt: #6f897b; /* Muted sage */
+
+  /* Structural Variables (Exact sizes from first file) */
+  --tr-white: #ffffff;
+  --tr-radius: 16px;
+  --tr-transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --tr-shadow: 0 10px 30px -10px rgba(37, 37, 37, 0.08);
+  --tr-shadow-hover: 0 20px 40px -15px rgba(37, 37, 37, 0.15);
+}
+
+.tr-page {
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    sans-serif;
+  color: var(--tr-fg);
+  background-color: var(--tr-bg);
+  overflow-x: hidden;
+}
+
+/* Common Typography */
+.tr-eyebrow {
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--tr-secondary);
+  margin-bottom: 0.75rem;
+}
+
+/* =========================================================
+   HERO SECTION (Reversed, Larger Typography & Resized Image)
+========================================================= */
+.tr-hero {
+  padding: 6rem 2rem 5rem;
+  background: linear-gradient(135deg, var(--tr-bg) 0%, var(--tr-bg-alt) 100%);
+  position: relative;
+}
+
+.tr-hero-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  /* عكس الترتيب: الصورة تصبح في اليسار والنص في اليمين */
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+/* عكسنا الترتيب البرمجي للعنصر داخلياً لضمان المطابقة */
+.tr-hero-content {
+  order: 2;
+  text-align: right;
+}
+
+.tr-hero-visual {
+  order: 1;
+  position: relative;
+  display: flex;
+  justify-content: center; /* توسيط الصورة المصغرة */
+}
+
+.tr-hero-title {
+  font-size: 3.8rem; /* تكبير الكتابة والعنوان */
+  line-height: 1.15;
+  font-weight: 800;
+  color: var(--tr-primary);
+  margin-bottom: 1.5rem;
+}
+
+.tr-hero-title-accent {
+  display: block;
+  color: var(--tr-secondary);
+}
+
+.tr-hero-description {
+  font-size: 1.25rem; /* تكبير الوصف */
+  line-height: 1.8;
+  color: var(--tr-fg);
+  opacity: 0.85;
+  margin-bottom: 2.5rem;
+  max-width: 550px;
+  margin-right: 0;
+  margin-left: auto;
+}
+
+.tr-hero-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1.15rem 2.5rem;
+  background-color: var(--tr-primary);
+  color: var(--tr-bg);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  border-radius: 50px;
+  transition: var(--tr-transition);
+  box-shadow: var(--tr-shadow);
+}
+
+.tr-hero-link:hover {
+  background-color: var(--tr-secondary);
+  color: var(--tr-white);
+  transform: translateY(-2px);
+  box-shadow: var(--tr-shadow-hover);
+}
+
+.tr-hero-image {
+  position: relative;
+  border-radius: var(--tr-radius);
+  overflow: hidden;
+  box-shadow: var(--tr-shadow-hover);
+  max-width: 82%; /* تصغير حجم الصورة قليلاً لتكون متناسقة وأنيقة */
+  width: 100%;
+}
+
+.tr-hero-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* =========================================================
+   INTRO SECTION
+========================================================= */
+.tr-intro {
+  max-width: 1000px;
+  margin: 4rem auto;
+  padding: 0 2rem;
+  text-align: center;
+}
+
+.tr-intro-label span {
+  color: var(--tr-fg-alt);
+}
+
+.tr-intro-content h2 {
+  font-size: 2.25rem;
+  color: var(--tr-primary);
+  margin-bottom: 1rem;
+}
+
+.tr-intro-content em {
+  font-style: normal;
+  color: var(--tr-secondary);
+}
+
+.tr-intro-content p {
+  font-size: 1.125rem;
+  color: var(--tr-fg);
+  opacity: 0.85;
+  line-height: 1.8;
+}
+
+/* =========================================================
+   TREATMENTS SECTION
+========================================================= */
+.tr-treatments {
+  max-width: 1200px;
+  margin: 5rem auto;
+  padding: 0 2rem;
+}
+
+.tr-section-heading {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 3.5rem;
+  align-items: flex-start;
+}
+
+.tr-section-heading h2 {
+  font-size: 2.5rem;
+  color: var(--tr-primary);
+  line-height: 1.2;
+}
+
+.tr-section-heading p {
+  font-size: 1.05rem;
+  color: var(--tr-fg);
+  opacity: 0.85;
+  line-height: 1.6;
+  max-width: 600px;
+}
+
+.tr-treatment-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+.tr-treatment-card {
+  background: var(--tr-white);
+  border-radius: var(--tr-radius);
+  overflow: hidden;
+  box-shadow: var(--tr-shadow);
+  transition: var(--tr-transition);
+  border: 1px solid rgba(184, 154, 98, 0.2);
+}
+
+.tr-treatment-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--tr-shadow-hover);
+  border-color: var(--tr-secondary);
+}
+
+.tr-card-image {
+  position: relative;
+  height: 240px;
+  overflow: hidden;
+  background-color: var(--tr-bg-alt);
+}
+
+.tr-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.tr-treatment-card:hover .tr-card-image img {
+  transform: scale(1.05);
+}
+
+.tr-card-arrow {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 40px;
+  height: 40px;
+  background: rgba(245, 241, 234, 0.9);
+  backdrop-filter: blur(4px);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: var(--tr-primary);
+}
+
+.tr-card-content {
+  padding: 2rem;
+  position: relative;
+}
+
+.tr-card-number {
+  font-size: 0.875rem;
+  font-weight: 800;
+  color: var(--tr-secondary);
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.tr-card-content h3 {
+  font-size: 1.35rem;
+  color: var(--tr-primary);
+  margin-bottom: 0.75rem;
+}
+
+.tr-card-content p {
+  color: var(--tr-fg);
+  opacity: 0.8;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+/* =========================================================
+   DIAGNOSTICS SECTION
+========================================================= */
+.tr-diagnostics {
+  background-color: var(--tr-primary);
+  color: var(--tr-bg);
+  padding: 6rem 2rem;
+  margin-top: 5rem;
+  border-radius: 32px 32px 0 0;
+}
+
+.tr-diagnostics-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.tr-diagnostics-header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 4rem;
+}
+
+.tr-light-label span {
+  color: var(--tr-secondary);
+}
+
+.tr-diagnostics-header h2 {
+  font-size: 2.5rem;
+  color: var(--tr-white);
+  margin-bottom: 1rem;
+}
+
+.tr-heading-accent-light {
+  color: var(--tr-secondary);
+}
+
+.tr-diagnostics-header p {
+  color: var(--tr-bg-alt);
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.tr-diagnostics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.tr-diagnostic-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(184, 154, 98, 0.2);
+  border-radius: var(--tr-radius);
+  padding: 1.5rem;
+  transition: var(--tr-transition);
+}
+
+.tr-diagnostic-card:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: var(--tr-secondary);
+  transform: translateY(-5px);
+}
+
+.tr-diagnostic-image {
+  height: 180px;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+}
+
+.tr-diagnostic-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.tr-diagnostic-number {
+  color: var(--tr-secondary);
+  font-weight: 700;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.tr-diagnostic-content h3 {
+  font-size: 1.25rem;
+  color: var(--tr-white);
+  margin-bottom: 0.5rem;
+}
+
+.tr-diagnostic-content p {
+  color: var(--tr-bg-alt);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* =========================================================
+   CTA SECTION
+========================================================= */
+.tr-cta {
+  max-width: 1200px;
+  margin: 6rem auto;
+  padding: 0 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.tr-cta-image {
+  border-radius: var(--tr-radius);
+  overflow: hidden;
+  box-shadow: var(--tr-shadow-hover);
+}
+
+.tr-cta-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.tr-cta-content h2 {
+  font-size: 2.5rem;
+  color: var(--tr-primary);
+  line-height: 1.2;
+  margin-bottom: 1.25rem;
+}
+
+.tr-cta-title-accent {
+  color: var(--tr-secondary);
+}
+
+.tr-cta-content p {
+  font-size: 1.1rem;
+  color: var(--tr-fg);
+  opacity: 0.85;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+.tr-cta-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.1rem 2.5rem;
+  background-color: var(--tr-secondary);
+  color: var(--tr-white);
+  border: none;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: var(--tr-transition);
+  box-shadow: 0 10px 20px rgba(184, 154, 98, 0.25);
+}
+
+.tr-cta-button:hover {
+  background-color: var(--tr-primary);
+  transform: translateY(-3px);
+  box-shadow: var(--tr-shadow-hover);
+}
+
+/* =========================================================
+   RESPONSIVE DESIGN (Exact original break-points)
+========================================================= */
+@media (max-width: 992px) {
+  .tr-hero-inner,
+  .tr-cta {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .tr-hero-content {
+    order: 1;
+    text-align: center;
+  }
+
+  .tr-hero-visual {
+    order: 2;
+  }
+
+  .tr-hero-description {
+    margin: 0 auto 2.5rem;
+  }
+
+  .tr-hero-title {
+    font-size: 2.8rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .tr-hero {
+    padding: 3rem 1.5rem;
+  }
+
+  .tr-hero-title {
+    font-size: 2.2rem;
+  }
+
+  .tr-diagnostics {
+    border-radius: 0;
+    padding: 4rem 1.5rem;
+  }
+
+  .tr-cta-button {
+    width: 100%;
+    justify-content: center;
+  }
+}
