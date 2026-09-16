@@ -18,7 +18,7 @@ const translations = {
     heroTitleAfter: "that lasts.",
 
     heroText:
-      "Modern orthodontics for children, teenagers and adults — individually planned, precisely diagnosed and personally guided.",
+      "Modern orthodontics for children, teenagers and adults  individually planned, precisely assessed and personally guided throughout treatment.",
 
     bookAppointment: "Book a Consultation",
     discoverClinic: "Explore Treatments",
@@ -35,9 +35,6 @@ const translations = {
     // =========================================================
     // INTRO
     // =========================================================
-
-    intro:
-      "Modern orthodontics for children, teenagers and adults — individually planned, precisely diagnosed and personally guided.",
 
     // =========================================================
     // ABOUT
@@ -78,10 +75,10 @@ const translations = {
     orthodonticsTitleHighlight: "tailored to you.",
 
     orthodonticsIntro:
-      "Whether invisible aligners, fixed braces or orthodontic treatment for children and teenagers — we develop an individual solution for every stage of life.",
+      "Whether invisible aligners, fixed braces or orthodontic treatment for children and teenagers — we develop an individual treatment plan for every stage of life.",
 
     orthodonticsText:
-      "Whether invisible aligners, fixed braces or orthodontic treatment for children and teenagers — we develop an individual solution for every stage of life.",
+      "Whether invisible aligners, fixed braces or orthodontic treatment for children and teenagers — we develop an individual treatment plan for every stage of life.",
 
     // =========================================================
     // TREATMENT TYPES
@@ -129,7 +126,7 @@ const translations = {
     digitalScanningTitle: "Digital 3D Scanning",
 
     digitalScanningText:
-      "Digital impressions — precise, comfortable and without conventional dental impressions.",
+      "Precise and comfortable digital impressions without conventional dental impressions.",
 
     modJawTitle: "ModJaw",
 
@@ -144,7 +141,7 @@ const translations = {
     digital3DScanning: "Digital 3D Scanning",
 
     digital3DScanningText:
-      "Digital impressions — precise, comfortable and without conventional dental impressions.",
+      "Precise and comfortable digital impressions without conventional dental impressions.",
 
     modJaw: "ModJaw",
 
@@ -392,7 +389,7 @@ const translations = {
     personalCareTitle: "Personal care from start to finish.",
 
     personalCareText:
-      "From your first consultation to the final result, we accompany you personally and explain every step of your treatment clearly and transparently.",
+      "From your first consultation throughout your treatment, we accompany you personally and explain every step clearly and transparently.",
 
     // =========================================================
     // LANGUAGES
@@ -453,7 +450,7 @@ const translations = {
 
     ctaTitleBefore: "Let's find the",
 
-    ctaTitleHighlight: "right treatment for you.",
+    ctaTitleHighlight: "right treatmentfor you.",
 
     ctaText:
       "In a personal consultation, we discuss your wishes, assess your individual situation and explain the treatment options that are right for you.",
@@ -496,9 +493,9 @@ const translations = {
 
     heroTitleBefore: "Kieferorthopädie.",
 
-    heroTitleHighlight: "Für ein Lächeln",
+    heroTitleHighlight: "Für ein Lächeln,",
 
-    heroTitleAfter: "das bleibt.",
+    heroTitleAfter: " das bleibt.",
 
     heroText:
       "Moderne Kieferorthopädie für Kinder, Jugendliche und Erwachsene – individuell geplant, präzise diagnostiziert und persönlich begleitet.",
@@ -556,11 +553,11 @@ const translations = {
     // TREATMENTS
     // =========================================================
 
-    orthodonticsLabel: "Behandlungen",
+    orthodonticsLabel: "Behandlungen.",
 
-    orthodonticsTitleBefore: "Behandlungen",
+    orthodonticsTitleBefore: "Behandlungen.",
 
-    orthodonticsTitleHighlight: "individuell für Sie.",
+    orthodonticsTitleHighlight: "Individuell für Sie.",
 
     orthodonticsIntro:
       "Ob unsichtbare Aligner, feste Zahnspangen oder kieferorthopädische Behandlung für Kinder und Jugendliche – wir entwickeln für jede Lebensphase eine individuelle Lösung.",
@@ -576,7 +573,7 @@ const translations = {
     treatmentFixedBracesTitle: "Feste Zahnspangen",
 
     treatmentFixedBracesText:
-      "Eine bewährte kieferorthopädische Behandlung für kontrollierte Zahnbewegungen und eine präzise Behandlungsplanung.",
+      " Eine bewährte kieferorthopädische Behandlung für kontrollierte Zahnbewegungen und präzise Ergebnisse.",
 
     treatmentChildrenTitle: "Kinder & Jugendliche",
 
@@ -591,7 +588,7 @@ const translations = {
     fixedBraces: "Feste Zahnspangen",
 
     fixedBracesText:
-      "Eine bewährte kieferorthopädische Behandlung für kontrollierte Zahnbewegungen und eine präzise Behandlungsplanung.",
+      "Eine bewährte kieferorthopädische Behandlung für kontrollierte Zahnbewegungen und präzise Ergebnisse.",
 
     childrenTeenagers: "Kinder & Jugendliche",
 
@@ -609,7 +606,7 @@ const translations = {
     digitalScanningTitle: "Digitaler 3D-Scan",
 
     digitalScanningText:
-      "Digitale Abformung – präzise, komfortabel und ohne herkömmliche Zahnabdrücke.",
+      "Digitale Abformungen - präzise, komfortabel und ohne herkömmliche Zahnabdrücke.",
 
     modJawTitle: "ModJaw",
 
@@ -624,7 +621,7 @@ const translations = {
     digital3DScanning: "Digitaler 3D-Scan",
 
     digital3DScanningText:
-      "Digitale Abformung – präzise, komfortabel und ohne herkömmliche Zahnabdrücke.",
+      "Digitale Abformungen - präzise, komfortabel und ohne herkömmliche Zahnabdrücke.",
 
     modJaw: "ModJaw",
 
@@ -846,7 +843,7 @@ const translations = {
     promiseTitleHighlight: "Präzise. Langfristig.",
 
     promiseText:
-      "Unser Ansatz verbindet individuelle Behandlungsplanung und moderne Diagnostik ",
+      "Unser Ansatz verbindet individuelle Behandlungsplanung und moderne Diagnostik. ",
 
     promise: "Warum wir?",
 
@@ -874,8 +871,7 @@ const translations = {
     // PERSONAL CARE
     // =========================================================
 
-    personalCareTitle:
-      "Von der ersten Beratung bis zum Behandlungsabschluss begleiten wir Sie persönlich und erklären jeden Schritt Ihrer Behandlung klar und transparent.",
+    personalCareTitle: "Körperpflege von Anfang bis Ende.",
 
     personalCareText:
       "Von der ersten Beratung bis zum Behandlungsergebnis begleiten wir Sie persönlich und erklären jeden Schritt Ihrer Behandlung klar und transparent.",
@@ -939,7 +935,7 @@ const translations = {
 
     ctaLabel: "Termin vereinbaren",
 
-    ctaTitleBefore: "Finden wir die",
+    ctaTitleBefore: "Gemeinsam finden wir die",
 
     ctaTitleHighlight: "richtige Behandlung für Sie.",
 

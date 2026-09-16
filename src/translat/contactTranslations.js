@@ -6,7 +6,7 @@ const contactTranslations = {
     headerTitleBefore: "Let's talk about",
     headerTitleHighlight: "your smile. ",
     headerText:
-      "Have a question, want to bBook a Consultation, or simply learn more about our treatments? We are here for you.",
+      "Have a question, want to book a consultation, or simply learn more about our treatments? We are here for you.",
 
     practiceLabel: "OUR PRACTICE",
     practiceTitleBefore: " We’d love ",
@@ -17,10 +17,10 @@ const contactTranslations = {
     addressLabel: "ADDRESS",
     openingHoursLabel: "OPENING HOURS",
 
-    openingDays: "Saturday — Thursday",
+    openingDays: "Monday — Thursday",
     openingTime: "09:00 AM — 05:00 PM",
 
-    bookingLabel: "READY WHEN YOU ARE",
+    bookingLabel: "YOUR NEXT STEP",
     bookingButton: "Book a Consultation",
 
     formProgress: "01 — 04",
@@ -39,8 +39,7 @@ const contactTranslations = {
 
     sendMessage: "SEND MESSAGE",
 
-    formNote:
-      "We usually respond within one business day.",
+    formNote: "We usually respond within one business day.",
 
     marqueeSmile: "YOUR SMILE",
     marqueePassion: "OUR PASSION",
@@ -56,7 +55,7 @@ const contactTranslations = {
       "Ob Sie eine Frage haben, einen Termin buchen möchten oder einfach mehr über unsere Behandlungen erfahren möchten – wir sind für Sie da.",
 
     practiceLabel: "UNSERE PRAXIS",
-    practiceTitleBefore: "Wir würden uns freuen",
+    practiceTitleBefore: "Wir freuen uns,",
     practiceTitleHighlight: "von Ihnen zu hören.",
 
     phoneLabel: "TELEFON",
@@ -82,13 +81,11 @@ const contactTranslations = {
     emailPlaceholder: "ihre@email.com",
 
     messageLabel: "IHRE NACHRICHT",
-    messagePlaceholder:
-      "Wie können wir Ihnen helfen...",
+    messagePlaceholder: "Wie können wir Ihnen helfen...",
 
     sendMessage: "NACHRICHT SENDEN",
 
-    formNote:
-      "Wir antworten in der Regel innerhalb eines Werktages.",
+    formNote: "Wir antworten in der Regel innerhalb eines Werktages.",
 
     marqueeSmile: "IHR LÄCHELN",
     marqueePassion: "UNSERE LEIDENSCHAFT",

@@ -62,9 +62,8 @@ export const aboutTranslations = {
   de: {
     navLabel: "Über uns ",
 
-    heroTitle: "Erfahrene Kieferorthopäden mit persönlicher Betreuung",
-    heroHighlight:
-      "und einem Fokus auf gesunde Funktion, präzise Behandlung und natürlich wirkende Ergebnisse.",
+    heroTitle: "Lernen Sie das Team ",
+    heroHighlight: "hinter Ihrem Lächeln kennen.",
     heroText:
       "Erfahrene Kieferorthopäden, die sich mit Leidenschaft dafür einsetzen, gesunde, selbstbewusste und schöne Lächeln mit individueller Betreuung zu schaffen.",
 

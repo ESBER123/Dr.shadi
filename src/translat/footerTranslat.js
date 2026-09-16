@@ -1,7 +1,7 @@
 const translations = {
   en: {
     footer: {
-      specialty: "Orthodontics",
+      specialty: "Orthodontist",
 
       description:
         "Modern orthodontic care for a healthy, functional and beautiful smile. Individual treatment with personal care and modern technology.",

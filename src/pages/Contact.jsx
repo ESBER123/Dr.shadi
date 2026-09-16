@@ -26,7 +26,7 @@ const Contact = () => {
       <div className="contact-bg-circle"></div>
       <div className="contact-bg-circle circle-two"></div>
       <div className="contact-watermark">{t.watermark}</div>
-      /* HEADER */
+      {/* HEADER    مشان اعرف */}
       <section className="contact-header">
         <div className="contact-label">
           <span></span>
@@ -42,9 +42,7 @@ const Contact = () => {
 
         <p>{t.headerText}</p>
 
-        {/* =========================================
-            CTA BUTTON
-        ========================================= */}
+        {/* CTA BUTTON مشان اعرف  */}
 
         <button className="hm-cta-button" type="button" onClick={goToBooking}>
           {t.bookAppointment}

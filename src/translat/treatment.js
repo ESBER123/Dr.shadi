@@ -10,7 +10,6 @@ const treatmentTranslations = {
     },
 
     intro: {
-      
       title: " The right treatment",
       titleAccent: " for every smile.",
       description:
@@ -18,7 +17,6 @@ const treatmentTranslations = {
     },
 
     services: {
-    
       title: "Find the right treatment for you.",
       description:
         "Modern orthodontics combines experience, precision and personalised care to achieve natural-looking results.",
@@ -27,22 +25,19 @@ const treatmentTranslations = {
         {
           number: "01",
           title: "Invisible Aligners",
-          text:
-            "Discreet tooth correction with individually planned aligners — comfortable, precise and almost invisible in everyday life.",
+          text: "Discreet tooth correction with individually planned aligners — comfortable, precise and almost invisible in everyday life.",
           link: "Discover treatment",
         },
         {
           number: "02",
           title: "Fixed Braces",
-          text:
-            "A proven orthodontic treatment for controlled tooth movement and effective treatment planning.",
+          text: "A proven orthodontic treatment for controlled tooth movement and precise treatment planning.",
           link: "Discover treatment",
         },
         {
           number: "03",
           title: "Children & Teens",
-          text:
-            "Early assessment and personalised orthodontic care to support the natural development of teeth and jaws.",
+          text: "Early assessment and personalised orthodontic care to support the natural development of teeth and jaws.",
           link: "Discover treatment",
         },
       ],
@@ -59,20 +54,17 @@ const treatmentTranslations = {
         {
           number: "01",
           title: "Digital 3D Scanner",
-          text:
-            "Digital impressions that are precise, comfortable and avoid conventional dental impressions.",
+          text: "Digital impressions that are precise, comfortable and avoid conventional dental impressions.",
         },
         {
           number: "02",
           title: "ModJaw",
-          text:
-            "4D analysis of natural jaw movement to support precise diagnosis and treatment planning.",
+          text: "4D analysis of natural jaw movement to support precise diagnosis and treatment planning.",
         },
         {
           number: "03",
           title: "3D Imaging DVT",
-          text:
-            "High-precision 3D imaging of the teeth and jaw for detailed diagnostics and treatment planning.",
+          text: "High-precision 3D imaging of the teeth and jaw for detailed diagnostics and treatment planning.",
         },
       ],
     },
@@ -123,7 +115,6 @@ const treatmentTranslations = {
     },
 
     intro: {
-     
       title: "Die richtige Behandlung",
       titleAccent: "für jedes Lächeln.",
       description:
@@ -131,7 +122,6 @@ const treatmentTranslations = {
     },
 
     services: {
-
       title: "Finden Sie Ihre passende Behandlung.",
       description:
         "Moderne Kieferorthopädie verbindet Erfahrung, Präzision und individuelle Betreuung für natürlich wirkende Ergebnisse.",
@@ -140,22 +130,19 @@ const treatmentTranslations = {
         {
           number: "01",
           title: "Unsichtbare Aligner",
-          text:
-            "Diskrete Zahnkorrektur mit individuell geplanten Alignern – komfortabel, präzise und im Alltag nahezu unsichtbar.",
+          text: "Diskrete Zahnkorrektur mit individuell geplanten Alignern – komfortabel, präzise und im Alltag nahezu unsichtbar.",
           link: "Behandlung entdecken",
         },
         {
           number: "02",
           title: "Feste Zahnspangen",
-          text:
-            "Eine bewährte kieferorthopädische Behandlung für kontrollierte Zahnbewegungen und eine präzise Behandlungsplanung.",
+          text: "Eine bewährte kieferorthopädische Behandlung für kontrollierte Zahnbewegungen und eine präzise Behandlungsplanung.",
           link: "Behandlung entdecken",
         },
         {
           number: "03",
           title: "Kinder & Jugendliche",
-          text:
-            "Frühzeitige Beurteilung und individuelle kieferorthopädische Betreuung zur Unterstützung der natürlichen Entwicklung von Zähnen und Kiefer.",
+          text: "Frühzeitige Beurteilung und individuelle kieferorthopädische Betreuung zur Unterstützung der natürlichen Entwicklung von Zähnen und Kiefer.",
           link: "Behandlung entdecken",
         },
       ],
@@ -172,20 +159,17 @@ const treatmentTranslations = {
         {
           number: "01",
           title: "Digitaler 3D-Scanner",
-          text:
-            "Präzise und komfortable digitale Abformungen – ganz ohne herkömmliche Zahnabdrücke.",
+          text: "Präzise und komfortable digitale Abformungen – ganz ohne herkömmliche Zahnabdrücke.",
         },
         {
           number: "02",
           title: "ModJaw",
-          text:
-            "4D-Analyse der natürlichen Kieferbewegungen zur Unterstützung einer präzisen Diagnostik und Behandlungsplanung.",
+          text: "4D-Analyse der natürlichen Kieferbewegungen zur Unterstützung einer präzisen Diagnostik und Behandlungsplanung.",
         },
         {
           number: "03",
           title: "3D-Bildgebung DVT",
-          text:
-            "Hochpräzise 3D-Aufnahmen von Zähnen und Kiefer für eine detaillierte Diagnostik und Behandlungsplanung.",
+          text: "Hochpräzise 3D-Aufnahmen von Zähnen und Kiefer für eine detaillierte Diagnostik und Behandlungsplanung.",
         },
       ],
     },
@@ -227,4 +211,3 @@ const treatmentTranslations = {
 };
 
 export default treatmentTranslations;
-

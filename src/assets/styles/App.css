@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Modern Editorial & Luxury Aesthetic (Extra Large Logo Version)
+   Modern Editorial & Luxury Aesthetic (Extra Large Logo Version - Responsive)
    Theme: High Contrast Ivory & Deep Forest Charcoal
    ========================================================================== */
 
@@ -12,13 +12,15 @@
   --primary: #303a34; /* Deep Olive Charcoal */
   --secondary: #b89a62; /* Champagne Gold */
   --accent-gold: #d4af37; /* Highlight Accent Gold */
-  --glass-bg: rgba(245, 241, 234, 0.85);
+  --glass-bg: rgba(245, 241, 234, 0.88);
   --border-subtle: rgba(48, 58, 52, 0.15);
   --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 /* Reset & Base Setup */
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -38,22 +40,21 @@ body {
 }
 
 /* ==========================================================================
-   1. EDITORIAL HEADER (Floating Glass Capsule)
+   1. EDITORIAL HEADER (Floating Glass Capsule) - Responsive Ready
    ========================================================================== */
 .navbar {
   position: fixed;
-  top: 1.2rem;
+  top: 1rem;
   left: 50%;
   transform: translateX(-50%);
-  width: 94%;
-  max-width: 1350px;
-  height: 100px; /* ارتفاع كبير ومريح يتناسب مع الشعار الضخم */
+  width: min(94%, 1350px);
+  height: clamp(75px, 9vw, 100px);
   background: var(--glass-bg);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid var(--border-subtle);
   border-radius: 100px;
-  padding: 0 2.5rem;
+  padding: 0 clamp(1.2rem, 3vw, 2.5rem);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -67,7 +68,7 @@ body {
 }
 
 .logo img {
-  height: 80px; /* تكبير الشعار للحد الأقصى البارز جداً */
+  height: clamp(48px, 6vw, 80px);
   width: auto;
   object-fit: contain;
   transition: var(--transition-smooth);
@@ -87,26 +88,27 @@ body {
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 1.8rem;
+  gap: clamp(1rem, 2vw, 1.8rem);
 }
 
 .nav-links a {
   text-decoration: none;
   color: var(--primary);
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   font-weight: 500;
   letter-spacing: 1px;
   text-transform: uppercase;
   padding: 0.5rem 0;
   position: relative;
   transition: var(--transition-smooth);
+  white-space: nowrap;
 }
 
 .nav-links a::after {
   content: "";
   position: absolute;
   bottom: 0;
-  right: 0;
+  inset-inline-end: 0;
   width: 0%;
   height: 1px;
   background-color: var(--secondary);
@@ -116,7 +118,8 @@ body {
 .nav-links a:hover::after,
 .nav-links a.active::after {
   width: 100%;
-  left: 0;
+  inset-inline-start: 0;
+  inset-inline-end: auto;
 }
 
 .nav-links a:hover,
@@ -127,15 +130,15 @@ body {
 .header-actions {
   display: flex;
   align-items: center;
-  gap: 1.2rem;
+  gap: clamp(0.6rem, 1.5vw, 1.2rem);
 }
 
 .language-switch {
   background: var(--bg-alt);
   border: none;
-  padding: 0.5rem 1.2rem;
+  padding: 0.45rem 1rem;
   border-radius: 50px;
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 1px;
   color: var(--fg-alt);
@@ -155,10 +158,10 @@ body {
 .header-cta {
   background: var(--primary);
   color: var(--bg-main);
-  padding: 0.85rem 1.8rem;
+  padding: 0.7rem 1.4rem;
   border-radius: 50px;
   text-decoration: none;
-  font-size: 0.85rem;
+  font-size: 0.78rem;
   font-weight: 600;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -175,12 +178,13 @@ body {
 
 /* ==========================================================================
    2. HERO SECTION
-   ========================================================================== */
+   ========================================================= */
 .good-hero {
   position: relative;
   min-height: 90vh;
-  padding-top: 170px; /* زيادة المساحة العلوية للـ Hero بسبب تكبير الهيدر */
+  padding-top: clamp(120px, 15vw, 170px);
   padding-bottom: 4rem;
+  padding-inline: 1.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -194,15 +198,15 @@ body {
 .good-hero::before {
   content: "";
   position: absolute;
-  width: 600px;
-  height: 600px;
+  width: min(600px, 90vw);
+  height: min(600px, 90vw);
   background: radial-gradient(
     circle,
     rgba(184, 154, 98, 0.25) 0%,
     transparent 70%
   );
   top: -100px;
-  right: -100px;
+  inset-inline-end: -100px;
   border-radius: 50%;
   pointer-events: none;
 }
@@ -211,13 +215,13 @@ body {
   position: relative;
   z-index: 2;
   max-width: 800px;
-  padding: 0 1.5rem;
+  width: 100%;
 }
 
 .good-hero-content h1 {
-  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-size: clamp(2.1rem, 5vw, 4.5rem);
   font-weight: 300;
-  line-height: 1.1;
+  line-height: 1.15;
   letter-spacing: -1px;
   margin-bottom: 1.5rem;
 }
@@ -230,24 +234,25 @@ body {
 }
 
 .good-hero-content p {
-  font-size: 1.1rem;
+  font-size: clamp(0.98rem, 1.8vw, 1.1rem);
   color: var(--bg-alt);
   margin-bottom: 2.5rem;
   max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
+  margin-inline: auto;
+  line-height: 1.6;
 }
 
 .hero-button {
   display: inline-flex;
   align-items: center;
   gap: 0.75rem;
-  padding: 1rem 2.25rem;
+  padding: 0.9rem 2rem;
   border-radius: 100px;
   background-color: var(--secondary);
   color: #fff;
   text-decoration: none;
   font-weight: 600;
+  font-size: 0.92rem;
   letter-spacing: 1px;
   transition: var(--transition-smooth);
 }
@@ -259,19 +264,19 @@ body {
 
 /* ==========================================================================
    3. FAQ ACCORDION
-   ========================================================================== */
+   ========================================================= */
 .faq-section {
-  padding: 8rem 2rem;
+  padding: clamp(4rem, 8vw, 8rem) clamp(1rem, 4vw, 2rem);
   background-color: var(--bg-main);
 }
 
 .faq-top {
   max-width: 900px;
-  margin: 0 auto 4rem;
+  margin: 0 auto 3rem;
 }
 
 .faq-top h2 {
-  font-size: clamp(2rem, 4vw, 3rem);
+  font-size: clamp(1.75rem, 4vw, 3rem);
   font-weight: 300;
   color: var(--primary);
 }
@@ -292,13 +297,13 @@ body {
   border: none;
   border-bottom: 1px solid var(--border-subtle);
   border-radius: 0;
-  padding: 0.5rem 0;
+  padding: 0.3rem 0;
   transition: var(--transition-smooth);
 }
 
 .faq-question {
   width: 100%;
-  padding: 1.5rem 0;
+  padding: 1.2rem 0;
   background: none;
   border: none;
   display: flex;
@@ -306,10 +311,11 @@ body {
   align-items: center;
   cursor: pointer;
   color: var(--primary);
-  font-size: 1.25rem;
+  font-size: clamp(1.05rem, 2vw, 1.25rem);
   font-weight: 500;
   font-family: inherit;
-  text-align: left;
+  text-align: start;
+  gap: 1rem;
 }
 
 .faq-left {
@@ -320,10 +326,10 @@ body {
 .faq-number {
   font-family: Georgia, serif;
   font-style: italic;
-  font-size: 1.4rem;
+  font-size: clamp(1.1rem, 2vw, 1.4rem);
   color: var(--secondary);
-  margin-right: 1.5rem;
-  min-width: 30px;
+  margin-inline-end: clamp(1rem, 2vw, 1.5rem);
+  min-width: 24px;
 }
 
 .faq-item.active {
@@ -386,48 +392,41 @@ body {
 }
 
 .answer-inner p {
-  padding: 0 0 2rem 3rem;
+  padding: 0 0 clamp(1.2rem, 3vw, 2rem) clamp(1.5rem, 5vw, 3rem);
   color: var(--fg-main);
-  font-size: 1.05rem;
+  font-size: clamp(0.95rem, 1.5vw, 1.05rem);
   line-height: 1.8;
   max-width: 800px;
 }
 
 /* ==========================================================================
-   4. RESPONSIVE DESIGN & RTL
+   4. RESPONSIVE BREAKPOINTS & RTL SUPPORT (Logical Properties)
    ========================================================================== */
 @media (max-width: 992px) {
   .nav-links {
-    display: none;
+    display: none; /* جاهز للقائمة الجانبية الموبايل (Mobile Drawer) إن وجدت */
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 576px) {
   .navbar {
-    width: 95%;
-    padding: 0 1.25rem;
-    height: 76px;
+    width: 96%;
+    padding: 0 1rem;
+    border-radius: 60px;
   }
 
-  .logo img {
-    height: 58px; /* حجم كبير وواضح للموبايل */
+  .header-cta {
+    padding: 0.6rem 1rem;
+    font-size: 0.72rem;
   }
 
-  .answer-inner p {
-    padding: 0 0 1.5rem 0;
+  .language-switch {
+    padding: 0.4rem 0.8rem;
   }
 }
 
-/* دعم اللغة العربية */
-[dir="rtl"] .faq-question {
-  text-align: right;
-}
-
-[dir="rtl"] .faq-number {
-  margin-right: 0;
-  margin-left: 1.5rem;
-}
-
-[dir="rtl"] .answer-inner p {
-  padding: 0 3rem 2rem 0;
+/* دعم عربي/إنجليزي تلقائي عبر Logical Properties (`inset-inline`, `margin-inline`, إلخ) */
+[dir="rtl"] .faq-question,
+[dir="ltr"] .faq-question {
+  text-align: start;
 }

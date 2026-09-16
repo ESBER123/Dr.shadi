@@ -10,7 +10,7 @@ import {
 } from "react-icons/fa";
 
 import { useLanguage } from "../context/LanguageContext";
-import translations from "../translat/footerTranslat.js";;
+import translations from "../translat/footerTranslat.js";
 
 import "../assets/styles/Footer.css";
 
@@ -31,7 +31,6 @@ const Footer = () => {
       <Container>
         {/* Main Footer */}
         <Row className="footer-main">
-
           {/* Brand */}
           <Col lg={5} md={6} className="footer-brand">
             <div className="footer-logo">
@@ -45,9 +44,7 @@ const Footer = () => {
               </div>
             </div>
 
-            <p className="footer-description">
-              {t.footer.description}
-            </p>
+            <p className="footer-description">{t.footer.description}</p>
 
             <div className="footer-socials">
               <a href="#" aria-label="Instagram">
@@ -65,10 +62,7 @@ const Footer = () => {
             <h4>{t.footer.contact}</h4>
 
             {/* Phone */}
-            <a
-              href="tel:+4367763471705"
-              className="footer-contact-item"
-            >
+            <a href="tel:+4367763471705" className="footer-contact-item">
               <span className="contact-icon">
                 <FaPhoneAlt />
               </span>
@@ -80,10 +74,7 @@ const Footer = () => {
             </a>
 
             {/* Email */}
-            <a
-              href="mailto:office@drloutfi.at"
-              className="footer-contact-item"
-            >
+            <a href="mailto:office@drloutfi.at" className="footer-contact-item">
               <span className="contact-icon">
                 <FaEnvelope />
               </span>
@@ -113,13 +104,11 @@ const Footer = () => {
                     <strong>
                       Billrothstraße 58/DG
                       <br />
-                      1190 Wien, Österreich
+                      1190 Vienna, Austria
                     </strong>
                   </div>
 
-                  <span className="info-arrow">
-                    →
-                  </span>
+                  <span className="info-arrow">→</span>
                 </a>
               </span>
             </div>
@@ -129,21 +118,13 @@ const Footer = () => {
           <Col lg={3} md={12} className="footer-links">
             <h4>{t.footer.quickLinks}</h4>
 
-            <a href="/about">
-              {t.footer.about}
-            </a>
+            <a href="/about">{t.footer.about}</a>
 
-            <a href="/treatment">
-              {t.footer.treatments}
-            </a>
+            <a href="/treatment">{t.footer.treatments}</a>
 
-            <a href="/faq">
-              {t.footer.whyUs}
-            </a>
+            <a href="/faq">{t.footer.whyUs}</a>
 
-            <a href="/booking">
-              {t.footer.appointment}
-            </a>
+            <a href="/booking">{t.footer.appointment}</a>
           </Col>
         </Row>
 
@@ -153,18 +134,13 @@ const Footer = () => {
         {/* Bottom */}
         <div className="footer-bottom">
           <p>
-            © 2026 <strong>Dr. Shadi Loutfi</strong>.{" "}
-            {t.footer.rights}
+            © 2026 <strong>Dr. Shadi Loutfi</strong>. {t.footer.rights}
           </p>
 
           <div className="footer-bottom-links">
-            <a href="/datenschutz">
-              {t.footer.privacy}
-            </a>
+            <a href="/datenschutz">{t.footer.privacy}</a>
 
-            <a href="/impressum">
-              {t.footer.imprint}
-            </a>
+            <a href="/impressum">{t.footer.imprint}</a>
           </div>
 
           <button

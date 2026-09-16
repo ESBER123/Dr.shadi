@@ -12,20 +12,18 @@ const faqTranslations = {
     intro: {
       label: "ORTHODONTICS",
       title: "Orthodontic treatment often comes with questions",
-      titleSecond: "Here you’ll find clear answers to some of the most common questions about braces, check-ups, discomfort and everyday care.",
-      text1:
-        "Our teeth and dentition occupy us almost our whole life. Of course, this also raises many questions, especially if you need special treatment such as orthodontics.",
-      text2:
-        "We have already summarized a few of the most common and important questions for you in advance, which will also prepare you for possible circumstances such as pain or follow-up treatments.",
+      titleSecond:
+        "Here you’ll find clear answers to some of the most common questions about braces, check-ups, discomfort and everyday care.",
+
       imageAlt: "Dental consultation",
     },
 
     faq: {
       label: "QUESTIONS & ANSWERS",
-      title: "Frequently asked questions",
+      title: "Frequently asked questions.",
       titleSecond: "questions.",
       description:
-        "FFind answers to the most important questions about orthodontic treatment, braces and everyday care.",
+        "Find answers to the most important questions about orthodontic treatment, braces and everyday care.",
 
       questions: [
         {
@@ -50,8 +48,7 @@ const faqTranslations = {
             "Some patients have very large teeth but small jaw bones. Even in this situation it is possible to force all the teeth into a jaw that is too small. Often, however, it makes more sense to sacrifice one tooth or another. The remaining teeth are then surrounded by enough healthy bone and a strong periodontium, so they can be properly nourished and kept for a lifetime. Otherwise it can lead to receding gums, periodontitis and premature tooth loss later in life. Leaving the teeth in a jaw bone that is too small does not make sense aesthetically either: the teeth protrude too far and make it harder for the patient to close the lips.",
         },
         {
-          question:
-            "Is retention necessary after the fixed brace is removed?",
+          question: "Is retention necessary after the fixed brace is removed?",
           answer:
             "Teeth tend to migrate back to their original position after the brace is removed. This is called a relapse. To prevent it, so-called retainers are used. They hold the teeth in their new position.",
         },
@@ -67,8 +64,7 @@ const faqTranslations = {
             "Orthodontic appliances move the teeth with very light forces. Nevertheless, at the start of the treatment and after a wire change, the teeth and gums can hurt, which in our experience subsides after a few days. If the pain persists, the treating orthodontist should be contacted. In the first days of treatment brackets can cause small sore spots on the oral mucosa. You can cover these spots with soft wax. After a short time the mucosa normally gets used to the brackets.",
         },
         {
-          question:
-            "Can I eat everything during the treatment with a brace?",
+          question: "Can I eat everything during the treatment with a brace?",
           answer:
             "It is sensible to avoid sweets between meals. I also advise against sugary chewing gum. Take care when eating hard food such as carrots, apples and hard crusts of bread. Parts of the brace can come loose.",
         },
@@ -81,18 +77,15 @@ const faqTranslations = {
         {
           question:
             "What should I do about a broken wire or a loose bracket or band?",
-          answer:
-            "Please contact the treating orthodontist immediately.",
+          answer: "Please contact the treating orthodontist immediately.",
         },
         {
-          question:
-            "May I chew gum during the orthodontic treatment?",
+          question: "May I chew gum during the orthodontic treatment?",
           answer:
             "Of course, but please use SUGAR FREE gum! There are studies showing that chewing gum can reduce the pain that occurs mainly in the first few days. The explanation is that the temporarily reduced blood flow in the periodontium, which causes the pain, is lessened by chewing gum.",
         },
         {
-          question:
-            "Can braces cause inflammation of the gums?",
+          question: "Can braces cause inflammation of the gums?",
           answer:
             "Swollen gums are often a first sign of insufficient oral hygiene. The bacteria in plaque cause the inflammation of the gums: they swell, turn a deep red and bleed easily. This condition can lead to receding gums and the loss of the bone underneath (periodontitis). If gum problems cannot be brought under control, the orthodontic treatment has to be stopped.",
         },
@@ -103,8 +96,7 @@ const faqTranslations = {
       label: "STILL HAVE QUESTIONS?",
       title: "We are here",
       titleSecond: "to help you.",
-      description:
-        "",
+      description: "",
       button: "Book a Consultation",
     },
   },
@@ -123,11 +115,6 @@ const faqTranslations = {
       label: "KIEFERORTHOPÄDIE",
       title: "Gut zu wissen",
       titleSecond: "vor Ihrer Behandlung.",
-      text1:
-        "Eine kieferorthopädische Behandlung wirft oft Fragen auf. Hier finden Sie Antworten auf einige der häufigsten Themen – von der Behandlung und möglichen Beschwerden bis hin zur Pflege und Nachsorge",
-      text2:
-        "Wir haben einige der häufigsten und wichtigsten Fragen bereits für Sie zusammengefasst. So können Sie sich auch auf mögliche Begleiterscheinungen wie Schmerzen oder spätere Behandlungen vorbereiten.",
-      imageAlt: "Zahnärztliche Beratung",
     },
 
     faq: {
@@ -140,8 +127,7 @@ const faqTranslations = {
 
       questions: [
         {
-          question:
-            "Verursachen Zahnspangen Karies oder Entkalkungen?",
+          question: "Verursachen Zahnspangen Karies oder Entkalkungen?",
           answer:
             "Kieferorthopädische Apparaturen verursachen an sich keine Schäden an den Zähnen. Sie begünstigen jedoch, dass sich Zahnbelag und Speisereste an den Zähnen ansammeln. Während der Behandlung ist es daher besonders wichtig, die Zähne nach jeder Mahlzeit gründlich zu putzen. Gelockerte Brackets und Bänder erhöhen das Kariesrisiko. Bitte informieren Sie uns sofort, wenn sich ein Bracket oder Band gelöst hat.",
         },
@@ -216,8 +202,7 @@ const faqTranslations = {
       label: "NOCH FRAGEN?",
       title: "Wir sind für Sie da",
       titleSecond: "und helfen Ihnen gerne.",
-      description:
-        "",
+      description: "",
       button: "Termin vereinbaren ",
     },
   },

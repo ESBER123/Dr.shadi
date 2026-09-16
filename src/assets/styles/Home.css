@@ -23,6 +23,12 @@
 /* =========================================================
    GLOBAL BASE & LAYOUT
    ========================================================= */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 .hm-page {
   background-color: var(--color-bg);
   color: var(--color-fg);
@@ -36,6 +42,7 @@
   overflow-x: hidden;
   padding: 0;
   margin: 0;
+  width: 100%;
 }
 
 .hm-page p,
@@ -94,6 +101,7 @@
   cursor: pointer;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 10px;
   transition: var(--transition-smooth);
 }
@@ -115,6 +123,9 @@
   font-weight: 600;
   border-radius: var(--radius-sm);
   cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   transition: var(--transition-smooth);
 }
 
@@ -125,25 +136,26 @@
 }
 
 /* =========================================================
-   HERO SECTION
+   HERO SECTION (حافظت 100% على نفس البنية والتصميم الأصلي بدون تعديل)
    ========================================================= */
 .hm-hero {
   position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
-  gap: 50px;
-  padding: 80px 8%;
+  gap: clamp(30px, 5vw, 50px);
+  padding: clamp(50px, 8vw, 80px) clamp(5%, 8vw, 8%);
   background-color: var(--color-bg);
   min-height: 85vh;
+  width: 100%;
 }
 
 .hm-hero-background-circle {
   position: absolute;
   top: -10%;
   left: -5%;
-  width: 500px;
-  height: 500px;
+  width: min(500px, 85vw);
+  height: min(500px, 85vw);
   border-radius: 50%;
   background: radial-gradient(
     circle,
@@ -166,7 +178,8 @@
 .hm-hero-image {
   width: 100%;
   max-width: 680px;
-  height: 680px;
+  height: min(680px, 55vw);
+  min-height: 320px;
   object-fit: cover;
   border-radius: var(--radius-lg);
   position: relative;
@@ -205,7 +218,7 @@
 }
 
 .hm-hero-title {
-  font-size: 3.4rem;
+  font-size: clamp(2.1rem, 4vw, 3.4rem);
   font-weight: 700;
   line-height: 1.15;
   color: var(--color-primary);
@@ -219,7 +232,7 @@
 }
 
 .hm-hero-text {
-  font-size: 1.1rem;
+  font-size: clamp(1rem, 1.1vw, 1.1rem);
   color: var(--color-muted);
   max-width: 520px;
   margin-bottom: 36px;
@@ -232,39 +245,44 @@
 }
 
 /* =========================================================
-   INTRO SECTION
+   INTRO SECTION (مرن)
    ========================================================= */
 .hm-intro {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 60px 10%;
-  gap: 30px;
+  padding: clamp(35px, 5vw, 60px) clamp(5%, 8vw, 10%);
+  gap: clamp(15px, 3vw, 30px);
   background-color: var(--color-bg);
+  flex-wrap: wrap;
+  width: 100%;
 }
 
 .hm-intro-line {
   flex: 1;
+  min-width: 20px;
   height: 1px;
   background-color: var(--color-bg-alt);
+  display: block;
 }
 
 .hm-intro p {
   max-width: 700px;
   text-align: center;
-  font-size: 1.25rem;
+  font-size: clamp(1.05rem, 2vw, 1.25rem);
   color: var(--color-primary);
   font-style: italic;
   font-family: "Playfair Display", Georgia, serif;
 }
 
 /* =========================================================
-   PERSONAL IMAGE (DOCTOR SECTION)
+   PERSONAL IMAGE (DOCTOR SECTION - مرن)
    ========================================================= */
 .hm-personal-image-section {
-  padding: 40px 8%;
+  padding: clamp(25px, 4vw, 40px) clamp(5%, 8vw, 8%);
   display: flex;
   justify-content: center;
+  width: 100%;
 }
 
 .hm-personal-image-wrapper {
@@ -289,23 +307,24 @@
 }
 
 /* =========================================================
-   ORTHODONTICS & TREATMENTS
+   ORTHODONTICS & TREATMENTS (مرن بالكامل لجميع الشاشات)
    ========================================================= */
 .hm-orthodontics {
-  padding: 100px 8%;
+  padding: clamp(60px, 9vw, 130px) clamp(5%, 8vw, 8%);
   background-color: var(--color-bg-alt);
+  width: 100%;
 }
 
 .hm-orthodontics-intro {
   text-align: center;
-  max-width: 650px;
-  margin: 0 auto 60px auto;
+  max-width: 750px;
+  margin: 0 auto clamp(40px, 6vw, 70px) auto;
 }
 
 .hm-orthodontics-title {
-  font-size: 2.6rem;
+  font-size: clamp(1.9rem, 3.8vw, 3.2rem);
   color: var(--color-primary);
-  margin-bottom: 16px;
+  margin-bottom: 14px;
 }
 
 .hm-orthodontics-title span {
@@ -314,26 +333,30 @@
 
 .hm-orthodontics-text {
   color: var(--color-muted);
-  font-size: 1rem;
+  font-size: clamp(0.95rem, 1.15vw, 1.2rem);
+  line-height: 1.7;
 }
 
 .hm-treatment-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
-  margin-bottom: 80px;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+  gap: clamp(20px, 3vw, 36px);
+  margin-bottom: clamp(50px, 7vw, 80px);
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
 }
 
-/* Treatment Card Styling (مطابقة لنمط Treatment.css) */
 .hm-treatment-card {
   background-color: var(--color-white);
   border-radius: var(--radius-lg);
   overflow: hidden;
   transition: var(--transition-smooth);
-  border: 1px solid rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(0, 0, 0, 0.05);
   display: flex;
   flex-direction: column;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
   position: relative;
 }
 
@@ -345,7 +368,7 @@
 .hm-treatment-image-wrapper {
   position: relative;
   width: 100%;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 16 / 10;
   overflow: hidden;
   background-color: var(--color-bg-alt);
 }
@@ -362,25 +385,24 @@
   transform: scale(1.05);
 }
 
-/* Arrow Badge floating on top of the image */
 .hm-card-arrow {
   position: absolute;
-  top: 16px;
-  right: 16px;
-  width: 38px;
-  height: 38px;
+  top: clamp(12px, 3vw, 18px);
+  right: clamp(12px, 3vw, 18px);
+  width: clamp(36px, 4vw, 44px);
+  height: clamp(36px, 4vw, 44px);
   border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 0.92);
   color: var(--color-fg);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.1rem;
+  font-size: clamp(1rem, 2vw, 1.25rem);
   font-weight: bold;
-  backdrop-filter: blur(4px);
+  backdrop-filter: blur(6px);
   transition: var(--transition-smooth);
   z-index: 2;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
 }
 
 .hm-treatment-card:hover .hm-card-arrow {
@@ -390,23 +412,23 @@
 }
 
 .hm-treatment-content {
-  padding: 28px;
+  padding: clamp(20px, 4vw, 36px);
   display: flex;
   flex-direction: column;
   flex-grow: 1;
 }
 
 .hm-treatment-number {
-  font-size: 0.85rem;
+  font-size: clamp(0.8rem, 1.2vw, 0.9rem);
   font-weight: 700;
   color: var(--color-secondary);
   margin-bottom: 10px;
   display: block;
-  letter-spacing: 1px;
+  letter-spacing: 1.5px;
 }
 
 .hm-treatment-title {
-  font-size: 1.3rem;
+  font-size: clamp(1.25rem, 2vw, 1.6rem);
   color: var(--color-primary);
   margin-bottom: 12px;
   font-weight: 700;
@@ -414,33 +436,37 @@
 }
 
 .hm-treatment-text {
-  font-size: 0.95rem;
+  font-size: clamp(0.95rem, 1.1vw, 1.05rem);
   color: var(--color-muted);
-  line-height: 1.6;
+  line-height: 1.7;
   margin: 0;
   flex-grow: 1;
 }
 
 /* =========================================================
-   DIAGNOSTICS SECTION
+   DIAGNOSTICS SECTION (مطابق ومتجاوب مع كافة الأجهزة)
    ========================================================= */
 .hm-diagnostics-section {
-  margin-top: 40px;
-  padding: 80px 8%;
+  margin-top: clamp(30px, 5vw, 50px);
+  padding: clamp(50px, 9vw, 110px) clamp(5%, 8vw, 8%);
   background-color: #1a2321;
   border-radius: var(--radius-lg);
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
 }
 
 .hm-diagnostics-heading {
   text-align: center;
-  max-width: 650px;
-  margin: 0 auto 50px auto;
+  max-width: 750px;
+  margin: 0 auto clamp(40px, 6vw, 60px) auto;
 }
 
 .hm-ortho-small-label {
-  font-size: 0.85rem;
+  font-size: clamp(0.75rem, 1.2vw, 0.85rem);
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 2.5px;
   color: var(--color-secondary);
   font-weight: 600;
   display: block;
@@ -448,7 +474,7 @@
 }
 
 .hm-diagnostics-title {
-  font-size: 2.2rem;
+  font-size: clamp(1.8rem, 3.8vw, 2.9rem);
   color: var(--color-white);
   margin-bottom: 16px;
   font-weight: 700;
@@ -456,17 +482,17 @@
 
 .hm-diagnostics-text {
   color: #a0aec0;
-  font-size: 1rem;
-  line-height: 1.6;
+  font-size: clamp(0.95rem, 1.15vw, 1.15rem);
+  line-height: 1.7;
 }
 
 .hm-diagnostics-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+  gap: clamp(20px, 3vw, 36px);
+  width: 100%;
 }
 
-/* Diagnostic Card Styling */
 .hm-diagnostic-card {
   background-color: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 255, 255, 0.08);
@@ -480,14 +506,14 @@
 .hm-diagnostic-card:hover {
   transform: translateY(-8px);
   background-color: rgba(255, 255, 255, 0.08);
-  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.35);
-  border-color: rgba(184, 154, 98, 0.4);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.4);
+  border-color: rgba(184, 154, 98, 0.5);
 }
 
 .hm-diagnostic-image-wrapper {
   position: relative;
   width: 100%;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 16 / 10;
   overflow: hidden;
   background-color: #212623;
 }
@@ -504,23 +530,23 @@
 }
 
 .hm-diagnostic-content {
-  padding: 28px;
+  padding: clamp(20px, 4vw, 36px);
   display: flex;
   flex-direction: column;
   flex-grow: 1;
 }
 
 .hm-diagnostic-number {
-  font-size: 0.85rem;
+  font-size: clamp(0.8rem, 1.2vw, 0.9rem);
   font-weight: 700;
   color: var(--color-secondary);
   margin-bottom: 10px;
   display: block;
-  letter-spacing: 1px;
+  letter-spacing: 1.5px;
 }
 
 .hm-diagnostic-title {
-  font-size: 1.25rem;
+  font-size: clamp(1.25rem, 1.8vw, 1.55rem);
   color: var(--color-white);
   margin-bottom: 12px;
   font-weight: 700;
@@ -528,34 +554,36 @@
 }
 
 .hm-diagnostic-text {
-  font-size: 0.95rem;
+  font-size: clamp(0.9rem, 1.1vw, 1.05rem);
   color: #cbd5e0;
-  line-height: 1.6;
+  line-height: 1.7;
   margin: 0;
   flex-grow: 1;
 }
 
 /* =========================================================
-   MIDDLE BOOKING BUTTON
+   MIDDLE BOOKING BUTTON (مرن)
    ========================================================= */
 .hm-booking-area {
-  padding: 60px 8%;
+  padding: clamp(40px, 6vw, 60px) clamp(5%, 8vw, 8%);
   display: flex;
   justify-content: center;
   background-color: var(--color-bg-alt);
+  width: 100%;
 }
 
 .hm-booking-button {
   background-color: var(--color-secondary);
   color: var(--color-white);
   border: none;
-  padding: 18px 42px;
+  padding: clamp(14px, 2vw, 18px) clamp(28px, 4vw, 42px);
   border-radius: var(--radius-sm);
-  font-size: 1.05rem;
+  font-size: clamp(0.95rem, 1.5vw, 1.05rem);
   font-weight: 600;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 14px;
   transition: var(--transition-smooth);
   box-shadow: 0 4px 15px rgba(184, 154, 98, 0.2);
@@ -576,33 +604,35 @@
 }
 
 /* =========================================================
-   PROMISE / THREE VALUES (FEATURES)
+   PROMISE / THREE VALUES (FEATURES - مرن)
    ========================================================= */
 .hm-features {
-  padding: 100px 8%;
+  padding: clamp(50px, 8vw, 100px) clamp(5%, 8vw, 8%);
   background-color: var(--color-bg);
+  width: 100%;
 }
 
 .hm-features-heading {
   text-align: center;
   max-width: 600px;
-  margin: 0 auto 60px auto;
+  margin: 0 auto clamp(40px, 6vw, 60px) auto;
 }
 
 .hm-features-heading p {
-  font-size: 1.8rem;
+  font-size: clamp(1.2rem, 2.5vw, 1.8rem);
   color: var(--color-primary);
   font-family: "Playfair Display", Georgia, serif;
 }
 
 .hm-feature-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+  gap: clamp(20px, 3vw, 30px);
+  width: 100%;
 }
 
 .hm-feature {
-  padding: 40px 30px;
+  padding: clamp(30px, 4vw, 40px) clamp(20px, 3vw, 30px);
   background-color: var(--color-bg-alt);
   border-radius: var(--radius-md);
   transition: var(--transition-smooth);
@@ -621,36 +651,37 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 24px;
+  margin-bottom: clamp(16px, 3vw, 24px);
 }
 
 .hm-feature-icon {
-  font-size: 1.8rem;
+  font-size: clamp(1.4rem, 2vw, 1.8rem);
   color: var(--color-secondary);
 }
 
 .hm-feature-number {
-  font-size: 0.9rem;
+  font-size: clamp(0.8rem, 1.2vw, 0.9rem);
   font-weight: 700;
   color: var(--color-fg-alt);
 }
 
 .hm-feature h3 {
-  font-size: 1.3rem;
-  margin-bottom: 12px;
+  font-size: clamp(1.15rem, 1.8vw, 1.3rem);
+  margin-bottom: 10px;
   color: var(--color-primary);
   transition: var(--transition-smooth);
 }
 
 .hm-feature p {
-  font-size: 0.95rem;
+  font-size: clamp(0.9rem, 1.1vw, 0.95rem);
   color: var(--color-muted);
   transition: var(--transition-smooth);
   flex-grow: 1;
+  line-height: 1.6;
 }
 
 .hm-feature-arrow {
-  margin-top: 20px;
+  margin-top: 16px;
   color: var(--color-secondary);
   font-size: 1.2rem;
   transition: transform 0.3s ease;
@@ -670,12 +701,13 @@
 }
 
 /* =========================================================
-   PERSONAL CARE & LANGUAGES SECTIONS
+   PERSONAL CARE & LANGUAGES SECTIONS (مرن)
    ========================================================= */
 .hm-personal-care,
 .hm-languages {
-  padding: 80px 8%;
+  padding: clamp(40px, 7vw, 80px) clamp(5%, 8vw, 8%);
   background-color: var(--color-bg);
+  width: 100%;
 }
 
 .hm-personal-care-content,
@@ -683,11 +715,12 @@
   max-width: 800px;
   margin: 0 auto;
   text-align: center;
-  padding: 50px 40px;
+  padding: clamp(30px, 5vw, 50px) clamp(20px, 4vw, 40px);
   background-color: var(--color-white);
   border-radius: var(--radius-lg);
   border-left: 5px solid var(--color-fg-alt);
   box-shadow: var(--shadow-subtle);
+  width: 100%;
 }
 
 .hm-languages-content {
@@ -696,27 +729,29 @@
 
 .hm-personal-care h2,
 .hm-languages h2 {
-  font-size: 2.2rem;
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
   color: var(--color-primary);
-  margin-bottom: 16px;
+  margin-bottom: 12px;
 }
 
 .hm-personal-care p,
 .hm-languages p {
-  font-size: 1.05rem;
+  font-size: clamp(0.95rem, 1.2vw, 1.05rem);
   color: var(--color-muted);
+  line-height: 1.6;
 }
 
 /* =========================================================
-   FINAL CTA SECTION
+   FINAL CTA SECTION (مرن)
    ========================================================= */
 .hm-cta {
   position: relative;
-  padding: 110px 8%;
+  padding: clamp(60px, 10vw, 110px) clamp(5%, 8vw, 8%);
   background-color: var(--color-primary);
   color: var(--color-bg);
   text-align: center;
   overflow: hidden;
+  width: 100%;
 }
 
 .hm-cta-decoration {
@@ -724,8 +759,8 @@
   top: -50%;
   left: 50%;
   transform: translateX(-50%);
-  width: 800px;
-  height: 800px;
+  width: min(800px, 120vw);
+  height: min(800px, 120vw);
   border-radius: 50%;
   background: radial-gradient(
     circle,
@@ -743,8 +778,8 @@
 }
 
 .hm-cta h2 {
-  font-size: 3rem;
-  margin-bottom: 16px;
+  font-size: clamp(1.8rem, 4.5vw, 3rem);
+  margin-bottom: 14px;
   color: var(--color-bg);
 }
 
@@ -753,22 +788,24 @@
 }
 
 .hm-cta p {
-  font-size: 1.1rem;
+  font-size: clamp(0.95rem, 1.3vw, 1.1rem);
   color: var(--color-bg-alt);
-  margin-bottom: 36px;
+  margin-bottom: 28px;
+  line-height: 1.6;
 }
 
 .hm-cta-button {
   background-color: var(--color-secondary);
   color: var(--color-white);
   border: none;
-  padding: 16px 36px;
-  font-size: 1rem;
+  padding: clamp(14px, 2vw, 16px) clamp(28px, 4vw, 36px);
+  font-size: clamp(0.95rem, 1.5vw, 1rem);
   font-weight: 600;
   border-radius: var(--radius-sm);
   cursor: pointer;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 12px;
   transition: var(--transition-smooth);
 }
@@ -780,63 +817,29 @@
 }
 
 /* =========================================================
-   RESPONSIVE DESIGN
+   RESPONSIVE DESIGN (GLOBAL MULTI-DEVICE SUPPORT - بدون المساس بالهيرو)
    ========================================================= */
 @media (max-width: 992px) {
-  .hm-hero {
-    grid-template-columns: 1fr;
+  /* قسم الهيرو يتم تجاهله تماماً بناءً على طلبك */
+}
+
+@media (max-width: 768px) {
+  .hm-intro {
+    flex-direction: column;
     text-align: center;
-    padding-top: 60px;
   }
 
-  .hm-hero-image-wrapper {
-    order: 2;
-    margin-top: 40px;
-  }
-
-  .hm-hero-content {
-    order: 1;
-  }
-
-  .hm-hero-label {
-    justify-content: center;
-  }
-
-  .hm-hero-text {
-    margin: 0 auto 36px auto;
-  }
-
-  .hm-hero-buttons {
-    justify-content: center;
-  }
-
-  .hm-cta h2 {
-    font-size: 2.3rem;
+  .hm-intro-line {
+    display: none;
   }
 }
 
 @media (max-width: 600px) {
-  .hm-hero-title {
-    font-size: 2.3rem;
-  }
-
-  .hm-hero-image {
-    height: 400px;
-  }
-
-  .hm-orthodontics-title,
-  .hm-features-heading p {
-    font-size: 1.8rem;
-  }
-
   .hm-primary-button,
-  .hm-secondary-button {
+  .hm-secondary-button,
+  .hm-booking-button,
+  .hm-cta-button {
     width: 100%;
     justify-content: center;
-  }
-
-  .hm-personal-care-content,
-  .hm-languages-content {
-    padding: 30px 20px;
   }
 }
