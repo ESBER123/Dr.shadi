@@ -1,456 +1,106 @@
-/* =========================================================
-   APPOINTMENT CONFIRMED
-   Luxury Minimal / Dental Clinic
-   Responsive Design
-========================================================= */
-
+/* ==========================================
+   APPOINTMENT CONFIRMED PAGE STYLES
+   ========================================== */
 .appointment-confirmed-page {
-  --foreground: #252525;
-  --background: #f5f1ea;
-  --primary: #303a34;
-  --secondary: #b89a62;
-  --background-alt: #e8e1d8;
-  --foreground-alt: #6f897b;
-
-  min-height: 100svh;
   position: relative;
-
+  background-color: var(--color-bg);
+  color: var(--color-fg);
+  min-height: 90vh;
   display: flex;
   align-items: center;
   justify-content: center;
-
-  padding: clamp(24px, 5vw, 80px);
-
-  background: var(--background);
-
-  color: var(--foreground);
-
+  padding: 4rem 2rem;
   overflow: hidden;
-  isolation: isolate;
 }
 
-/* =========================================================
-   DECORATIVE BACKGROUND
-========================================================= */
-
-.appointment-confirmed-page::before {
-  content: "";
-  position: absolute;
-
-  width: min(55vw, 650px);
-  height: min(55vw, 650px);
-
-  top: -30%;
-  right: -15%;
-
-  border-radius: 50%;
-
-  background: rgba(111, 137, 123, 0.1);
-
-  z-index: -2;
-}
-
-.appointment-confirmed-page::after {
-  content: "";
-  position: absolute;
-
-  width: min(45vw, 500px);
-  height: min(45vw, 500px);
-
-  bottom: -30%;
-  left: -15%;
-
-  border-radius: 50%;
-
-  background: rgba(184, 154, 98, 0.08);
-
-  z-index: -2;
-}
-
-/* =========================================================
-   EXTRA CIRCLES
-========================================================= */
-
+/* Background Circles */
 .confirmed-background-circle {
   position: absolute;
-
+  width: 350px;
+  height: 350px;
   border-radius: 50%;
-
+  background: var(--color-bg-alt);
+  opacity: 0.6;
+  z-index: 0;
   pointer-events: none;
-
-  z-index: -1;
 }
 
 .confirmed-circle-one {
-  width: clamp(180px, 25vw, 330px);
-  height: clamp(180px, 25vw, 330px);
-
-  top: 8%;
-  left: -12%;
-
-  border: 1px solid rgba(184, 154, 98, 0.18);
+  top: -100px;
+  right: -100px;
 }
 
 .confirmed-circle-two {
-  width: clamp(140px, 20vw, 260px);
-  height: clamp(140px, 20vw, 260px);
-
-  bottom: 5%;
-  right: -8%;
-
-  border: 1px solid rgba(111, 137, 123, 0.16);
+  bottom: -100px;
+  left: -100px;
 }
 
-/* =========================================================
-   MAIN CARD
-========================================================= */
-
+/* Confirmation Card */
 .appointment-confirmed-card {
   position: relative;
-
-  width: min(100%, 760px);
-
-  padding: clamp(38px, 6vw, 72px) clamp(24px, 7vw, 75px);
-
+  z-index: 1;
+  background-color: var(--color-bg-alt);
+  max-width: 600px;
+  width: 100%;
+  padding: 3.5rem 3rem;
+  border-radius: 8px;
   text-align: center;
-
-  background: rgba(255, 255, 255, 0.72);
-
-  border: 1px solid rgba(48, 58, 52, 0.1);
-
-  border-radius: clamp(20px, 3vw, 32px);
-
-  box-shadow:
-    0 30px 80px rgba(37, 37, 37, 0.08),
-    0 8px 25px rgba(37, 37, 37, 0.04);
-
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-
-  animation: confirmedFadeIn 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+  box-shadow: 0 15px 35px rgba(37, 37, 37, 0.05);
+  border: 1px solid rgba(184, 154, 98, 0.2);
 }
-
-/* =========================================================
-   TOP GOLD LINE
-========================================================= */
-
-.appointment-confirmed-card::before {
-  content: "";
-
-  position: absolute;
-
-  top: 0;
-  left: 50%;
-
-  width: 80px;
-  height: 3px;
-
-  transform: translateX(-50%);
-
-  background: var(--secondary);
-
-  border-radius: 0 0 5px 5px;
-}
-
-/* =========================================================
-   CHECK ICON
-========================================================= */
 
 .confirmed-icon {
-  width: clamp(64px, 9vw, 82px);
-  height: clamp(64px, 9vw, 82px);
-
-  margin: 0 auto clamp(22px, 3vw, 30px);
-
+  width: 70px;
+  height: 70px;
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+  font-size: 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
-
   border-radius: 50%;
-
-  background: var(--primary);
-
-  color: var(--background);
-
-  font-size: clamp(28px, 4vw, 38px);
-
-  font-weight: 400;
-
-  box-shadow: 0 12px 30px rgba(48, 58, 52, 0.18);
-
-  position: relative;
+  margin: 0 auto 1.5rem auto;
 }
-
-/* Gold ring around icon */
-
-.confirmed-icon::before {
-  content: "";
-
-  position: absolute;
-
-  inset: -7px;
-
-  border: 1px solid var(--secondary);
-
-  border-radius: 50%;
-
-  opacity: 0.65;
-}
-
-/* =========================================================
-   LABEL
-========================================================= */
 
 .confirmed-label {
-  display: block;
-
-  margin-bottom: clamp(18px, 3vw, 25px);
-
-  color: var(--secondary);
-
-  font-size: clamp(11px, 1.5vw, 14px);
-
-  font-weight: 700;
-
-  letter-spacing: clamp(1.5px, 0.35vw, 3px);
-
+  font-size: 0.85rem;
   text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--color-fg-alt);
+  display: block;
+  margin-bottom: 0.75rem;
 }
-
-/* =========================================================
-   TITLE
-========================================================= */
 
 .appointment-confirmed-card h1 {
-  margin: 0 auto clamp(20px, 3vw, 28px);
-
-  max-width: 620px;
-
-  color: var(--foreground);
-
-  font-size: clamp(25px, 4vw, 38px);
-
-  line-height: 1.25;
-
-  font-weight: 500;
-
-  letter-spacing: -0.4px;
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  margin-bottom: 1rem;
+  color: var(--color-fg);
 }
-
-/* =========================================================
-   MAIN MESSAGE
-========================================================= */
 
 .confirmed-main-text {
-  max-width: 600px;
-
-  margin: 0 auto clamp(18px, 2.5vw, 24px);
-
-  color: var(--primary);
-
-  font-size: clamp(17px, 2vw, 21px);
-
-  line-height: 1.6;
-
+  font-size: 1.1rem;
+  color: var(--color-primary);
   font-weight: 500;
+  margin-bottom: 1rem;
 }
-
-/* =========================================================
-   DESCRIPTION
-========================================================= */
 
 .confirmed-description {
-  max-width: 610px;
-
-  margin: 0 auto;
-
-  color: var(--foreground-alt);
-
-  font-size: clamp(15px, 1.8vw, 17px);
-
-  line-height: 1.85;
-
-  font-weight: 400;
+  font-size: 0.95rem;
+  color: var(--color-fg);
+  line-height: 1.6;
+  margin-bottom: 2rem;
 }
-
-/* =========================================================
-   DIVIDER
-========================================================= */
 
 .confirmed-divider {
-  width: 65px;
+  width: 60px;
   height: 1px;
-
-  margin: clamp(27px, 4vw, 38px) auto;
-
-  background: var(--secondary);
-
-  opacity: 0.8;
+  background-color: var(--color-secondary);
+  margin: 0 auto 2rem auto;
 }
-
-/* =========================================================
-   FOOTER
-========================================================= */
 
 .confirmed-footer {
-  margin: 0;
-
-  color: var(--primary);
-
-  font-size: clamp(14px, 1.7vw, 16px);
-
-  line-height: 1.6;
-
-  font-weight: 500;
-}
-
-/* =========================================================
-   ANIMATION
-========================================================= */
-
-@keyframes confirmedFadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(25px) scale(0.98);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
-}
-
-/* =========================================================
-   LARGE DESKTOP
-========================================================= */
-
-@media (min-width: 1400px) {
-  .appointment-confirmed-page {
-    padding: 100px;
-  }
-
-  .appointment-confirmed-card {
-    max-width: 800px;
-  }
-}
-
-/* =========================================================
-   TABLET
-========================================================= */
-
-@media (max-width: 900px) {
-  .appointment-confirmed-page {
-    padding: 50px 25px;
-  }
-
-  .appointment-confirmed-card {
-    width: min(100%, 700px);
-  }
-}
-
-/* =========================================================
-   MOBILE
-========================================================= */
-
-@media (max-width: 600px) {
-  .appointment-confirmed-page {
-    min-height: 100svh;
-
-    padding: 24px 16px;
-  }
-
-  .appointment-confirmed-card {
-    padding: 48px 22px 42px;
-
-    border-radius: 22px;
-
-    box-shadow: 0 20px 50px rgba(37, 37, 37, 0.07);
-  }
-
-  .appointment-confirmed-card::before {
-    width: 60px;
-  }
-
-  .confirmed-description {
-    line-height: 1.75;
-  }
-
-  .confirmed-circle-one {
-    left: -25%;
-  }
-
-  .confirmed-circle-two {
-    right: -25%;
-  }
-}
-
-/* =========================================================
-   VERY SMALL PHONES
-========================================================= */
-
-@media (max-width: 380px) {
-  .appointment-confirmed-page {
-    padding: 16px 12px;
-  }
-
-  .appointment-confirmed-card {
-    padding: 42px 18px 36px;
-  }
-
-  .appointment-confirmed-card h1 {
-    font-size: 23px;
-  }
-
-  .confirmed-main-text {
-    font-size: 16px;
-  }
-
-  .confirmed-description {
-    font-size: 14px;
-  }
-}
-
-/* =========================================================
-   LANDSCAPE MOBILE
-========================================================= */
-
-@media (max-height: 600px) and (orientation: landscape) {
-  .appointment-confirmed-page {
-    min-height: auto;
-
-    padding: 35px 20px;
-  }
-
-  .appointment-confirmed-card {
-    padding: 35px 30px;
-  }
-
-  .confirmed-icon {
-    width: 58px;
-    height: 58px;
-
-    margin-bottom: 18px;
-  }
-
-  .appointment-confirmed-card h1 {
-    margin-bottom: 15px;
-  }
-
-  .confirmed-description {
-    line-height: 1.55;
-  }
-
-  .confirmed-divider {
-    margin: 20px auto;
-  }
-}
-
-/* =========================================================
-   REDUCED MOTION
-========================================================= */
-
-@media (prefers-reduced-motion: reduce) {
-  .appointment-confirmed-card {
-    animation: none;
-  }
+  font-size: 0.9rem;
+  color: var(--color-fg-alt);
+  font-style: italic;
+  margin-bottom: 1.5rem;
 }

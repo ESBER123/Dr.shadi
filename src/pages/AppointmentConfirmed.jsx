@@ -3,7 +3,6 @@ import "../assets/styles/AppointmentConfirmed.css";
 
 const AppointmentConfirmed = () => {
   const { language } = useLanguage();
-
   const content = {
     en: {
       label: "APPOINTMENT CONFIRMED",
@@ -13,7 +12,6 @@ const AppointmentConfirmed = () => {
         "We look forward to welcoming you to our practice and helping you on your journey to a healthy, confident smile.",
       footer: "We look forward to seeing you.",
     },
-
     de: {
       label: "TERMIN BESTÄTIGT",
       title: "Vielen Dank für Ihre Terminvereinbarung.",

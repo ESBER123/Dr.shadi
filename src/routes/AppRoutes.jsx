@@ -9,6 +9,7 @@ import Booking from "../pages/Booking";
 import Impressum from "../pages/Impressum";
 import Datenschutz from "../pages/Datenschutz";
 import AppointmentConfirmed from "../pages/AppointmentConfirmed";
+
 const AppRoutes = () => {
   return (
     <>

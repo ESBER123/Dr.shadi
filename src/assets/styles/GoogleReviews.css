@@ -1,0 +1,232 @@
+/* =========================================================
+   GOOGLE REVIEWS SECTION STYLING
+========================================================= */
+
+.google-reviews-section {
+  width: 100% !important;
+  padding: 60px 20px !important;
+  background-color: #f5f1ea !important;
+  box-sizing: border-box !important;
+  text-align: center !important;
+}
+
+.reviews-header {
+  margin-bottom: 40px !important;
+}
+
+.reviews-tag {
+  font-size: 13px !important;
+  letter-spacing: 0.15em !important;
+  color: #b89a62 !important;
+  text-transform: uppercase !important;
+  font-weight: 600 !important;
+}
+
+.reviews-header h2 {
+  font-size: 42px !important;
+  color: #252525 !important;
+  margin: 10px 0 15px 0 !important;
+  font-family: serif !important;
+}
+
+.reviews-header h2 .italic-accent {
+  font-style: italic !important;
+  color: #b89a62 !important;
+  font-weight: normal !important;
+}
+
+.reviews-subtitle {
+  font-size: 16px !important;
+  color: #555555 !important;
+}
+
+/* حاوية السلايدر والكارتات */
+.reviews-container {
+  max-width: 1350px !important;
+  margin: 0 auto 30px auto !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 15px !important;
+  position: relative !important;
+}
+
+.reviews-track-wrapper {
+  overflow: hidden !important;
+  width: 100% !important;
+  max-width: 1120px !important;
+}
+
+.reviews-track {
+  display: flex !important;
+  gap: 20px !important;
+  transition: transform 0.5s ease-in-out !important;
+}
+
+/* تصميم كارت التقييم الواحد */
+.review-card {
+  min-width: 350px !important;
+  max-width: 350px !important;
+  background: #ffffff !important;
+  border-radius: 16px !important;
+  padding: 25px !important;
+  box-shadow: 0 8px 25px rgba(48, 58, 52, 0.04) !important;
+  border: 1px solid #e8e1d8 !important;
+  text-align: left !important;
+  box-sizing: border-box !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+}
+
+.review-card-top {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: flex-start !important;
+  margin-bottom: 12px !important;
+}
+
+.reviewer-info {
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+}
+
+.reviewer-avatar {
+  width: 40px !important;
+  height: 40px !important;
+  background-color: #303a34 !important;
+  color: #f5f1ea !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-weight: 700 !important;
+  font-size: 16px !important;
+}
+
+.reviewer-name {
+  font-size: 15px !important;
+  color: #252525 !important;
+  margin: 0 0 2px 0 !important;
+  font-weight: 600 !important;
+}
+
+.review-time {
+  font-size: 12px !important;
+  color: #888888 !important;
+}
+
+.review-stars {
+  color: #fbbc05 !important;
+  font-size: 16px !important;
+  letter-spacing: 2px !important;
+  margin-bottom: 15px !important;
+}
+
+.review-text {
+  font-size: 14px !important;
+  color: #333333 !important;
+  line-height: 1.6 !important;
+  margin: 0 !important;
+}
+
+/* أزرار السلايدر الجانبية */
+.carousel-btn {
+  background: #ffffff !important;
+  border: 1px solid #d5ccc0 !important;
+  color: #303a34 !important;
+  width: 45px !important;
+  height: 45px !important;
+  border-radius: 50% !important;
+  font-size: 24px !important;
+  cursor: pointer !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  transition: all 0.3s ease !important;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05) !important;
+  flex-shrink: 0 !important;
+  z-index: 10 !important;
+}
+
+.carousel-btn:hover {
+  background-color: #303a34 !important;
+  color: #f5f1ea !important;
+  border-color: #303a34 !important;
+}
+
+/* تقييم جوجل السفلي */
+.google-footer-rating {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  margin-top: 25px !important;
+  font-size: 15px !important;
+  color: #252525 !important;
+}
+
+.g-logo-letter {
+  font-weight: 800 !important;
+  color: #4285f4 !important;
+  font-size: 18px !important;
+}
+
+.footer-stars {
+  color: #fbbc05 !important;
+  letter-spacing: 1px !important;
+}
+
+.footer-score {
+  font-weight: 700 !important;
+}
+
+.footer-divider {
+  color: #aaa !important;
+}
+
+.footer-count {
+  color: #666 !important;
+}
+
+/* رابط قراءة كل التقييمات */
+.read-all-container {
+  margin-top: 10px !important;
+}
+
+.read-all-link {
+  color: #b89a62 !important;
+  text-decoration: none !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  transition: opacity 0.2s ease !important;
+}
+
+.read-all-link:hover {
+  opacity: 0.8 !important;
+  text-decoration: underline !important;
+}
+
+/* التجاوب مع الهواتف والأجهزة الصغيرة */
+@media screen and (max-width: 768px) {
+  .reviews-header h2 {
+    font-size: 30px !important;
+  }
+
+  .reviews-container {
+    padding: 0 10px !important;
+  }
+
+  .carousel-btn {
+    display: none !important;
+  }
+
+  .reviews-track-wrapper {
+    max-width: 100% !important;
+  }
+
+  .review-card {
+    min-width: 280px !important;
+  }
+}

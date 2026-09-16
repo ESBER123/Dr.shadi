@@ -14,7 +14,7 @@ const translations = {
       quickLinks: "Quick Links",
       about: "About Us",
       treatments: "Treatments",
-      whyUs: "Why Choose Us",
+      whyUs: "FAQ",
       appointment: "Book a Consultation",
 
       rights: "All rights reserved.",
@@ -40,7 +40,7 @@ const translations = {
       quickLinks: "Schnellzugriff",
       about: "Über uns ",
       treatments: "Behandlungen",
-      whyUs: "Warum wir?",
+      whyUs: "FAQ?",
       appointment: "Termin vereinbaren",
 
       rights: "Alle Rechte vorbehalten.",

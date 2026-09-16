@@ -1,17 +1,12 @@
-// Booking.jsx
 import { useLanguage } from "../context/LanguageContext";
 import { bookingTranslations } from "../translat/bookingTranslations";
 import "../assets/styles/Booking.css";
-
 const Booking = () => {
   const { language } = useLanguage();
   const t = bookingTranslations[language] || bookingTranslations.en;
 
   return (
     <main className="booking-page">
-      <div className="booking-background-circle booking-circle-one"></div>
-      <div className="booking-background-circle booking-circle-two"></div>
-
       <section className="booking-header">
         <div className="booking-label">
           <span></span>

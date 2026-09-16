@@ -467,7 +467,7 @@ const translations = {
     heroImageAlt: "Moderne kieferorthopädische Praxis",
 
     // =========================================================
-    // DOCTOR SECTION (IHRE KIEFERORTHOPÄDIE) - تمت الإضافة هنا
+    // DOCTOR SECTION (IHRE KIEFERORTHOPÄDIE)
     // =========================================================
     doctorSectionLabel: "IHRE KIEFERORTHOPÄDIE",
     doctorSectionTitleBefore: "Mehr als",
@@ -779,6 +779,32 @@ const translations = {
     languagesTitle: "",
     languagesText:
       "Wir sprechen Deutsch, Englisch, Russisch, Ukrainisch, Türkisch und Arabisch, damit die Kommunikation so einfach und angenehm wie möglich ist.",
+
+    // =========================================================
+    // CTA
+    // =========================================================
+
+    ctaLabel: "Beratung vereinbaren",
+
+    ctaTitleBefore: "Finden wir gemeinsam die",
+    ctaTitleHighlight: "passende Behandlung für Sie.",
+
+    ctaText:
+      "In einem persönlichen Gespräch besprechen wir Ihre Wünsche, beurteilen Ihre individuelle Situation und erklären Ihnen die Behandlungsoptionen.",
+
+    start: "Beratung vereinbaren →",
+
+    // =========================================================
+    // FOOTER
+    // =========================================================
+
+    footerDescription:
+      "Moderne Kieferorthopädie für ein gesundes, funktionelles und schönes Lächeln. Individuelle Behandlung mit persönlicher Betreuung und moderner Technologie.",
+
+    footerAbout: "Über uns",
+    footerTreatments: "Behandlungen",
+    footerWhyChooseUs: "Warum wir?",
+    footerBookConsultation: "Termin vereinbaren",
   },
 };
 

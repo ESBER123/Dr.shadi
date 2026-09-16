@@ -11,6 +11,7 @@ import ChildrenImage from "../images/ChildrenTeenagers.jpg";
 import DigitalScanningImage from "../images/Digitaler3DScanner.png";
 import ModJawImage from "../images/Modjaw.png";
 import DVTImage from "../images/3DImagingDVT.png";
+import GoogleReviews from "./GoogleReviews.jsx";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -430,7 +431,8 @@ const Home = () => {
           ))}
         </div>
       </section>
-
+      {/* صفحه حوحول  */}
+      <GoogleReviews />
       {/* =====================================================
           PERSONAL CARE
       ===================================================== */}

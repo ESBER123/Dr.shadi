@@ -1,219 +1,138 @@
-:root {
-  --bg-color: rgba(245, 241, 234, 0.78); /* شفافية أعلى وأنيقة أثناء التحريك */
-  --bg-alt: #e8e1d8;
-  --fg-color: #252525;
-  --primary-color: #303a34;
-  --secondary-color: #b89a62;
-  --muted-sage: #6f897b;
-  --transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+/* =========================================================
+   BOOKING PAGE - FULL WIDTH & CLEAN STYLE
+========================================================= */
+
+.booking-page {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  padding: 50px 0 80px 0 !important;
+  background-color: #f5f1ea !important;
+  box-sizing: border-box !important;
+  display: block !important;
 }
 
-/* خلفية الصفحة العامة */
-body {
-  background-color: var(--bg-alt);
-  margin: 0;
-  font-family: inherit;
+/* Header Section */
+.booking-header {
+  text-align: center !important;
+  max-width: 1200px !important;
+  margin: 0 auto 40px auto !important;
+  padding: 0 20px !important;
 }
 
-/* إخفاء زر الموبايل نهائياً */
-.mobile-menu-toggle {
-  display: none !important;
+.booking-label {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.15em !important;
+  text-transform: uppercase !important;
+  color: #6f897b !important;
+  margin-bottom: 15px !important;
 }
 
-/* الكبسولة العائمة الأعرض والشفافة */
-.navbar {
-  position: sticky;
-  top: 18px;
-  z-index: 1000;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  max-width: 1050px; /* عرض أوسع وأفخم */
-  width: 92%; /* تمدد مرن للشاشات المتوسطة والكبيرة */
-  margin: 1.2rem auto;
-  padding: 1.5rem 3rem;
-  background-color: var(--bg-color);
-  backdrop-filter: blur(16px); /* ضبابية زجاجية أنعم وأقوى */
-  -webkit-backdrop-filter: blur(16px);
-  border-radius: 40px;
-  border: 1px solid rgba(184, 154, 98, 0.32);
-  box-shadow: 0 14px 40px rgba(48, 58, 52, 0.1);
-  gap: 1.3rem;
-  text-align: center;
-  box-sizing: border-box;
-  transition: var(--transition);
+.booking-label span {
+  width: 30px !important;
+  height: 1px !important;
+  background-color: #b89a62 !important;
+  display: inline-block !important;
 }
 
-/* الشعار الكبير والواضح في المنتصف تماماً */
-.logo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.booking-header h1 {
+  font-size: clamp(36px, 4vw, 52px) !important;
+  color: #303a34 !important;
+  font-weight: 400 !important;
+  margin: 0 0 15px 0 !important;
+  line-height: 1.2 !important;
 }
 
-.logo img {
-  height: 72px;
-  width: auto;
-  display: block;
-  transition: var(--transition);
+.booking-header h1 em {
+  color: #b89a62 !important;
+  font-style: italic !important;
+  font-family: serif !important;
 }
 
-.logo img:hover {
-  transform: scale(1.03);
+.booking-header p {
+  color: #252525 !important;
+  font-size: 16px !important;
+  opacity: 0.8 !important;
+  max-width: 600px !important;
+  margin: 0 auto !important;
+  line-height: 1.6 !important;
 }
 
-/* الحاوية الوسطى لترتيب الروابط والأزرار */
-.header-center {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 1.1rem;
-  width: 100%;
+/* Card / Content Section -> أصبحت ممتدة وكاملة وليست كارت */
+.booking-card {
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  padding: 0 20px !important;
+  box-shadow: none !important;
+  max-width: 1400px !important;
+  margin: 0 auto !important;
 }
 
-.header-center.open {
-  right: auto;
+.booking-card-top {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  margin-bottom: 25px !important;
+  flex-wrap: wrap !important;
+  gap: 20px !important;
+  padding: 0 10px !important;
 }
 
-/* روابط التنقل (Nav Links) */
-.nav-links {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 2.2rem;
+.booking-card-label {
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.2em !important;
+  color: #6f897b !important;
+  text-transform: uppercase !important;
+  display: block !important;
+  margin-bottom: 6px !important;
 }
 
-.nav-links a {
-  text-decoration: none;
-  color: var(--fg-color);
-  font-weight: 500;
-  font-size: 0.96rem;
-  letter-spacing: 0.5px;
-  position: relative;
-  transition: var(--transition);
+.booking-card-top h2 {
+  font-size: 26px !important;
+  color: #303a34 !important;
+  margin: 0 !important;
+  font-weight: 400 !important;
 }
 
-.nav-links a:hover,
-.nav-links a.active {
-  color: var(--secondary-color);
+.booking-status {
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  color: #6f897b !important;
+  background-color: #e8e1d8 !important;
+  padding: 6px 14px !important;
+  border-radius: 50px !important;
 }
 
-.nav-links a::after {
-  content: "";
-  position: absolute;
-  bottom: -4px;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background-color: var(--secondary-color);
-  transition: var(--transition);
+.booking-status span {
+  width: 8px !important;
+  height: 8px !important;
+  border-radius: 50% !important;
+  background-color: #b89a62 !important;
+  display: inline-block !important;
 }
 
-.nav-links a:hover::after,
-.nav-links a.active::after {
-  width: 100%;
+/* Iframe Section - تأخذ عرض الشاشة وبتصميم مريح */
+.booking-frame {
+  width: 100% !important;
+  border-radius: 16px !important;
+  overflow: hidden !important;
+  background-color: #ffffff !important;
+  box-shadow: 0 10px 30px rgba(48, 58, 52, 0.04) !important;
+  border: 1px solid rgba(184, 154, 98, 0.2) !important;
 }
 
-/* أزرار الإجراءات */
-.header-actions {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1.2rem;
-  flex-wrap: wrap;
-  margin-top: 0.2rem;
-}
-
-/* زر تبديل اللغة الأنيق */
-.language-switch {
-  background: rgba(232, 225, 216, 0.6);
-  border: 1px solid rgba(111, 137, 123, 0.35);
-  padding: 0.5rem 1.1rem;
-  border-radius: 25px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: var(--muted-sage);
-  transition: var(--transition);
-}
-
-.language-switch:hover {
-  border-color: var(--secondary-color);
-  color: var(--primary-color);
-}
-
-.language-switch span.active {
-  color: var(--secondary-color);
-}
-
-.language-divider {
-  color: var(--muted-sage);
-  opacity: 0.6;
-}
-
-/* زر حجز موعد */
-.header-cta {
-  background-color: var(--primary-color);
-  color: #f5f1ea;
-  padding: 0.65rem 1.8rem;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 0.88rem;
-  letter-spacing: 0.8px;
-  box-shadow: 0 4px 15px rgba(48, 58, 52, 0.2);
-  transition: var(--transition);
-  text-transform: uppercase;
-}
-
-.header-cta:hover {
-  background-color: var(--secondary-color);
-  color: var(--fg-color);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(184, 154, 98, 0.35);
-}
-
-/* ==========================================
-   التجاوب مع الشاشات والموبايل (Responsive)
-   ========================================== */
-@media (max-width: 768px) {
-  .navbar {
-    top: 10px;
-    width: 95%;
-    margin: 0.8rem auto;
-    padding: 1.2rem 1.2rem;
-    border-radius: 30px;
-    gap: 1rem;
-  }
-
-  .logo img {
-    height: 52px;
-  }
-
-  .nav-links {
-    gap: 1.1rem;
-    font-size: 0.85rem;
-  }
-
-  .nav-links a {
-    font-size: 0.85rem;
-  }
-
-  .header-actions {
-    flex-direction: row;
-    gap: 0.8rem;
-    width: 100%;
-    justify-content: center;
-  }
-
-  .header-cta {
-    padding: 0.6rem 1.3rem;
-    font-size: 0.8rem;
-  }
+.booking-frame iframe {
+  width: 100% !important;
+  height: 750px !important;
+  border: none !important;
+  display: block !important;
 }

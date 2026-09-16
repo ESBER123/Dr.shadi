@@ -112,7 +112,7 @@ const Contact = () => {
               <strong>
                 Billrothstraße 58/DG
                 <br />
-                1190 Vienna, Austria
+                1190 Vienna, os
               </strong>
             </div>
 

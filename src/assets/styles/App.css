@@ -1,210 +1,188 @@
-:root {
-  --bg-color: #f5f1ea;
-  --bg-alt: #e8e1d8;
-  --fg-color: #252525;
-  --primary-color: #303a34;
-  --secondary-color: #b89a62;
-  --muted-sage: #6f897b;
-  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+/* =========================================================
+   FLOATING CARD HEADER - LARGE & CLEAR (Client Exact Request)
+========================================================= */
+
+.navbar-floating-wrapper {
+  width: 100% !important;
+  padding: 30px 40px !important;
+  background-color: #f5f1ea !important;
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 1000 !important;
+  box-sizing: border-box !important;
 }
 
-/* خلفية الصفحة العامة لتبان الكبسولة بشكل بارز وفخم */
-body {
-  background-color: var(--bg-alt);
-  margin: 0;
-  font-family: inherit;
+/* الكارت الأساسي الفخم والعريض */
+.navbar-card {
+  max-width: 1450px !important;
+  margin: 0 auto !important;
+  background-color: #f5f1ea !important;
+  border: 1px solid #e8e1d8 !important;
+  border-radius: 40px !important;
+  padding: 35px 60px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  gap: 30px !important;
+  box-shadow: 0 15px 40px rgba(48, 58, 52, 0.06) !important;
+  box-sizing: border-box !important;
 }
 
-/* إخفاء زر الموبايل نهائياً */
-.mobile-menu-toggle {
-  display: none !important;
+/* الشعار أصبح كبيراً وواضحاً جداً في المنتصف */
+.logo-center img {
+  height: 75px !important;
+  width: auto !important;
+  display: block !important;
+  object-fit: contain !important;
 }
 
-/* تصميم الهيدر على شكل كبسولة عائمة في المنتصف */
-.navbar {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  max-width: 900px;
-  margin: 1.5rem auto;
-  padding: 1.8rem 2.5rem;
-  background-color: var(--bg-color);
-  border-radius: 40px; /* شكل الكبسولة */
-  border: 1px solid rgba(184, 154, 98, 0.25);
-  box-shadow: 0 10px 30px rgba(48, 58, 52, 0.08);
-  gap: 1.5rem;
-  text-align: center;
-  box-sizing: border-box;
-}
-
-/* الشعار الكبير والواضح في المنتصف تماماً */
-.logo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.logo img {
-  height: 75px; /* حجم كبير وبارز مطابق للصورة */
-  width: auto;
-  display: block;
-  transition: var(--transition);
-}
-
-.logo img:hover {
-  transform: scale(1.03);
-}
-
-/* الحاوية الوسطى لترتيب الروابط والأزرار */
+/* الحاوية السفلية (الروابط والأزرار) متباعدة وواضحة */
 .header-center {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 1.2rem;
-  width: 100%;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
 }
 
-.header-center.open {
-  right: auto;
-}
-
-/* روابط التنقل (Nav Links) */
+/* روابط التنقل بحجم كبير وخط واضح جداً */
 .nav-links {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 2rem;
+  display: flex !important;
+  align-items: center !important;
+  gap: 45px !important;
+  margin: 0 auto !important;
 }
 
 .nav-links a {
-  text-decoration: none;
-  color: var(--fg-color);
-  font-weight: 500;
-  font-size: 0.95rem;
-  letter-spacing: 0.5px;
-  position: relative;
-  transition: var(--transition);
+  text-decoration: none !important;
+  color: #252525 !important;
+  font-size: 19px !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.02em !important;
+  transition: color 0.3s ease !important;
 }
 
 .nav-links a:hover,
 .nav-links a.active {
-  color: var(--secondary-color);
+  color: #b89a62 !important;
 }
 
-.nav-links a::after {
-  content: "";
-  position: absolute;
-  bottom: -4px;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background-color: var(--secondary-color);
-  transition: var(--transition);
-}
-
-.nav-links a:hover::after,
-.nav-links a.active::after {
-  width: 100%;
-}
-
-/* أزرار الإجراءات (اللغة + زر الحجز البارز) */
+/* الأكشنز (زر اللغة وزر الحجز) بحجم بارز */
 .header-actions {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  flex-wrap: wrap;
-  margin-top: 0.3rem;
+  display: flex !important;
+  align-items: center !important;
+  gap: 20px !important;
 }
 
-/* زر تبديل اللغة الأنيق */
 .language-switch {
-  background: var(--bg-alt);
-  border: 1px solid rgba(111, 137, 123, 0.3);
-  padding: 0.5rem 1rem;
-  border-radius: 25px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: var(--muted-sage);
-  transition: var(--transition);
-}
-
-.language-switch:hover {
-  border-color: var(--secondary-color);
-  color: var(--primary-color);
+  background: #e8e1d8 !important;
+  border: 1px solid #d5ccc0 !important;
+  padding: 10px 20px !important;
+  border-radius: 30px !important;
+  cursor: pointer !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  font-size: 15px !important;
+  color: #252525 !important;
 }
 
 .language-switch span.active {
-  color: var(--secondary-color);
+  color: #303a34 !important;
+  font-weight: 700 !important;
 }
 
 .language-divider {
-  color: var(--muted-sage);
-  opacity: 0.6;
+  color: #888 !important;
 }
 
-/* زر حجز موعد (كبسولي غامق وبارز تماماً مثل الصورة) */
+/* زر الحجز باللون الأخضر الغامق وبحجم كبير وفخم */
 .header-cta {
-  background-color: var(--primary-color);
-  color: var(--bg-color);
-  padding: 0.65rem 1.6rem;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 0.88rem;
-  letter-spacing: 0.8px;
-  box-shadow: 0 4px 15px rgba(48, 58, 52, 0.2);
-  transition: var(--transition);
-  text-transform: uppercase;
+  background-color: #303a34 !important;
+  color: #f5f1ea !important;
+  border: 1px solid #303a34 !important;
+  padding: 14px 30px !important;
+  border-radius: 35px !important;
+  text-decoration: none !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  transition: all 0.3s ease !important;
+  box-shadow: 0 6px 20px rgba(48, 58, 52, 0.2) !important;
 }
 
 .header-cta:hover {
-  background-color: var(--secondary-color);
-  color: var(--fg-color);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(184, 154, 98, 0.35);
+  background-color: #b89a62 !important;
+  border-color: #b89a62 !important;
+  color: #ffffff !important;
 }
 
-/* ==========================================
-   التجاوب مع الشاشات والموبايل (Responsive)
-   ========================================== */
-@media (max-width: 768px) {
-  .navbar {
-    margin: 0.8rem;
-    padding: 1.2rem 1rem;
-    border-radius: 30px;
-    gap: 1rem;
+.mobile-menu-toggle {
+  display: none !important;
+}
+
+/* =========================================================
+   RESPONSIVE DESIGN FOR MOBILE (< 992px)
+========================================================= */
+@media screen and (max-width: 992px) {
+  .navbar-floating-wrapper {
+    padding: 15px !important;
   }
 
-  .logo img {
-    height: 55px; /* حجم متناسق وواضح جداً للموبايل */
+  .navbar-card {
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    padding: 18px 25px !important;
+    border-radius: 24px !important;
+  }
+
+  .logo-center img {
+    height: 50px !important;
+  }
+
+  .mobile-menu-toggle {
+    display: flex !important;
+    background: transparent !important;
+    border: none !important;
+    cursor: pointer !important;
+    color: #303a34 !important;
+    z-index: 1001 !important;
+  }
+
+  .header-center {
+    position: fixed !important;
+    top: 0 !important;
+    right: -100% !important;
+    width: 85% !important;
+    max-width: 380px !important;
+    height: 100vh !important;
+    background-color: #f5f1ea !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 35px !important;
+    box-shadow: -15px 0 40px rgba(0, 0, 0, 0.15) !important;
+    transition: right 0.4s ease-in-out !important;
+    z-index: 1000 !important;
+  }
+
+  .header-center.open {
+    right: 0 !important;
   }
 
   .nav-links {
-    gap: 1rem;
-    font-size: 0.85rem;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 25px !important;
+    margin: 0 !important;
   }
 
   .nav-links a {
-    font-size: 0.85rem;
+    font-size: 20px !important;
   }
 
   .header-actions {
-    flex-direction: row;
-    gap: 0.8rem;
-    width: 100%;
-    justify-content: center;
-  }
-
-  .header-cta {
-    padding: 0.6rem 1.2rem;
-    font-size: 0.8rem;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 15px !important;
   }
 }

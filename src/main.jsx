@@ -8,8 +8,8 @@ import { LanguageProvider } from "./context/LanguageContext.jsx";
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <BrowserRouter>
-    <LanguageProvider>
-      <App />
+      <LanguageProvider>
+        <App />
       </LanguageProvider>
     </BrowserRouter>
   </StrictMode>,
