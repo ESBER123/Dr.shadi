@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import LogoImage from "../images/Logoo.png";
 import { useLanguage } from "../context/LanguageContext.jsx";
@@ -6,80 +7,93 @@ import "../assets/styles/App.css";
 
 const Header = () => {
   const { language, toggleLanguage } = useLanguage();
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const t = translations?.[language] ?? translations?.en ?? {};
+
+  const closeMobileMenu = () => setMobileMenuOpen(false);
 
   return (
     <header className="navbar">
       <div className="logo">
-        <NavLink to="/">
-          <img
-            src={LogoImage}
-            alt="Dr. Shadi Loutfi Orthodontics"
-          />
+        <NavLink to="/" onClick={closeMobileMenu}>
+          <img src={LogoImage} alt="Kieferorthopädie Dr. Shadi Loutfi" />
         </NavLink>
       </div>
 
-      <div className="header-center">
+      {/* زر الموبايل (Hamburger / Close) */}
+      <button
+        type="button"
+        className="mobile-menu-toggle"
+        onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+        aria-label="Toggle navigation menu"
+        aria-expanded={mobileMenuOpen}
+      >
+        {mobileMenuOpen ? (
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+          >
+            <path d="M18 6L6 18M6 6l12 12" />
+          </svg>
+        ) : (
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+          >
+            <path d="M3 12h18M3 6h18M3 18h18" />
+          </svg>
+        )}
+      </button>
 
+      <div className={`header-center ${mobileMenuOpen ? "open" : ""}`}>
         <nav className="nav-links">
-
-          <NavLink to="/">
+          <NavLink to="/" onClick={closeMobileMenu}>
             {language === "en" ? "Home" : "Startseite"}
           </NavLink>
-
-          <NavLink to="/treatment">
+          <NavLink to="/treatment" onClick={closeMobileMenu}>
             {language === "en" ? "Treatments" : "Behandlungen"}
           </NavLink>
-
-          <NavLink to="/about">
+          <NavLink to="/about" onClick={closeMobileMenu}>
             {language === "en" ? "About" : "Über uns"}
           </NavLink>
-
-          <NavLink to="/faq">
+          <NavLink to="/faq" onClick={closeMobileMenu}>
             FAQ
           </NavLink>
-
-          <NavLink to="/contact">
+          <NavLink to="/contact" onClick={closeMobileMenu}>
             {language === "en" ? "Contact" : "Kontakt"}
           </NavLink>
-
         </nav>
 
         <div className="header-actions">
-
           <button
             type="button"
             className="language-switch"
             onClick={toggleLanguage}
-            aria-label={
-              language === "en"
-                ? "Switch language to German"
-                : "Switch language to English"
-            }
+            aria-label="Switch language"
           >
-            <span className={language === "en" ? "active" : ""}>
-              EN
-            </span>
-
-            <span className="language-divider">
-              /
-            </span>
-
-            <span className={language === "de" ? "active" : ""}>
-              DE
-            </span>
+            <span className={language === "en" ? "active" : ""}>EN</span>
+            <span className="language-divider">/</span>
+            <span className={language === "de" ? "active" : ""}>DE</span>
           </button>
 
           <NavLink
             to="/booking"
             className="header-cta"
+            onClick={closeMobileMenu}
           >
-            {t.bookAppointment || "Book a Consultation"}
+            {t.bookAppointment ||
+              (language === "de" ? "Termin buchen" : "Book a Consultation")}
           </NavLink>
-
         </div>
-
       </div>
     </header>
   );

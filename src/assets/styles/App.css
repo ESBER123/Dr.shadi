@@ -1,244 +1,231 @@
-/* ==========================================================
-   BESPOKE ORGANIC-LUXE NAVBAR - Orthodontics & Bio-Glass
-   ========================================================== */
-
 :root {
-  /* نظام الألوان المطلوب */
-  --foreground: #252525; /* Deep charcoal */
-  --background: #f5f1ea; /* Warm ivory/cream */
-  --primary: #303a34; /* Deep olive-charcoal */
-  --secondary: #b89a62; /* Champagne/gold */
-  --background-alt: #e8e1d8; /* Soft greige */
-  --foreground-alt: #6f897b; /* Muted sage */
-
-  /* إعدادات الشكل الغريب المريح */
-  --quirky-radius: 24px 6px 24px 6px;
-  --quirky-radius-hover: 6px 24px 6px 24px;
+  --primary-color: #303a34; /* Deep olive-charcoal */
+  --primary-hover: #222a25;
+  --secondary-color: #b89a62; /* Champagne/gold - اللمسات الفاخرة */
+  --text-main: #252525; /* Deep charcoal */
+  --text-muted: #6f897b; /* Muted sage */
+  --bg-color: #f5f1ea; /* Warm ivory/cream */
+  --bg-alt: #e8e1d8; /* Soft greige */
+  --border-color: #d6ccbe; /* حدود أنيقة ومتناسقة مع الكريمي */
 }
 
-body {
-  background-color: var(--background);
-  color: var(--foreground);
-  margin: 0;
-  font-family:
-    system-ui,
-    -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    Roboto,
-    sans-serif;
-}
-
-/* النافبار الرئيسية */
 .navbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1.5rem;
   position: sticky;
-  top: 14px;
-  margin: 14px auto;
-  max-width: 1260px;
-  padding: 0.75rem 1.5rem;
-  background: rgba(245, 241, 234, 0.88);
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
-  border: 1.5px solid rgba(184, 154, 98, 0.28);
-  border-radius: var(--quirky-radius);
-  box-shadow:
-    0 16px 36px -12px rgba(48, 58, 52, 0.12),
-    0 0 0 1px rgba(255, 255, 255, 0.6) inset;
+  top: 0;
   z-index: 1000;
-  transition: all 0.45s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.navbar:hover {
-  border-radius: var(--quirky-radius-hover);
-  border-color: rgba(184, 154, 98, 0.55);
-  box-shadow: 0 20px 45px -10px rgba(48, 58, 52, 0.18);
-}
-
-/* الشعار (تم التكبير هنا) */
-.logo a {
-  display: inline-flex;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-}
-.logo img {
-  height: 52px; /* <-- تم التكبير من 40px إلى 52px */
-  max-height: 56px;
-  width: auto;
-  object-fit: contain;
-  transition:
-    transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1),
-    filter 0.3s ease;
-  filter: drop-shadow(0 5px 8px rgba(48, 58, 52, 0.14));
-}
-.logo a:hover img {
-  transform: scale(1.08) rotate(-3deg);
-  filter: drop-shadow(0 10px 18px rgba(184, 154, 98, 0.4));
+  padding: 1rem 6%;
+  background-color: var(--bg-color);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 25px rgba(48, 58, 52, 0.05);
+  border-bottom: 1px solid var(--border-color);
+  transition: all 0.3s ease;
 }
 
-/* المنتصف (الروابط + الإجراءات) */
+/* --- الشعار بحجم كبير وواضح --- */
+.logo img {
+  height: 78px;
+  width: auto;
+  display: block;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+  transform: scale(1.02);
+}
+
 .header-center {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  flex: 1;
-  gap: 1.5rem;
+  gap: 3.5rem;
 }
 
-/* كبسولة الروابط */
+/* --- روابط التنقل بتصميم عصري --- */
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 0.35rem;
-  background: var(--background-alt);
-  padding: 4px;
-  border-radius: 9999px;
-  border: 1px solid rgba(184, 154, 98, 0.2);
+  gap: 2.2rem;
 }
 
 .nav-links a {
   text-decoration: none;
-  color: var(--foreground-alt);
-  font-weight: 600;
-  font-size: 0.9rem;
-  padding: 0.45rem 1rem;
-  border-radius: 9999px;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  white-space: nowrap;
+  color: var(--text-main);
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: color 0.25s ease;
+  position: relative;
+  padding-bottom: 4px;
 }
 
 .nav-links a:hover,
 .nav-links a.active {
-  color: var(--primary);
-  background: var(--background);
-  box-shadow: 0 4px 14px rgba(48, 58, 52, 0.08);
-  transform: translateY(-1px);
+  color: var(--primary-color);
+  font-weight: 600;
 }
 
-/* قسم الأكشنات (اللغة + الحجز) */
+/* خط فاخر تحت الرابط النشط بلون الذهب/الشامبين */
+.nav-links a.active::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2.5px;
+  background-color: var(--secondary-color);
+  border-radius: 4px;
+}
+
 .header-actions {
   display: flex;
   align-items: center;
-  gap: 0.85rem;
+  gap: 1.2rem;
 }
 
-/* زر تبديل اللغة */
+/* --- زر تبديل اللغة بتصميم أنيق --- */
 .language-switch {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.3rem;
-  background: rgba(184, 154, 98, 0.1);
-  border: 1px solid rgba(184, 154, 98, 0.3);
-  padding: 0.45rem 0.8rem;
-  border-radius: 9999px;
+  background: var(--bg-alt);
+  border: 1px solid var(--border-color);
+  border-radius: 999px;
+  padding: 0.45rem 1rem;
   cursor: pointer;
-  font-weight: 700;
-  font-size: 0.78rem;
-  color: var(--primary);
-  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  transition: all 0.25s ease;
 }
 
 .language-switch:hover {
-  background: rgba(184, 154, 98, 0.22);
-  transform: scale(1.05);
+  border-color: var(--secondary-color);
+  color: var(--text-main);
 }
 
 .language-switch span.active {
-  color: var(--secondary);
-  font-weight: 800;
+  color: var(--primary-color);
+  font-weight: 700;
 }
 
 .language-divider {
-  color: var(--foreground-alt);
-  opacity: 0.6;
+  color: var(--border-color);
 }
 
-/* زر الحجز (CTA) */
+/* --- زر حجز الموعد (CTA) بلون فاخر --- */
 .header-cta {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  background: var(--primary);
-  color: var(--background);
+  background-color: var(--primary-color);
+  color: #ffffff !important;
+  padding: 0.7rem 1.5rem;
+  border-radius: 999px;
   font-weight: 600;
-  font-size: 0.88rem;
-  padding: 0.55rem 1.25rem;
-  border-radius: 12px 4px 12px 4px;
-  border: 1px solid rgba(184, 154, 98, 0.35);
-  box-shadow: 0 8px 20px rgba(48, 58, 52, 0.15);
-  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-  white-space: nowrap;
+  font-size: 0.9rem;
+  text-decoration: none;
+  box-shadow: 0 4px 15px rgba(48, 58, 52, 0.15);
+  border: 1px solid rgba(184, 154, 98, 0.2);
+  transition: all 0.3s ease;
 }
 
 .header-cta:hover {
-  background: linear-gradient(135deg, var(--primary), var(--secondary));
-  color: #ffffff;
-  border-radius: 4px 12px 4px 12px;
-  transform: translateY(-2px) scale(1.03);
-  box-shadow: 0 12px 28px rgba(184, 154, 98, 0.35);
+  background-color: var(--primary-hover);
+  border-color: var(--secondary-color);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(48, 58, 52, 0.25);
 }
 
-/* ==========================================================
-   RESPONSIVE DESIGN (تجاوب تام مع الأجهزة)
-   ========================================================== */
-
-@media (max-width: 960px) {
-  .navbar {
-    margin: 10px;
-    padding: 0.65rem 1rem;
-    border-radius: 20px;
-    flex-wrap: wrap;
-  }
-  .header-center {
-    width: 100%;
-    order: 3;
-    justify-content: center;
-    margin-top: 0.4rem;
-    padding-top: 0.4rem;
-    border-top: 1px dashed rgba(184, 154, 98, 0.3);
-  }
+.mobile-menu-toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: var(--primary-color);
+  padding: 0.4rem;
+  border-radius: 8px;
 }
 
-@media (max-width: 640px) {
-  .navbar {
-    margin: 6px;
-    padding: 0.55rem 0.85rem;
-    border-radius: 16px;
-  }
-  .logo img {
-    height: 40px; /* تصغير طفيف ومناسب للموبايل لكي لا يستهلك مساحة النافبار */
-  }
+/* --- التجاوب مع الأجهزة اللوحية والهواتف --- */
+@media screen and (max-width: 1024px) {
   .header-center {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 0.5rem;
+    gap: 1.5rem;
   }
   .nav-links {
-    width: 100%;
-    overflow-x: auto;
-    justify-content: flex-start;
-    padding: 3px;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
+    gap: 1.2rem;
   }
-  .nav-links::-webkit-scrollbar {
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    padding: 0.75rem 5%;
+  }
+
+  .logo img {
+    height: 56px;
+  }
+
+  .mobile-menu-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .header-center {
+    position: fixed;
+    top: 75px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 75px);
+    background-color: var(--bg-color);
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    padding: 2.5rem 6%;
+    gap: 2rem;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+    transform: translateX(100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .header-center.open {
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+
+  .nav-links a {
+    font-size: 1.2rem;
+    width: 100%;
+    padding: 0.6rem 0;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .nav-links a.active::after {
     display: none;
   }
-  .nav-links a {
-    font-size: 0.82rem;
-    padding: 0.4rem 0.8rem;
-  }
+
   .header-actions {
-    width: 100%;
+    flex-direction: row;
     justify-content: space-between;
+    width: 100%;
+    margin-top: auto;
+    padding-bottom: 2rem;
   }
+
+  .language-switch {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.95rem;
+  }
+
   .header-cta {
-    flex: 1;
     text-align: center;
-    padding: 0.5rem 0.8rem;
-    font-size: 0.82rem;
+    padding: 0.8rem 1.5rem;
   }
 }
