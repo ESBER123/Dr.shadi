@@ -1,34 +1,25 @@
-/* ==========================================================================
-   Modern Editorial & Luxury Aesthetic (Extra Large Logo Version - Responsive)
-   Theme: High Contrast Ivory & Deep Forest Charcoal
-   ========================================================================== */
+/* ==========================================================
+   BESPOKE ORGANIC-LUXE NAVBAR - Orthodontics & Bio-Glass
+   ========================================================== */
 
 :root {
-  /* Color Palette Variables */
-  --bg-main: #f5f1ea; /* Warm Ivory Base */
-  --bg-alt: #e8e1d8; /* Greige Section Background */
-  --fg-main: #252525; /* Deep Charcoal */
-  --fg-alt: #6f897b; /* Muted Sage */
-  --primary: #303a34; /* Deep Olive Charcoal */
-  --secondary: #b89a62; /* Champagne Gold */
-  --accent-gold: #d4af37; /* Highlight Accent Gold */
-  --glass-bg: rgba(245, 241, 234, 0.88);
-  --border-subtle: rgba(48, 58, 52, 0.15);
-  --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-}
+  /* نظام الألوان المطلوب */
+  --foreground: #252525; /* Deep charcoal */
+  --background: #f5f1ea; /* Warm ivory/cream */
+  --primary: #303a34; /* Deep olive-charcoal */
+  --secondary: #b89a62; /* Champagne/gold */
+  --background-alt: #e8e1d8; /* Soft greige */
+  --foreground-alt: #6f897b; /* Muted sage */
 
-/* Reset & Base Setup */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+  /* إعدادات الشكل الغريب المريح */
+  --quirky-radius: 24px 6px 24px 6px;
+  --quirky-radius-hover: 6px 24px 6px 24px;
 }
 
 body {
-  background-color: var(--bg-main);
-  color: var(--fg-main);
+  background-color: var(--background);
+  color: var(--foreground);
+  margin: 0;
   font-family:
     system-ui,
     -apple-system,
@@ -36,397 +27,218 @@ body {
     "Segoe UI",
     Roboto,
     sans-serif;
-  overflow-x: hidden;
 }
 
-/* ==========================================================================
-   1. EDITORIAL HEADER (Floating Glass Capsule) - Responsive Ready
-   ========================================================================== */
+/* النافبار الرئيسية */
 .navbar {
-  position: fixed;
-  top: 1rem;
-  left: 50%;
-  transform: translateX(-50%);
-  width: min(94%, 1350px);
-  height: clamp(75px, 9vw, 100px);
-  background: var(--glass-bg);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid var(--border-subtle);
-  border-radius: 100px;
-  padding: 0 clamp(1.2rem, 3vw, 2.5rem);
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 1.5rem;
+  position: sticky;
+  top: 14px;
+  margin: 14px auto;
+  max-width: 1260px;
+  padding: 0.75rem 1.5rem;
+  background: rgba(245, 241, 234, 0.88);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1.5px solid rgba(184, 154, 98, 0.28);
+  border-radius: var(--quirky-radius);
+  box-shadow:
+    0 16px 36px -12px rgba(48, 58, 52, 0.12),
+    0 0 0 1px rgba(255, 255, 255, 0.6) inset;
   z-index: 1000;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.04);
+  transition: all 0.45s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.logo {
-  display: flex;
+.navbar:hover {
+  border-radius: var(--quirky-radius-hover);
+  border-color: rgba(184, 154, 98, 0.55);
+  box-shadow: 0 20px 45px -10px rgba(48, 58, 52, 0.18);
+}
+
+/* الشعار (تم التكبير هنا) */
+.logo a {
+  display: inline-flex;
   align-items: center;
 }
-
 .logo img {
-  height: clamp(48px, 6vw, 80px);
+  height: 52px; /* <-- تم التكبير من 40px إلى 52px */
+  max-height: 56px;
   width: auto;
   object-fit: contain;
-  transition: var(--transition-smooth);
-  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.07));
+  transition:
+    transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1),
+    filter 0.3s ease;
+  filter: drop-shadow(0 5px 8px rgba(48, 58, 52, 0.14));
+}
+.logo a:hover img {
+  transform: scale(1.08) rotate(-3deg);
+  filter: drop-shadow(0 10px 18px rgba(184, 154, 98, 0.4));
 }
 
-.logo img:hover {
-  transform: scale(1.05);
-}
-
+/* المنتصف (الروابط + الإجراءات) */
 .header-center {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  justify-content: space-between;
+  flex: 1;
+  gap: 1.5rem;
 }
 
+/* كبسولة الروابط */
 .nav-links {
   display: flex;
   align-items: center;
-  gap: clamp(1rem, 2vw, 1.8rem);
+  gap: 0.35rem;
+  background: var(--background-alt);
+  padding: 4px;
+  border-radius: 9999px;
+  border: 1px solid rgba(184, 154, 98, 0.2);
 }
 
 .nav-links a {
   text-decoration: none;
-  color: var(--primary);
-  font-size: 0.85rem;
-  font-weight: 500;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  padding: 0.5rem 0;
-  position: relative;
-  transition: var(--transition-smooth);
+  color: var(--foreground-alt);
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 0.45rem 1rem;
+  border-radius: 9999px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   white-space: nowrap;
-}
-
-.nav-links a::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  inset-inline-end: 0;
-  width: 0%;
-  height: 1px;
-  background-color: var(--secondary);
-  transition: var(--transition-smooth);
-}
-
-.nav-links a:hover::after,
-.nav-links a.active::after {
-  width: 100%;
-  inset-inline-start: 0;
-  inset-inline-end: auto;
 }
 
 .nav-links a:hover,
 .nav-links a.active {
-  color: var(--secondary);
+  color: var(--primary);
+  background: var(--background);
+  box-shadow: 0 4px 14px rgba(48, 58, 52, 0.08);
+  transform: translateY(-1px);
 }
 
+/* قسم الأكشنات (اللغة + الحجز) */
 .header-actions {
   display: flex;
   align-items: center;
-  gap: clamp(0.6rem, 1.5vw, 1.2rem);
+  gap: 0.85rem;
 }
 
+/* زر تبديل اللغة */
 .language-switch {
-  background: var(--bg-alt);
-  border: none;
-  padding: 0.45rem 1rem;
-  border-radius: 50px;
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 1px;
-  color: var(--fg-alt);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  background: rgba(184, 154, 98, 0.1);
+  border: 1px solid rgba(184, 154, 98, 0.3);
+  padding: 0.45rem 0.8rem;
+  border-radius: 9999px;
   cursor: pointer;
-  transition: var(--transition-smooth);
+  font-weight: 700;
+  font-size: 0.78rem;
+  color: var(--primary);
+  transition: all 0.3s ease;
 }
 
 .language-switch:hover {
-  background: var(--primary);
-  color: var(--bg-main);
+  background: rgba(184, 154, 98, 0.22);
+  transform: scale(1.05);
 }
 
 .language-switch span.active {
   color: var(--secondary);
+  font-weight: 800;
 }
 
+.language-divider {
+  color: var(--foreground-alt);
+  opacity: 0.6;
+}
+
+/* زر الحجز (CTA) */
 .header-cta {
-  background: var(--primary);
-  color: var(--bg-main);
-  padding: 0.7rem 1.4rem;
-  border-radius: 50px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   text-decoration: none;
-  font-size: 0.78rem;
+  background: var(--primary);
+  color: var(--background);
   font-weight: 600;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  transition: var(--transition-smooth);
-  border: 1px solid var(--primary);
+  font-size: 0.88rem;
+  padding: 0.55rem 1.25rem;
+  border-radius: 12px 4px 12px 4px;
+  border: 1px solid rgba(184, 154, 98, 0.35);
+  box-shadow: 0 8px 20px rgba(48, 58, 52, 0.15);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
   white-space: nowrap;
 }
 
 .header-cta:hover {
-  background: transparent;
-  color: var(--primary);
-  box-shadow: 0 10px 20px rgba(48, 58, 52, 0.12);
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: #ffffff;
+  border-radius: 4px 12px 4px 12px;
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 12px 28px rgba(184, 154, 98, 0.35);
 }
 
-/* ==========================================================================
-   2. HERO SECTION
-   ========================================================= */
-.good-hero {
-  position: relative;
-  min-height: 90vh;
-  padding-top: clamp(120px, 15vw, 170px);
-  padding-bottom: 4rem;
-  padding-inline: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: var(--primary);
-  color: var(--bg-main);
-  text-align: center;
-  overflow: hidden;
-}
+/* ==========================================================
+   RESPONSIVE DESIGN (تجاوب تام مع الأجهزة)
+   ========================================================== */
 
-.good-hero::before {
-  content: "";
-  position: absolute;
-  width: min(600px, 90vw);
-  height: min(600px, 90vw);
-  background: radial-gradient(
-    circle,
-    rgba(184, 154, 98, 0.25) 0%,
-    transparent 70%
-  );
-  top: -100px;
-  inset-inline-end: -100px;
-  border-radius: 50%;
-  pointer-events: none;
-}
-
-.good-hero-content {
-  position: relative;
-  z-index: 2;
-  max-width: 800px;
-  width: 100%;
-}
-
-.good-hero-content h1 {
-  font-size: clamp(2.1rem, 5vw, 4.5rem);
-  font-weight: 300;
-  line-height: 1.15;
-  letter-spacing: -1px;
-  margin-bottom: 1.5rem;
-}
-
-.good-hero-content h1 span {
-  font-style: italic;
-  font-weight: 600;
-  color: var(--secondary);
-  font-family: Georgia, serif;
-}
-
-.good-hero-content p {
-  font-size: clamp(0.98rem, 1.8vw, 1.1rem);
-  color: var(--bg-alt);
-  margin-bottom: 2.5rem;
-  max-width: 600px;
-  margin-inline: auto;
-  line-height: 1.6;
-}
-
-.hero-button {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.75rem;
-  padding: 0.9rem 2rem;
-  border-radius: 100px;
-  background-color: var(--secondary);
-  color: #fff;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 0.92rem;
-  letter-spacing: 1px;
-  transition: var(--transition-smooth);
-}
-
-.hero-button:hover {
-  transform: translateY(-3px);
-  background-color: var(--accent-gold);
-}
-
-/* ==========================================================================
-   3. FAQ ACCORDION
-   ========================================================= */
-.faq-section {
-  padding: clamp(4rem, 8vw, 8rem) clamp(1rem, 4vw, 2rem);
-  background-color: var(--bg-main);
-}
-
-.faq-top {
-  max-width: 900px;
-  margin: 0 auto 3rem;
-}
-
-.faq-top h2 {
-  font-size: clamp(1.75rem, 4vw, 3rem);
-  font-weight: 300;
-  color: var(--primary);
-}
-
-.faq-top h2 span {
-  font-style: italic;
-  font-family: Georgia, serif;
-  color: var(--secondary);
-}
-
-.faq-list {
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-.faq-item {
-  background: transparent;
-  border: none;
-  border-bottom: 1px solid var(--border-subtle);
-  border-radius: 0;
-  padding: 0.3rem 0;
-  transition: var(--transition-smooth);
-}
-
-.faq-question {
-  width: 100%;
-  padding: 1.2rem 0;
-  background: none;
-  border: none;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  cursor: pointer;
-  color: var(--primary);
-  font-size: clamp(1.05rem, 2vw, 1.25rem);
-  font-weight: 500;
-  font-family: inherit;
-  text-align: start;
-  gap: 1rem;
-}
-
-.faq-left {
-  display: flex;
-  align-items: center;
-}
-
-.faq-number {
-  font-family: Georgia, serif;
-  font-style: italic;
-  font-size: clamp(1.1rem, 2vw, 1.4rem);
-  color: var(--secondary);
-  margin-inline-end: clamp(1rem, 2vw, 1.5rem);
-  min-width: 24px;
-}
-
-.faq-item.active {
-  border-bottom-color: var(--secondary);
-}
-
-.faq-item.active .question-text {
-  color: var(--secondary);
-  font-weight: 600;
-}
-
-.faq-icon {
-  position: relative;
-  width: 16px;
-  height: 16px;
-  flex-shrink: 0;
-  transition: var(--transition-smooth);
-}
-
-.faq-icon span {
-  position: absolute;
-  background-color: var(--primary);
-  transition: var(--transition-smooth);
-}
-
-.faq-icon span:nth-child(1) {
-  top: 7px;
-  left: 0;
-  width: 100%;
-  height: 1.5px;
-}
-
-.faq-icon span:nth-child(2) {
-  top: 0;
-  left: 7px;
-  width: 1.5px;
-  height: 100%;
-}
-
-.faq-item.active .faq-icon {
-  transform: rotate(135deg);
-}
-
-.faq-item.active .faq-icon span {
-  background-color: var(--secondary);
-}
-
-.faq-answer {
-  display: grid;
-  grid-template-rows: 0fr;
-  transition: grid-template-rows 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.faq-answer.answer-open {
-  grid-template-rows: 1fr;
-}
-
-.answer-inner {
-  overflow: hidden;
-}
-
-.answer-inner p {
-  padding: 0 0 clamp(1.2rem, 3vw, 2rem) clamp(1.5rem, 5vw, 3rem);
-  color: var(--fg-main);
-  font-size: clamp(0.95rem, 1.5vw, 1.05rem);
-  line-height: 1.8;
-  max-width: 800px;
-}
-
-/* ==========================================================================
-   4. RESPONSIVE BREAKPOINTS & RTL SUPPORT (Logical Properties)
-   ========================================================================== */
-@media (max-width: 992px) {
-  .nav-links {
-    display: none; /* جاهز للقائمة الجانبية الموبايل (Mobile Drawer) إن وجدت */
-  }
-}
-
-@media (max-width: 576px) {
+@media (max-width: 960px) {
   .navbar {
-    width: 96%;
-    padding: 0 1rem;
-    border-radius: 60px;
+    margin: 10px;
+    padding: 0.65rem 1rem;
+    border-radius: 20px;
+    flex-wrap: wrap;
   }
-
-  .header-cta {
-    padding: 0.6rem 1rem;
-    font-size: 0.72rem;
+  .header-center {
+    width: 100%;
+    order: 3;
+    justify-content: center;
+    margin-top: 0.4rem;
+    padding-top: 0.4rem;
+    border-top: 1px dashed rgba(184, 154, 98, 0.3);
   }
+}
 
-  .language-switch {
+@media (max-width: 640px) {
+  .navbar {
+    margin: 6px;
+    padding: 0.55rem 0.85rem;
+    border-radius: 16px;
+  }
+  .logo img {
+    height: 40px; /* تصغير طفيف ومناسب للموبايل لكي لا يستهلك مساحة النافبار */
+  }
+  .header-center {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5rem;
+  }
+  .nav-links {
+    width: 100%;
+    overflow-x: auto;
+    justify-content: flex-start;
+    padding: 3px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .nav-links::-webkit-scrollbar {
+    display: none;
+  }
+  .nav-links a {
+    font-size: 0.82rem;
     padding: 0.4rem 0.8rem;
   }
-}
-
-/* دعم عربي/إنجليزي تلقائي عبر Logical Properties (`inset-inline`, `margin-inline`, إلخ) */
-[dir="rtl"] .faq-question,
-[dir="ltr"] .faq-question {
-  text-align: start;
+  .header-actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .header-cta {
+    flex: 1;
+    text-align: center;
+    padding: 0.5rem 0.8rem;
+    font-size: 0.82rem;
+  }
 }
