@@ -136,15 +136,15 @@
 }
 
 /* =========================================================
-   HERO SECTION (حافظت 100% على نفس البنية والتصميم الأصلي بدون تعديل)
+   HERO SECTION (محافظ على تصميمه مع تحسين التجاوب)
    ========================================================= */
 .hm-hero {
   position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
-  gap: clamp(30px, 5vw, 50px);
-  padding: clamp(50px, 8vw, 80px) clamp(5%, 8vw, 8%);
+  gap: clamp(24px, 5vw, 50px);
+  padding: clamp(40px, 6vw, 80px) clamp(5%, 8vw, 8%);
   background-color: var(--color-bg);
   min-height: 85vh;
   width: 100%;
@@ -178,8 +178,8 @@
 .hm-hero-image {
   width: 100%;
   max-width: 680px;
-  height: min(680px, 55vw);
-  min-height: 320px;
+  height: min(550px, 50vw);
+  min-height: 280px;
   object-fit: cover;
   border-radius: var(--radius-lg);
   position: relative;
@@ -207,7 +207,7 @@
   text-transform: uppercase;
   color: var(--color-fg-alt);
   font-weight: 600;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 
 .hm-hero-label span {
@@ -218,11 +218,11 @@
 }
 
 .hm-hero-title {
-  font-size: clamp(2.1rem, 4vw, 3.4rem);
+  font-size: clamp(1.8rem, 3.8vw, 3.4rem);
   font-weight: 700;
   line-height: 1.15;
   color: var(--color-primary);
-  margin-bottom: 24px;
+  margin-bottom: 20px;
 }
 
 .hm-hero-title em {
@@ -232,10 +232,10 @@
 }
 
 .hm-hero-text {
-  font-size: clamp(1rem, 1.1vw, 1.1rem);
+  font-size: clamp(0.95rem, 1.1vw, 1.1rem);
   color: var(--color-muted);
   max-width: 520px;
-  margin-bottom: 36px;
+  margin-bottom: 28px;
 }
 
 .hm-hero-buttons {
@@ -245,13 +245,13 @@
 }
 
 /* =========================================================
-   INTRO SECTION (مرن)
+   INTRO SECTION
    ========================================================= */
 .hm-intro {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: clamp(35px, 5vw, 60px) clamp(5%, 8vw, 10%);
+  padding: clamp(30px, 5vw, 60px) clamp(5%, 8vw, 10%);
   gap: clamp(15px, 3vw, 30px);
   background-color: var(--color-bg);
   flex-wrap: wrap;
@@ -269,17 +269,17 @@
 .hm-intro p {
   max-width: 700px;
   text-align: center;
-  font-size: clamp(1.05rem, 2vw, 1.25rem);
+  font-size: clamp(1rem, 2vw, 1.25rem);
   color: var(--color-primary);
   font-style: italic;
   font-family: "Playfair Display", Georgia, serif;
 }
 
 /* =========================================================
-   PERSONAL IMAGE (DOCTOR SECTION - مرن)
+   PERSONAL IMAGE (DOCTOR SECTION)
    ========================================================= */
 .hm-personal-image-section {
-  padding: clamp(25px, 4vw, 40px) clamp(5%, 8vw, 8%);
+  padding: clamp(20px, 4vw, 40px) clamp(5%, 8vw, 8%);
   display: flex;
   justify-content: center;
   width: 100%;
@@ -307,10 +307,10 @@
 }
 
 /* =========================================================
-   ORTHODONTICS & TREATMENTS (مرن بالكامل لجميع الشاشات)
+   ORTHODONTICS & TREATMENTS
    ========================================================= */
 .hm-orthodontics {
-  padding: clamp(60px, 9vw, 130px) clamp(5%, 8vw, 8%);
+  padding: clamp(50px, 8vw, 130px) clamp(5%, 8vw, 8%);
   background-color: var(--color-bg-alt);
   width: 100%;
 }
@@ -318,13 +318,13 @@
 .hm-orthodontics-intro {
   text-align: center;
   max-width: 750px;
-  margin: 0 auto clamp(40px, 6vw, 70px) auto;
+  margin: 0 auto clamp(35px, 6vw, 70px) auto;
 }
 
 .hm-orthodontics-title {
-  font-size: clamp(1.9rem, 3.8vw, 3.2rem);
+  font-size: clamp(1.7rem, 3.5vw, 3.2rem);
   color: var(--color-primary);
-  margin-bottom: 14px;
+  margin-bottom: 12px;
 }
 
 .hm-orthodontics-title span {
@@ -333,15 +333,15 @@
 
 .hm-orthodontics-text {
   color: var(--color-muted);
-  font-size: clamp(0.95rem, 1.15vw, 1.2rem);
+  font-size: clamp(0.9rem, 1.1vw, 1.2rem);
   line-height: 1.7;
 }
 
 .hm-treatment-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
-  gap: clamp(20px, 3vw, 36px);
-  margin-bottom: clamp(50px, 7vw, 80px);
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: clamp(16px, 3vw, 36px);
+  margin-bottom: clamp(40px, 7vw, 80px);
   max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
@@ -361,7 +361,7 @@
 }
 
 .hm-treatment-card:hover {
-  transform: translateY(-8px);
+  transform: translateY(-6px);
   box-shadow: var(--shadow-hover);
 }
 
@@ -387,17 +387,17 @@
 
 .hm-card-arrow {
   position: absolute;
-  top: clamp(12px, 3vw, 18px);
-  right: clamp(12px, 3vw, 18px);
-  width: clamp(36px, 4vw, 44px);
-  height: clamp(36px, 4vw, 44px);
+  top: 14px;
+  right: 14px;
+  width: 38px;
+  height: 38px;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.92);
   color: var(--color-fg);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: clamp(1rem, 2vw, 1.25rem);
+  font-size: 1.1rem;
   font-weight: bold;
   backdrop-filter: blur(6px);
   transition: var(--transition-smooth);
@@ -412,31 +412,31 @@
 }
 
 .hm-treatment-content {
-  padding: clamp(20px, 4vw, 36px);
+  padding: clamp(18px, 3.5vw, 36px);
   display: flex;
   flex-direction: column;
   flex-grow: 1;
 }
 
 .hm-treatment-number {
-  font-size: clamp(0.8rem, 1.2vw, 0.9rem);
+  font-size: 0.85rem;
   font-weight: 700;
   color: var(--color-secondary);
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   display: block;
   letter-spacing: 1.5px;
 }
 
 .hm-treatment-title {
-  font-size: clamp(1.25rem, 2vw, 1.6rem);
+  font-size: clamp(1.2rem, 1.8vw, 1.6rem);
   color: var(--color-primary);
-  margin-bottom: 12px;
+  margin-bottom: 10px;
   font-weight: 700;
   font-family: "Plus Jakarta Sans", sans-serif;
 }
 
 .hm-treatment-text {
-  font-size: clamp(0.95rem, 1.1vw, 1.05rem);
+  font-size: clamp(0.9rem, 1vw, 1.05rem);
   color: var(--color-muted);
   line-height: 1.7;
   margin: 0;
@@ -444,11 +444,11 @@
 }
 
 /* =========================================================
-   DIAGNOSTICS SECTION (مطابق ومتجاوب مع كافة الأجهزة)
+   DIAGNOSTICS SECTION
    ========================================================= */
 .hm-diagnostics-section {
-  margin-top: clamp(30px, 5vw, 50px);
-  padding: clamp(50px, 9vw, 110px) clamp(5%, 8vw, 8%);
+  margin-top: clamp(20px, 4vw, 50px);
+  padding: clamp(40px, 8vw, 110px) clamp(5%, 8vw, 8%);
   background-color: #1a2321;
   border-radius: var(--radius-lg);
   max-width: 1440px;
@@ -460,36 +460,36 @@
 .hm-diagnostics-heading {
   text-align: center;
   max-width: 750px;
-  margin: 0 auto clamp(40px, 6vw, 60px) auto;
+  margin: 0 auto clamp(35px, 6vw, 60px) auto;
 }
 
 .hm-ortho-small-label {
-  font-size: clamp(0.75rem, 1.2vw, 0.85rem);
+  font-size: 0.8rem;
   text-transform: uppercase;
   letter-spacing: 2.5px;
   color: var(--color-secondary);
   font-weight: 600;
   display: block;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
 .hm-diagnostics-title {
-  font-size: clamp(1.8rem, 3.8vw, 2.9rem);
+  font-size: clamp(1.6rem, 3.5vw, 2.9rem);
   color: var(--color-white);
-  margin-bottom: 16px;
+  margin-bottom: 14px;
   font-weight: 700;
 }
 
 .hm-diagnostics-text {
   color: #a0aec0;
-  font-size: clamp(0.95rem, 1.15vw, 1.15rem);
+  font-size: clamp(0.9rem, 1.1vw, 1.15rem);
   line-height: 1.7;
 }
 
 .hm-diagnostics-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
-  gap: clamp(20px, 3vw, 36px);
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: clamp(16px, 3vw, 36px);
   width: 100%;
 }
 
@@ -504,7 +504,7 @@
 }
 
 .hm-diagnostic-card:hover {
-  transform: translateY(-8px);
+  transform: translateY(-6px);
   background-color: rgba(255, 255, 255, 0.08);
   box-shadow: 0 20px 45px rgba(0, 0, 0, 0.4);
   border-color: rgba(184, 154, 98, 0.5);
@@ -530,31 +530,31 @@
 }
 
 .hm-diagnostic-content {
-  padding: clamp(20px, 4vw, 36px);
+  padding: clamp(18px, 3.5vw, 36px);
   display: flex;
   flex-direction: column;
   flex-grow: 1;
 }
 
 .hm-diagnostic-number {
-  font-size: clamp(0.8rem, 1.2vw, 0.9rem);
+  font-size: 0.85rem;
   font-weight: 700;
   color: var(--color-secondary);
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   display: block;
   letter-spacing: 1.5px;
 }
 
 .hm-diagnostic-title {
-  font-size: clamp(1.25rem, 1.8vw, 1.55rem);
+  font-size: clamp(1.2rem, 1.8vw, 1.55rem);
   color: var(--color-white);
-  margin-bottom: 12px;
+  margin-bottom: 10px;
   font-weight: 700;
   font-family: "Plus Jakarta Sans", sans-serif;
 }
 
 .hm-diagnostic-text {
-  font-size: clamp(0.9rem, 1.1vw, 1.05rem);
+  font-size: clamp(0.9rem, 1vw, 1.05rem);
   color: #cbd5e0;
   line-height: 1.7;
   margin: 0;
@@ -562,10 +562,10 @@
 }
 
 /* =========================================================
-   MIDDLE BOOKING BUTTON (مرن)
+   MIDDLE BOOKING BUTTON
    ========================================================= */
 .hm-booking-area {
-  padding: clamp(40px, 6vw, 60px) clamp(5%, 8vw, 8%);
+  padding: clamp(35px, 6vw, 60px) clamp(5%, 8vw, 8%);
   display: flex;
   justify-content: center;
   background-color: var(--color-bg-alt);
@@ -576,7 +576,7 @@
   background-color: var(--color-secondary);
   color: var(--color-white);
   border: none;
-  padding: clamp(14px, 2vw, 18px) clamp(28px, 4vw, 42px);
+  padding: clamp(13px, 2vw, 18px) clamp(24px, 4vw, 42px);
   border-radius: var(--radius-sm);
   font-size: clamp(0.95rem, 1.5vw, 1.05rem);
   font-weight: 600;
@@ -584,7 +584,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 14px;
+  gap: 12px;
   transition: var(--transition-smooth);
   box-shadow: 0 4px 15px rgba(184, 154, 98, 0.2);
 }
@@ -604,10 +604,10 @@
 }
 
 /* =========================================================
-   PROMISE / THREE VALUES (FEATURES - مرن)
+   PROMISE / THREE VALUES (FEATURES)
    ========================================================= */
 .hm-features {
-  padding: clamp(50px, 8vw, 100px) clamp(5%, 8vw, 8%);
+  padding: clamp(45px, 8vw, 100px) clamp(5%, 8vw, 8%);
   background-color: var(--color-bg);
   width: 100%;
 }
@@ -615,24 +615,24 @@
 .hm-features-heading {
   text-align: center;
   max-width: 600px;
-  margin: 0 auto clamp(40px, 6vw, 60px) auto;
+  margin: 0 auto clamp(35px, 6vw, 60px) auto;
 }
 
 .hm-features-heading p {
-  font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+  font-size: clamp(1.1rem, 2.2vw, 1.8rem);
   color: var(--color-primary);
   font-family: "Playfair Display", Georgia, serif;
 }
 
 .hm-feature-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
-  gap: clamp(20px, 3vw, 30px);
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: clamp(16px, 3vw, 30px);
   width: 100%;
 }
 
 .hm-feature {
-  padding: clamp(30px, 4vw, 40px) clamp(20px, 3vw, 30px);
+  padding: clamp(24px, 4vw, 40px) clamp(18px, 3vw, 30px);
   background-color: var(--color-bg-alt);
   border-radius: var(--radius-md);
   transition: var(--transition-smooth);
@@ -644,36 +644,36 @@
 .hm-feature:hover {
   background-color: var(--color-primary);
   color: var(--color-bg);
-  transform: translateY(-5px);
+  transform: translateY(-4px);
 }
 
 .hm-feature-top {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: clamp(16px, 3vw, 24px);
+  margin-bottom: clamp(14px, 3vw, 24px);
 }
 
 .hm-feature-icon {
-  font-size: clamp(1.4rem, 2vw, 1.8rem);
+  font-size: clamp(1.3rem, 2vw, 1.8rem);
   color: var(--color-secondary);
 }
 
 .hm-feature-number {
-  font-size: clamp(0.8rem, 1.2vw, 0.9rem);
+  font-size: 0.85rem;
   font-weight: 700;
   color: var(--color-fg-alt);
 }
 
 .hm-feature h3 {
-  font-size: clamp(1.15rem, 1.8vw, 1.3rem);
-  margin-bottom: 10px;
+  font-size: clamp(1.1rem, 1.8vw, 1.3rem);
+  margin-bottom: 8px;
   color: var(--color-primary);
   transition: var(--transition-smooth);
 }
 
 .hm-feature p {
-  font-size: clamp(0.9rem, 1.1vw, 0.95rem);
+  font-size: clamp(0.88rem, 1vw, 0.95rem);
   color: var(--color-muted);
   transition: var(--transition-smooth);
   flex-grow: 1;
@@ -681,7 +681,7 @@
 }
 
 .hm-feature-arrow {
-  margin-top: 16px;
+  margin-top: 14px;
   color: var(--color-secondary);
   font-size: 1.2rem;
   transition: transform 0.3s ease;
@@ -701,11 +701,11 @@
 }
 
 /* =========================================================
-   PERSONAL CARE & LANGUAGES SECTIONS (مرن)
+   PERSONAL CARE & LANGUAGES SECTIONS
    ========================================================= */
 .hm-personal-care,
 .hm-languages {
-  padding: clamp(40px, 7vw, 80px) clamp(5%, 8vw, 8%);
+  padding: clamp(35px, 7vw, 80px) clamp(5%, 8vw, 8%);
   background-color: var(--color-bg);
   width: 100%;
 }
@@ -715,7 +715,7 @@
   max-width: 800px;
   margin: 0 auto;
   text-align: center;
-  padding: clamp(30px, 5vw, 50px) clamp(20px, 4vw, 40px);
+  padding: clamp(24px, 5vw, 50px) clamp(16px, 4vw, 40px);
   background-color: var(--color-white);
   border-radius: var(--radius-lg);
   border-left: 5px solid var(--color-fg-alt);
@@ -729,24 +729,24 @@
 
 .hm-personal-care h2,
 .hm-languages h2 {
-  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  font-size: clamp(1.4rem, 3vw, 2.2rem);
   color: var(--color-primary);
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
 .hm-personal-care p,
 .hm-languages p {
-  font-size: clamp(0.95rem, 1.2vw, 1.05rem);
+  font-size: clamp(0.9rem, 1.1vw, 1.05rem);
   color: var(--color-muted);
   line-height: 1.6;
 }
 
 /* =========================================================
-   FINAL CTA SECTION (مرن)
+   FINAL CTA SECTION
    ========================================================= */
 .hm-cta {
   position: relative;
-  padding: clamp(60px, 10vw, 110px) clamp(5%, 8vw, 8%);
+  padding: clamp(50px, 10vw, 110px) clamp(5%, 8vw, 8%);
   background-color: var(--color-primary);
   color: var(--color-bg);
   text-align: center;
@@ -778,8 +778,8 @@
 }
 
 .hm-cta h2 {
-  font-size: clamp(1.8rem, 4.5vw, 3rem);
-  margin-bottom: 14px;
+  font-size: clamp(1.6rem, 4vw, 3rem);
+  margin-bottom: 12px;
   color: var(--color-bg);
 }
 
@@ -788,9 +788,9 @@
 }
 
 .hm-cta p {
-  font-size: clamp(0.95rem, 1.3vw, 1.1rem);
+  font-size: clamp(0.9rem, 1.2vw, 1.1rem);
   color: var(--color-bg-alt);
-  margin-bottom: 28px;
+  margin-bottom: 24px;
   line-height: 1.6;
 }
 
@@ -798,7 +798,7 @@
   background-color: var(--color-secondary);
   color: var(--color-white);
   border: none;
-  padding: clamp(14px, 2vw, 16px) clamp(28px, 4vw, 36px);
+  padding: clamp(13px, 2vw, 16px) clamp(24px, 4vw, 36px);
   font-size: clamp(0.95rem, 1.5vw, 1rem);
   font-weight: 600;
   border-radius: var(--radius-sm);
@@ -817,10 +817,33 @@
 }
 
 /* =========================================================
-   RESPONSIVE DESIGN (GLOBAL MULTI-DEVICE SUPPORT - بدون المساس بالهيرو)
+   RESPONSIVE DESIGN (GLOBAL MULTI-DEVICE SUPPORT)
    ========================================================= */
-@media (max-width: 992px) {
-  /* قسم الهيرو يتم تجاهله تماماً بناءً على طلبك */
+
+@media (max-width: 900px) {
+  .hm-hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .hm-hero-image-wrapper {
+    order: 2;
+  }
+
+  .hm-hero-content {
+    order: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hm-hero-label {
+    justify-content: center;
+  }
+
+  .hm-hero-buttons {
+    justify-content: center;
+  }
 }
 
 @media (max-width: 768px) {
@@ -834,12 +857,21 @@
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 500px) {
   .hm-primary-button,
   .hm-secondary-button,
   .hm-booking-button,
   .hm-cta-button {
     width: 100%;
     justify-content: center;
+  }
+
+  .hm-hero-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hm-hero-buttons > * {
+    width: 100%;
   }
 }
