@@ -1,16 +1,13 @@
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "../assets/styles/Home.css";
-
 import { useLanguage } from "../context/LanguageContext.jsx";
 import translations from "../translat/translations";
-
 import FirstImage from "../images/First.png";
 import DoctorImage from "../images/doctorshadi.png";
 import AlignersImage from "../images/Invisiblealigner.jpg";
 import FixedBracesImage from "../images/FixedBraces.png";
 import ChildrenImage from "../images/ChildrenTeenagers.jpg";
-
 import DigitalScanningImage from "../images/Digitaler3DScanner.png";
 import ModJawImage from "../images/Modjaw.png";
 import DVTImage from "../images/3DImagingDVT.png";
@@ -167,19 +164,36 @@ const Home = () => {
       </section>
 
       {/* =====================================================
-          DOCTOR IMAGE
+          DOCTOR SECTION (IMAGE ON LEFT / TEXT ON RIGHT)
       ===================================================== */}
 
-      <section className="hm-personal-image-section">
-        <div className="hm-personal-image-wrapper">
-          <img
-            src={DoctorImage}
-            alt="Dr. Shadi Loutfi"
-            className="hm-personal-image"
-          />
+      <section className="hm-doctor-section hm-reveal">
+        <div className="hm-doctor-container">
+          {/* Doctor Content / Text (النص أصبح على اليسار) */}
+          <div className="hm-doctor-content">
+            <div className="hm-doctor-label">
+              <span></span>
+              {t.doctorSectionLabel || "IHRE KIEFERORTHOPÄDIE"}
+            </div>
+
+            <h2 className="hm-doctor-title">
+              {t.doctorSectionTitleBefore}{" "}
+              <em>{t.doctorSectionTitleHighlight}</em>
+            </h2>
+
+            <p className="hm-doctor-text">{t.doctorSectionText}</p>
+          </div>
+
+          {/* Doctor Image Wrapper (الصورة أصبحت على اليمين) */}
+          <div className="hm-doctor-image-wrapper">
+            <img
+              src={DoctorImage}
+              alt="Dr. Shadi Loutfi"
+              className="hm-doctor-image"
+            />
+          </div>
         </div>
       </section>
-
       {/* =====================================================
           ORTHODONTICS / TREATMENTS
       ===================================================== */}
@@ -199,7 +213,7 @@ const Home = () => {
         </div>
 
         {/* ===================================================
-            TREATMENT CARDS (مطابقة لستايل صفحة Treatment)
+            TREATMENT CARDS
         =================================================== */}
 
         <div className="hm-treatment-grid hm-reveal">
@@ -283,7 +297,7 @@ const Home = () => {
 
         {/* ===================================================
             DIAGNOSTICS
-        =================================================== */}
+        ================================================== */}
 
         <div className="hm-diagnostics-section hm-reveal">
           {/* DIAGNOSTICS HEADER */}

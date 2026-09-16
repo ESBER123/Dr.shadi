@@ -22,19 +22,20 @@ const translations = {
 
     bookAppointment: "Book a Consultation",
     discoverClinic: "Explore Treatments",
-    // Kept for compatibility with existing Home.jsx
     yearsExperience: "",
     happyPatients: "",
     personalCare: "",
 
-    // healthySmile: "Healthy Smile",
-    // beautifulResults: "Beautiful results",
-
     heroImageAlt: "Modern orthodontic clinic",
 
     // =========================================================
-    // INTRO
+    // DOCTOR SECTION (YOUR ORTHODONTIST)
     // =========================================================
+    doctorSectionLabel: "YOUR ORTHODONTIST",
+    doctorSectionTitleBefore: "More than",
+    doctorSectionTitleHighlight: "straight teeth.",
+    doctorSectionText:
+      "My goal is not simply to straighten teeth, but to create a healthy, functional and naturally beautiful smile that lasts.",
 
     // =========================================================
     // ABOUT
@@ -79,11 +80,6 @@ const translations = {
 
     orthodonticsText:
       "Whether invisible aligners, fixed braces or orthodontic treatment for children and teenagers — we develop an individual treatment plan for every stage of life.",
-
-    // =========================================================
-    // TREATMENT TYPES
-    // Compatibility keys for possible existing Home.jsx
-    // =========================================================
 
     treatmentAlignersTitle: "Invisible Aligners",
 
@@ -137,7 +133,6 @@ const translations = {
     dvtText:
       "High-precision 3D imaging of the jaw and teeth for detailed diagnostics and treatment planning.",
 
-    // Additional compatibility keys
     digital3DScanning: "Digital 3D Scanning",
 
     digital3DScanningText:
@@ -172,17 +167,11 @@ const translations = {
     ],
 
     objective1: "A healthy and functional bite",
-
     objective2: "Precise alignment of the teeth",
-
     objective3: "Balanced relationship between teeth and jaws",
-
     objective4: "A naturally beautiful smile",
-
     objective5: "Individual treatment planning",
-
     objective6: "Modern diagnostics and digital technology",
-
     objective7: "Personal guidance throughout treatment",
 
     objectiveImageAlt: "Orthodontic consultation",
@@ -205,9 +194,7 @@ const translations = {
     objectiveWhatYouCanExpect: "What you can expect from us",
 
     objectiveExpectation1: "Individual treatment planning",
-
     objectiveExpectation2: "Modern diagnostics and technology",
-
     objectiveExpectation3: "Personal care throughout treatment",
 
     objectiveWhatToPayAttention: "Our focus",
@@ -220,14 +207,9 @@ const translations = {
     objectiveApproachText:
       "From the first consultation to the final result, we accompany you personally and explain every step of your treatment clearly and transparently.",
 
-    // =========================================================
-    // EXISTING EXPECTATIONS SECTION - COMPATIBILITY
-    // =========================================================
-
     expectationsLabel: "Our Approach",
 
     expectationsTitleBefore: "Individual treatment.",
-
     expectationsTitleHighlight: "Long-term results.",
 
     expectationsText:
@@ -242,11 +224,8 @@ const translations = {
     ],
 
     expectation1: "Individual treatment planning",
-
     expectation2: "Modern diagnostics and technology",
-
     expectation3: "Personal care throughout treatment",
-
     expectation4: "A healthy, functional bite and a naturally beautiful smile.",
 
     approachTitle: "Our approach",
@@ -278,19 +257,13 @@ const translations = {
     ],
 
     childFactor1: "Early assessment",
-
     childFactor2: "Individual treatment planning",
-
     childFactor3: "Monitoring tooth and jaw development",
-
     childFactor4: "Gentle orthodontic care",
-
     childFactor5: "Personal attention",
 
     childrenImageAlt: "Orthodontic treatment for children and teenagers",
-
     childrenCardSubtitle: "Gentle & Personal",
-
     childrenLearnMore: "Learn more about children's orthodontics →",
 
     // =========================================================
@@ -337,15 +310,11 @@ const translations = {
     ],
 
     adultPoint1: "Individual treatment planning",
-
     adultPoint2: "Discreet orthodontic treatment options",
-
     adultPoint3: "Invisible aligners where appropriate",
-
     adultPoint4: "Modern fixed braces where appropriate",
 
     adultsImageAlt: "Adult orthodontic patient",
-
     adultBadge: "Adult Care",
 
     // =========================================================
@@ -361,7 +330,6 @@ const translations = {
       "Our approach combines individual treatment planning, modern diagnostics and personal care from start to finish. ",
 
     promise: "Why Choose Us?",
-
     work: "Personal. Precise. Long-term.",
 
     features: [
@@ -398,7 +366,7 @@ const translations = {
     languagesTitle: "",
 
     languagesText:
-      "We speak German, English, Russian,Ukrainian, Turkish and  Arabic to make communication as easy and comfortable as possible. Only keep the languages that are actually offered by the practice.",
+      "We speak German, English, Russian, Ukrainian, Turkish and Arabic to make communication as easy and comfortable as possible.",
 
     // =========================================================
     // VALUES
@@ -410,7 +378,6 @@ const translations = {
     valuesTitleHighlight: "Precise. Long-term.",
 
     why: "Why Choose Us?",
-
     hands: "Personal care, precise treatment and long-term results.",
 
     quote:
@@ -430,16 +397,13 @@ const translations = {
       {
         number: "03",
         title: "Long-term",
-        text: "Our goal is a healthy, functional bite and a beautiful smile that lasts.",
+        text: "Unser Ziel ist ein gesunder, funktioneller Biss und ein schönes Lächeln, das bleibt.",
       },
     ],
 
     patientFirst: "Personal",
-
     qualified: "Precise",
-
     languages: "Communication in your language",
-
     love: "Long-term",
 
     // =========================================================
@@ -449,8 +413,7 @@ const translations = {
     ctaLabel: "Book a Consultation",
 
     ctaTitleBefore: "Let's find the",
-
-    ctaTitleHighlight: "right treatmentfor you.",
+    ctaTitleHighlight: "right treatment for you.",
 
     ctaText:
       "In a personal consultation, we discuss your wishes, assess your individual situation and explain the treatment options that are right for you.",
@@ -465,11 +428,8 @@ const translations = {
       "Modern orthodontics for a healthy, functional and beautiful smile. Individual treatment with personal care and modern technology.",
 
     footerAbout: "About",
-
     footerTreatments: "Treatments",
-
     footerWhyChooseUs: "Why choose us?",
-
     footerBookConsultation: "Book a consultation",
   },
 
@@ -492,44 +452,39 @@ const translations = {
     heroLabel: "Moderne kieferorthopädische Praxis",
 
     heroTitleBefore: "Kieferorthopädie.",
-
     heroTitleHighlight: "Für ein Lächeln,",
-
     heroTitleAfter: " das bleibt.",
 
     heroText:
       "Moderne Kieferorthopädie für Kinder, Jugendliche und Erwachsene – individuell geplant, präzise diagnostiziert und persönlich begleitet.",
 
     bookAppointment: "Termin vereinbaren",
-
     discoverClinic: "Behandlungen entdecken",
     yearsExperience: "Jahre Erfahrung",
-
     happyPatients: "Zufriedene Patienten",
-
     personalCare: "Persönliche Betreuung",
 
     heroImageAlt: "Moderne kieferorthopädische Praxis",
 
     // =========================================================
-    // INTRO
+    // DOCTOR SECTION (IHRE KIEFERORTHOPÄDIE) - تمت الإضافة هنا
     // =========================================================
-
-    intro:
-      "Moderne Kieferorthopädie für Kinder, Jugendliche und Erwachsene – individuell geplant, präzise diagnostiziert und persönlich begleitet.",
+    doctorSectionLabel: "IHRE KIEFERORTHOPÄDIE",
+    doctorSectionTitleBefore: "Mehr als",
+    doctorSectionTitleHighlight: "gerade Zähne.",
+    doctorSectionText:
+      "Mein Ziel ist mehr als eine Zahnkorrektur. Ich möchte ein gesundes, funktionelles und natürlich schönes Lächeln schaffen – eines, das Sie langfristig begleitet.",
 
     // =========================================================
     // ABOUT
     // =========================================================
 
     modernCare: "Moderne Behandlung",
-
     advancedTechnology: "Fortschrittliche Technologie",
 
     aboutLabel: "Über unsere Praxis",
 
     aboutTitleBefore: "Kieferorthopädie.",
-
     aboutTitleHighlight: "Für ein Lächeln, das bleibt.",
 
     aboutLead:
@@ -546,7 +501,6 @@ const translations = {
     ],
 
     aboutImageAlt: "Kieferorthopädische Behandlung",
-
     learnMore: "Mehr erfahren",
 
     // =========================================================
@@ -554,9 +508,7 @@ const translations = {
     // =========================================================
 
     orthodonticsLabel: "Behandlungen.",
-
     orthodonticsTitleBefore: "Behandlungen.",
-
     orthodonticsTitleHighlight: "Individuell für Sie.",
 
     orthodonticsIntro:
@@ -566,32 +518,26 @@ const translations = {
       "Ob unsichtbare Aligner, feste Zahnspangen oder kieferorthopädische Behandlung für Kinder und Jugendliche – wir entwickeln für jede Lebensphase eine individuelle Lösung.",
 
     treatmentAlignersTitle: "Unsichtbare Aligner",
-
     treatmentAlignersText:
       "Diskrete Zahnkorrektur mit individuell geplanten Alignern – komfortabel und im Alltag nahezu unsichtbar.",
 
     treatmentFixedBracesTitle: "Feste Zahnspangen",
-
     treatmentFixedBracesText:
       " Eine bewährte kieferorthopädische Behandlung für kontrollierte Zahnbewegungen und präzise Ergebnisse.",
 
     treatmentChildrenTitle: "Kinder & Jugendliche",
-
     treatmentChildrenText:
       "Frühzeitige Beurteilung, individuelle Behandlungsplanung und einfühlsame kieferorthopädische Betreuung während des Wachstums.",
 
     invisibleAligners: "Unsichtbare Aligner",
-
     invisibleAlignersText:
       "Diskrete Zahnkorrektur mit individuell geplanten Alignern – komfortabel und im Alltag nahezu unsichtbar.",
 
     fixedBraces: "Feste Zahnspangen",
-
     fixedBracesText:
       "Eine bewährte kieferorthopädische Behandlung für kontrollierte Zahnbewegungen und präzise Ergebnisse.",
 
     childrenTeenagers: "Kinder & Jugendliche",
-
     childrenTeenagersText:
       "Frühzeitige Beurteilung, individuelle Behandlungsplanung und einfühlsame kieferorthopädische Betreuung während des Wachstums.",
 
@@ -600,35 +546,28 @@ const translations = {
     // =========================================================
 
     diagnosticsLabel: "Diagnostik",
-
     diagnosticsTitle: "Moderne Diagnostik für eine präzise Behandlungsplanung",
 
     digitalScanningTitle: "Digitaler 3D-Scan",
-
     digitalScanningText:
       "Digitale Abformungen - präzise, komfortabel und ohne herkömmliche Zahnabdrücke.",
 
     modJawTitle: "ModJaw",
-
     modJawText:
       "Präzise Analyse der natürlichen Kieferbewegung in 4D zur Unterstützung von Diagnostik und Behandlungsplanung.",
 
     dvtTitle: "3D-Bildgebung (DVT)",
-
     dvtText:
       "Hochpräzise 3D-Aufnahmen von Kiefer und Zähnen für eine detaillierte Diagnostik und Behandlungsplanung.",
 
     digital3DScanning: "Digitaler 3D-Scan",
-
     digital3DScanningText:
       "Digitale Abformungen - präzise, komfortabel und ohne herkömmliche Zahnabdrücke.",
 
     modJaw: "ModJaw",
-
     modJawDescription: "Präzise Analyse der natürlichen Kieferbewegung in 4D.",
 
     threeDImaging: "3D-Bildgebung (DVT)",
-
     threeDImagingText:
       "Hochpräzise 3D-Aufnahmen von Kiefer und Zähnen für eine detaillierte Diagnostik und Behandlungsplanung.",
 
@@ -637,7 +576,6 @@ const translations = {
     // =========================================================
 
     objectiveLabel: "Unser Ziel",
-
     objectiveTitle:
       "Unser Ziel ist ein gesunder, funktioneller Biss und ein natürlich schönes Lächeln.",
 
@@ -652,17 +590,11 @@ const translations = {
     ],
 
     objective1: "Ein gesunder und funktioneller Biss",
-
     objective2: "Eine präzise Ausrichtung der Zähne",
-
     objective3: "Ein harmonisches Zusammenspiel von Zähnen und Kiefern",
-
     objective4: "Ein natürlich schönes Lächeln",
-
     objective5: "Individuelle Behandlungsplanung",
-
     objective6: "Moderne Diagnostik und digitale Technologie",
-
     objective7: "Persönliche Begleitung während der Behandlung",
 
     objectiveImageAlt: "Kieferorthopädische Beratung",
@@ -672,7 +604,6 @@ const translations = {
     // =========================================================
 
     objectiveExpectationsLabel: "Unser Ansatz",
-
     objectiveExpectationsTitle:
       "Individuelle Behandlung. Klare Ziele. Langfristige Ergebnisse.",
 
@@ -683,38 +614,26 @@ const translations = {
       "Jeder Patient hat unterschiedliche Bedürfnisse und Ziele. Deshalb beurteilen wir Ihre individuelle Situation sorgfältig, bevor wir die passende Behandlung empfehlen.",
 
     objectiveWhatYouCanExpect: "Was Sie von uns erwarten können",
-
     objectiveExpectation1: "Individuelle Behandlungsplanung",
-
     objectiveExpectation2: "Moderne Diagnostik und Technologie",
-
     objectiveExpectation3: "Persönliche Betreuung während der Behandlung",
 
     objectiveWhatToPayAttention: "Unser Fokus",
-
     objectiveAttentionText:
       "Wir betrachten nicht nur die Stellung einzelner Zähne. Das Zusammenspiel von Zähnen, Kiefern und Biss ist ein wichtiger Bestandteil für ein gesundes, funktionelles und ästhetisch ansprechendes Ergebnis.",
 
     objectiveOurApproach: "Unser Ansatz",
-
     objectiveApproachText:
       "Von der ersten Beratung bis zum Behandlungsergebnis begleiten wir Sie persönlich und erklären jeden Schritt Ihrer Behandlung klar und transparent.",
 
-    // =========================================================
-    // EXISTING EXPECTATIONS SECTION
-    // =========================================================
-
     expectationsLabel: "Unser Ansatz",
-
     expectationsTitleBefore: "Individuelle Behandlung.",
-
     expectationsTitleHighlight: "Langfristige Ergebnisse.",
 
     expectationsText:
       "Wir verbinden präzise Diagnostik, moderne kieferorthopädische Behandlungsmethoden und persönliche Betreuung zu einem Behandlungsplan, der auf Ihre individuellen Bedürfnisse abgestimmt ist.",
 
     expectationsListTitle: "Was Sie von uns erwarten können",
-
     expectationsList: [
       "Individuelle Behandlungsplanung",
       "Moderne Diagnostik und Technologie",
@@ -722,16 +641,12 @@ const translations = {
     ],
 
     expectation1: "Individuelle Behandlungsplanung",
-
     expectation2: "Moderne Diagnostik und Technologie",
-
     expectation3: "Persönliche Betreuung während der Behandlung",
-
     expectation4:
       "Ein gesunder, funktioneller Biss und ein natürlich schönes Lächeln.",
 
     approachTitle: "Unser Ansatz",
-
     approachText:
       "Von der ersten Beratung bis zum Behandlungsergebnis begleiten wir Sie persönlich und erklären jeden Schritt Ihrer Behandlung klar und transparent.",
 
@@ -743,14 +658,12 @@ const translations = {
     // =========================================================
 
     childrenLabel: "Kinder & Jugendliche",
-
     childrenTitle: "Einfühlsame kieferorthopädische Betreuung von klein auf.",
 
     childrenText:
       "Wir begleiten Kinder und Jugendliche während ihrer kieferorthopädischen Entwicklung mit individuellen Behandlungsplänen und persönlicher Betreuung. Eine frühzeitige Beurteilung hilft uns, sich entwickelnde Zahn- und Kieferprobleme zu erkennen und den richtigen Zeitpunkt für eine Behandlung zu bestimmen.",
 
     childrenFactorsTitle: "Individuelle Betreuung während des Wachstums",
-
     childrenFactors: [
       "Frühzeitige Beurteilung",
       "Individuelle Behandlungsplanung",
@@ -760,20 +673,14 @@ const translations = {
     ],
 
     childFactor1: "Frühzeitige Beurteilung",
-
     childFactor2: "Individuelle Behandlungsplanung",
-
     childFactor3: "Beobachtung der Zahn- und Kieferentwicklung",
-
     childFactor4: "Einfühlsame kieferorthopädische Betreuung",
-
     childFactor5: "Persönliche Aufmerksamkeit",
 
     childrenImageAlt:
       "Kieferorthopädische Behandlung für Kinder und Jugendliche",
-
     childrenCardSubtitle: "Einfühlsam & persönlich",
-
     childrenLearnMore: "Mehr über Kieferorthopädie für Kinder erfahren →",
 
     // =========================================================
@@ -781,7 +688,6 @@ const translations = {
     // =========================================================
 
     mixedDentitionTitle: "Behandlung während der Zahnentwicklung",
-
     mixedDentitionText:
       "Eine frühzeitige Beurteilung hilft uns, sich entwickelnde Zahn- und Kieferprobleme zu erkennen und den richtigen Zeitpunkt für eine kieferorthopädische Behandlung zu bestimmen.",
 
@@ -793,7 +699,6 @@ const translations = {
     // =========================================================
 
     permanentDentitionTitle: "Behandlung des bleibenden Gebisses",
-
     permanentDentitionText:
       "Bei Jugendlichen und Erwachsenen entwickeln wir auf Grundlage der Zahnstellung, der Kiefer und des Bisses einen individuellen Behandlungsplan. Je nach Situation können moderne feste Zahnspangen oder andere kieferorthopädische Lösungen eingesetzt werden.",
 
@@ -802,7 +707,6 @@ const translations = {
     // =========================================================
 
     adultsLabel: "Erwachsene",
-
     adultsTitle:
       "Kieferorthopädie für Erwachsene – diskret, präzise und individuell.",
 
@@ -821,15 +725,11 @@ const translations = {
     ],
 
     adultPoint1: "Individuelle Behandlungsplanung",
-
     adultPoint2: "Diskrete kieferorthopädische Behandlungsmöglichkeiten",
-
     adultPoint3: "Unsichtbare Aligner, wenn geeignet",
-
     adultPoint4: "Moderne feste Zahnspangen, wenn geeignet",
 
     adultsImageAlt: "Erwachsener Patient in kieferorthopädischer Behandlung",
-
     adultBadge: "Erwachsenenbehandlung",
 
     // =========================================================
@@ -837,16 +737,13 @@ const translations = {
     // =========================================================
 
     promiseLabel: "Warum wir?",
-
     promiseTitleBefore: "Persönlich.",
-
     promiseTitleHighlight: "Präzise. Langfristig.",
 
     promiseText:
       "Unser Ansatz verbindet individuelle Behandlungsplanung und moderne Diagnostik. ",
 
     promise: "Warum wir?",
-
     work: "Persönlich. Präzise. Langfristig.",
 
     features: [
@@ -871,8 +768,7 @@ const translations = {
     // PERSONAL CARE
     // =========================================================
 
-    personalCareTitle: "Körperpflege von Anfang bis Ende.",
-
+    personalCareTitle: "Persönliche Betreuung von Anfang bis Ende.",
     personalCareText:
       "Von der ersten Beratung bis zum Behandlungsergebnis begleiten wir Sie persönlich und erklären jeden Schritt Ihrer Behandlung klar und transparent.",
 
@@ -881,85 +777,8 @@ const translations = {
     // =========================================================
 
     languagesTitle: "",
-
     languagesText:
       "Wir sprechen Deutsch, Englisch, Russisch, Ukrainisch, Türkisch und Arabisch, damit die Kommunikation so einfach und angenehm wie möglich ist.",
-
-    // =========================================================
-    // VALUES
-    // =========================================================
-
-    whyChooseUs: "Warum wir?",
-
-    valuesTitleBefore: "Persönlich.",
-
-    valuesTitleHighlight: "Präzise. Langfristig.",
-
-    why: "Warum wir?",
-
-    hands:
-      "Persönliche Betreuung, präzise Behandlung und langfristige Ergebnisse.",
-
-    quote:
-      "Jede Behandlung wird individuell geplant – mit dem Ziel, ein gesundes, funktionelles und natürlich schönes Lächeln zu schaffen.",
-
-    values: [
-      {
-        number: "01",
-        title: "Persönlich",
-        text: "Jeder Behandlungsplan wird individuell auf Ihre Bedürfnisse, Wünsche und klinische Situation abgestimmt.",
-      },
-      {
-        number: "02",
-        title: "Präzise",
-        text: "Moderne Diagnostik und digitale Technologie unterstützen eine präzise Behandlungsplanung.",
-      },
-      {
-        number: "03",
-        title: "Langfristig",
-        text: "Unser Ziel ist ein gesunder, funktioneller Biss und ein schönes Lächeln, das bleibt.",
-      },
-    ],
-
-    patientFirst: "Persönlich",
-
-    qualified: "Präzise",
-
-    languages: "Kommunikation in Ihrer Sprache",
-
-    love: "Langfristig",
-
-    // =========================================================
-    // CTA
-    // =========================================================
-
-    ctaLabel: "Termin vereinbaren",
-
-    ctaTitleBefore: "Gemeinsam finden wir die",
-
-    ctaTitleHighlight: "richtige Behandlung für Sie.",
-
-    ctaText:
-      "In einem persönlichen Beratungsgespräch besprechen wir Ihre Wünsche, beurteilen Ihre individuelle Situation und erklären Ihnen die Behandlungsmöglichkeiten, die für Sie geeignet sind.",
-
-    start: "Termin vereinbaren →",
-
-    bestSmile: "Finden wir gemeinsam die richtige Behandlung für Sie.",
-
-    // =========================================================
-    // FOOTER
-    // =========================================================
-
-    footerDescription:
-      "Modern orthodontic care for a healthy, functional and beautiful smile. Individual treatment with personal care and modern technology",
-
-    footerAbout: "Über uns",
-
-    footerTreatments: "Behandlungen",
-
-    footerWhyChooseUs: "Warum wir?",
-
-    footerBookConsultation: "Termin vereinbaren",
   },
 };
 

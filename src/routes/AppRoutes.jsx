@@ -8,6 +8,7 @@ import FAQ from "../pages/FAQ";
 import Booking from "../pages/Booking";
 import Impressum from "../pages/Impressum";
 import Datenschutz from "../pages/Datenschutz";
+import AppointmentConfirmed from "../pages/AppointmentConfirmed";
 const AppRoutes = () => {
   return (
     <>
@@ -18,6 +19,10 @@ const AppRoutes = () => {
           <Route path="/About" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/booking" element={<Booking />} />
+          <Route
+            path="/appointment-confirmed"
+            element={<AppointmentConfirmed />}
+          />
           <Route path="/faq" element={<FAQ />} />
           <Route path="/impressum" element={<Impressum />} />
           <Route path="/datenschutz" element={<Datenschutz />} />
