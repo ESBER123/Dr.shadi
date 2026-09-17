@@ -14,7 +14,6 @@ const GoogleReviews = () => {
       titlePart2: "say about us.",
       subtitle:
         "Real experiences from patients who trusted us with their smiles.",
-      basedOn: "Based on 50+ reviews",
       readAll: "Read all reviews on Google →",
     },
     de: {
@@ -23,7 +22,6 @@ const GoogleReviews = () => {
       titlePart2: "über uns sagen.",
       subtitle:
         "Echte Erfahrungen von Patientinnen und Patienten, die uns ihr Lächeln anvertraut haben.",
-      basedOn: "Basierend auf 50+ Rezensionen",
       readAll: "Alle Bewertungen auf Google ansehen →",
     },
   };
@@ -33,57 +31,42 @@ const GoogleReviews = () => {
   const reviews = [
     {
       id: 1,
-      name: "Jelena J.",
-      timeEn: "6 weeks ago",
-      timeDe: "vor 6 Wochen",
-      reviewEn:
-        "Very satisfied with my smile makeover at Dr. Loutfi. I thought it would take years, but it was just a few months. The consultation was detailed, the result looks natural and suits my face perfectly. The treatment was professional and stress-free.",
-      reviewDe:
-        "Sehr zufrieden mit meinem Smile Makeover bei Dr. Loutfi. Ich dachte, es würde Jahre dauern, aber es waren nur ein paar Monate. Die Beratung war ausführlich, das Ergebnis sieht natürlich aus und passt gut zu meinem Gesicht. Die Behandlung verlief professionell und stressfrei.",
+      name: "Yulia A.",
+      time: "vor 6 Wochen",
+      review:
+        "Dr. Shadi Loutfi hat meine Behandlung mit dem hochmodernen ModJaw-Gerät geplant. Meine Kieferbewegung wurde in 4D sichtbar gemacht und die Behandlung perfekt auf mich zugeschnitten. Das Ergebnis: ein Lächeln, auf das ich stolz bin, und ein Biss, der sich einfach perfekt anfühlt. Dazu ein herzliches, professionelles Team!",
       initial: "J",
     },
     {
       id: 2,
-      name: "Luisa M.",
-      timeEn: "7 days ago",
-      timeDe: "vor 7 Tagen",
-      reviewEn:
-        "Friendly, well organized, and truly professional. They listened to my wishes and the result is amazing! I'm 100% satisfied with my teeth.",
-      reviewDe:
-        "Freundlich, sehr gut organisiert, sind auf meine Wünsche eingegangen, sehr professionell und kompetent - das Ergebnis top! Ich bin zu 100% zufrieden mit meinen Zähnen :)",
+      name: "Hanna E.",
+      time: "vor 7 Tagen",
+      review:
+        "Ich bin sehr zufrieden mit meiner Behandlung bei Dr. Shadi Loutfi. Das Team ist freundlich, professionell, und man fühlt sich vom ersten Termin an gut aufgehoben. Das Ergebnis ist hervorragend und mein Lächeln hat sich deutlich verbessert.",
       initial: "L",
     },
     {
       id: 3,
-      name: "Uliana U.",
-      timeEn: "4 weeks ago",
-      timeDe: "vor 4 Wochen",
-      reviewEn:
-        "Very satisfied with my experience at Dr. Loutfi. The consultation was thorough, the result looks natural and suits my face perfectly. The treatment was professional and smooth from start to finish.",
-      reviewDe:
-        "Sehr zufrieden mit meinem Smile Makeover bei Dr. Loutfi. Die Beratung war ausführlich, das Ergebnis sieht natürlich aus und passt gut zu meinem Gesicht. Die Behandlung verlief professionell und stressfrei.",
+      name: "Yamen A.",
+      time: "4 weeks ago",
+      review:
+        "After seeing so many doctors with no answers, Dr. Loutfi finally solved my joint pain. He actually listened, took the time to understand what was going on, and got me the right treatment. I feel like myself again- I can't recommend him enough 😊",
       initial: "U",
     },
     {
       id: 4,
-      name: "Valentina T.",
-      timeEn: "5 weeks ago",
-      timeDe: "vor 5 Wochen",
-      reviewEn:
-        "Really happy with my experience so far. It's super easy to get here by bus or tram, and I didn't have to wait long for my appointment. The team is professional, friendly and the treatment is well explained.",
-      reviewDe:
-        "Sehr zufrieden mit meinem Smile Makeover bei Dr. Loutfi. Ich dachte, es würde Jahre dauern, aber es waren nur ein paar Monate. Die Beratung war ausführlich, das Ergebnis sieht natürlich aus und passt gut zu meinem Gesicht.",
+      name: "Marwan D.",
+      time: "5 weeks ago",
+      review:
+        "Dr. Loutfi impressed me. they use a digital scanner instead of messy impressions, so everything was quick and comfortable. It's amazing to see a practice using the latest technology.",
       initial: "V",
     },
     {
       id: 5,
       name: "Anna V.",
-      timeEn: "5 weeks ago",
-      timeDe: "vor 5 Wochen",
-      reviewEn:
-        "I'm very satisfied with my Invisalign treatment. The team is professional, attentive and always takes the time to answer my questions. I feel in great hands!",
-      reviewDe:
-        "Ich bin sehr zufrieden mit meiner Invisalign-Behandlung. Das Team ist professionell, freundlich und nimmt sich Zeit, um alle meine Fragen zu beantworten. Ich fühle mich rundum gut aufgehoben.",
+      time: "vor 5 Wochen",
+      review:
+        " Er ist ein wunderbarer Arzt und ein echter Profi auf seinem Gebiet, mit voller Hingabe und großer Aufmerksamkeit für Details. Die Praxis ist bis ins kleinste Detail organisiert, modern ausgestattet und blitzsauber. Meine Invisalign-Behandlung war von Anfang an in den besten Händen.",
       initial: "A",
     },
   ];
@@ -137,9 +120,6 @@ const GoogleReviews = () => {
                     <div className="reviewer-avatar">{rev.initial}</div>
                     <div>
                       <h4 className="reviewer-name">{rev.name}</h4>
-                      <span className="review-time">
-                        {language === "de" ? rev.timeDe : rev.timeEn}
-                      </span>
                     </div>
                   </div>
                   <div className="google-icon-badge">
@@ -166,9 +146,7 @@ const GoogleReviews = () => {
 
                 <div className="review-stars">{"★★★★★"}</div>
 
-                <p className="review-text">
-                  "{language === "de" ? rev.reviewDe : rev.reviewEn}"
-                </p>
+                <p className="review-text">"{rev.review}"</p>
               </div>
             ))}
           </div>
@@ -188,7 +166,6 @@ const GoogleReviews = () => {
         <span className="footer-stars">★★★★★</span>
         <span className="footer-score">5.0</span>
         <span className="footer-source">on Google</span>
-        <span className="footer-divider">•</span>
         <span className="footer-count">{t.basedOn}</span>
       </div>
 

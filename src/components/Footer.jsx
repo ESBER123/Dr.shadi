@@ -69,31 +69,24 @@ const Footer = () => {
 
               <span>
                 <small>{t.footer.phone}</small>
-                +4367763471705
+                +43 677 63471705
               </span>
             </a>
-
-            {/* Email */}
             <a href="mailto:office@drloutfi.at" className="footer-contact-item">
               <span className="contact-icon">
                 <FaEnvelope />
               </span>
-
               <span>
                 <small>{t.footer.email}</small>
                 office@drloutfi.at
               </span>
             </a>
-
-            {/* Address */}
             <div className="footer-contact-item">
               <span className="contact-icon">
                 <FaMapMarkerAlt />
               </span>
-
               <span>
-                <small>{t.footer.address}</small>
-
+                <small>{t.footer.addressTitle}</small>
                 <a
                   href="https://www.google.com/maps/place/Dr.+Shadi+Loutfi/@48.2408543,16.3491936,17z"
                   target="_blank"
@@ -102,9 +95,9 @@ const Footer = () => {
                 >
                   <div>
                     <strong>
-                      Billrothstraße 58/DG
+                      {t.footer.street}
                       <br />
-                      1190 Wien, Österreich
+                      {t.footer.city}
                     </strong>
                   </div>
 
@@ -113,8 +106,6 @@ const Footer = () => {
               </span>
             </div>
           </Col>
-
-          {/* Quick Links */}
           <Col lg={3} md={12} className="footer-links">
             <h4>{t.footer.quickLinks}</h4>
 
@@ -128,10 +119,7 @@ const Footer = () => {
           </Col>
         </Row>
 
-        {/* Divider */}
         <div className="footer-divider"></div>
-
-        {/* Bottom */}
         <div className="footer-bottom">
           <p>
             © 2026 <strong>Dr. Shadi Loutfi</strong>. {t.footer.rights}

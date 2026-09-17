@@ -94,7 +94,7 @@ export const aboutTranslations = {
     claudiaRole: "Fachzahnärztin für Kieferorthopädie",
 
     claudiaQuote:
-      "Ich arbeite besonders gerne mit Kindern, Jugendlichen und Erwachsenen und entwickle Behandlungskonzepte, die individuell auf ihre Bedürfnisse abgestimmt sind,Für mich bedeutet hochwertige Kieferorthopädie, Erfahrung, moderne Technologie und kontinuierliche Weiterbildung zu verbinden. Der Austausch mit internationalen Fachkollegen sowie die laufende Auseinandersetzung mit neuen Entwicklungen in Forschung und Kieferorthopädie sind für mich dabei besonders wichtig.",
+      "Ich arbeite besonders gerne mit Kindern, Jugendlichen und Erwachsenen und entwickle Behandlungskonzepte, die individuell auf ihre Bedürfnisse abgestimmt sind. Für mich bedeutet hochwertige Kieferorthopädie, Erfahrung, moderne Technologie und kontinuierliche Weiterbildung zu verbinden.",
 
     claudiaDescription:
       "Kieferorthopädie wird nie langweilig, weil sie sich ständig weiterentwickelt. Der Beruf der Kieferorthopädin ist für mich der schönste Beruf, den ich mir vorstellen kann. Die bestmögliche Behandlung hat für mich höchste Priorität. Ich halte es für besonders wichtig, mit den neuesten Entwicklungen in Forschung und Technik Schritt zu halten. Daher spielt kontinuierliche Weiterbildung eine wichtige Rolle in meinem Berufsleben. Ich pflege einen intensiven Austausch mit internationalen Spezialisten der Kieferorthopädie, gebe mein Wissen als Lehrende weiter und halte regelmäßig Vorträge auf internationalen Kongressen.",
