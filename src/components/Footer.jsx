@@ -8,30 +8,23 @@ import {
   FaFacebookF,
   FaArrowUp,
 } from "react-icons/fa";
-
 import { useLanguage } from "../context/LanguageContext";
 import translations from "../translat/footerTranslat.js";
-
 import "../assets/styles/Footer.css";
 
 const Footer = () => {
   const { language } = useLanguage();
-
   const t = translations[language];
-
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
       behavior: "smooth",
     });
   };
-
   return (
     <footer className="clinic-footer">
       <Container>
-        {/* Main Footer */}
         <Row className="footer-main">
-          {/* Brand */}
           <Col lg={5} md={6} className="footer-brand">
             <div className="footer-logo">
               <div className="footer-logo-icon">
@@ -50,23 +43,17 @@ const Footer = () => {
               <a href="#" aria-label="Instagram">
                 <FaInstagram />
               </a>
-
               <a href="#" aria-label="Facebook">
                 <FaFacebookF />
               </a>
             </div>
           </Col>
-
-          {/* Contact */}
           <Col lg={4} md={6} className="footer-contact">
             <h4>{t.footer.contact}</h4>
-
-            {/* Phone */}
             <a href="tel:+4367763471705" className="footer-contact-item">
               <span className="contact-icon">
                 <FaPhoneAlt />
               </span>
-
               <span>
                 <small>{t.footer.phone}</small>
                 +43 677 63471705
@@ -108,13 +95,9 @@ const Footer = () => {
           </Col>
           <Col lg={3} md={12} className="footer-links">
             <h4>{t.footer.quickLinks}</h4>
-
             <a href="/about">{t.footer.about}</a>
-
             <a href="/treatment">{t.footer.treatments}</a>
-
             <a href="/faq">{t.footer.whyUs}</a>
-
             <a href="/booking">{t.footer.appointment}</a>
           </Col>
         </Row>
@@ -127,10 +110,8 @@ const Footer = () => {
 
           <div className="footer-bottom-links">
             <a href="/datenschutz">{t.footer.privacy}</a>
-
             <a href="/impressum">{t.footer.imprint}</a>
           </div>
-
           <button
             className="back-to-top"
             onClick={scrollToTop}

@@ -28,20 +28,13 @@ const AppointmentConfirmed = () => {
     <main className="appointment-confirmed-page">
       <div className="confirmed-background-circle confirmed-circle-one"></div>
       <div className="confirmed-background-circle confirmed-circle-two"></div>
-
       <section className="appointment-confirmed-card">
         <div className="confirmed-icon">✓</div>
-
         <span className="confirmed-label">{t.label}</span>
-
         <h1>{t.title}</h1>
-
         <p className="confirmed-main-text">{t.message}</p>
-
         <p className="confirmed-description">{t.description}</p>
-
         <div className="confirmed-divider"></div>
-
         <p className="confirmed-footer">{t.footer}</p>
       </section>
     </main>

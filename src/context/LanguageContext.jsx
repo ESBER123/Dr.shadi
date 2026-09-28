@@ -3,15 +3,12 @@ const LanguageContext = createContext();
 export const LanguageProvider = ({ children }) => {
   const [language, setLanguage] = useState(() => {
     const savedLanguage = localStorage.getItem("clinic-language");
-
     if (savedLanguage === "de" || savedLanguage === "en") {
       return savedLanguage;
     }
-
     localStorage.setItem("clinic-language", "de");
     return "de";
   });
-
   const toggleLanguage = () => {
     setLanguage((prev) => {
       const newLanguage = prev === "en" ? "de" : "en";
@@ -19,7 +16,6 @@ export const LanguageProvider = ({ children }) => {
       return newLanguage;
     });
   };
-
   return (
     <LanguageContext.Provider
       value={{
@@ -32,7 +28,6 @@ export const LanguageProvider = ({ children }) => {
     </LanguageContext.Provider>
   );
 };
-
 export const useLanguage = () => {
   return useContext(LanguageContext);
 };

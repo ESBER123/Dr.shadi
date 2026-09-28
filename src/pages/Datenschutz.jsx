@@ -1,29 +1,23 @@
 import { useLanguage } from "../context/LanguageContext";
 import translations from "../translat/datenschutzTranslations.js";
-
 import "../assets/styles/Datenschutz.css";
 
 const Datenschutz = () => {
   const { language } = useLanguage();
-
   const t = translations[language] || translations.en;
-
   return (
     <main className="ds-page" lang={language}>
       {/* HERO */}
       <section className="ds-hero">
         <div className="ds-container">
           <span className="ds-eyebrow">{t.hero.label}</span>
-
           <h1>
             {t.hero.title}
             <span>{t.hero.accent}</span>
           </h1>
-
           <p>{t.hero.description}</p>
         </div>
       </section>
-
       {/* CONTENT */}
       <section className="ds-content">
         <div className="ds-container">
@@ -32,15 +26,10 @@ const Datenschutz = () => {
             <aside className="ds-sidebar">
               <div className="ds-sidebar-card">
                 <span className="ds-sidebar-label">{t.responsible.label}</span>
-
                 <strong>Dr. Shadi Loutfi</strong>
-
                 <span>{t.responsible.practice}</span>
-
                 <span>Billrothstraße 58</span>
-
                 <span>1190 Wien, Österreich</span>
-
                 <a href="mailto:office@drloutfi.at">office@drloutfi.at</a>
               </div>
             </aside>
@@ -50,12 +39,9 @@ const Datenschutz = () => {
               {/* 01 */}
               <section className="ds-section">
                 <div className="ds-number">01</div>
-
                 <div>
                   <h2>{t.sections.introduction.title}</h2>
-
                   <p>{t.sections.introduction.text1}</p>
-
                   <p>{t.sections.introduction.text2}</p>
                 </div>
               </section>
@@ -63,23 +49,15 @@ const Datenschutz = () => {
               {/* 02 */}
               <section className="ds-section">
                 <div className="ds-number">02</div>
-
                 <div>
                   <h2>{t.sections.responsible.title}</h2>
-
                   <p>{t.sections.responsible.intro}</p>
-
                   <div className="ds-contact-card">
                     <strong>Dr. Shadi Loutfi</strong>
-
                     <span>Kieferorthopädische Praxis</span>
-
                     <span>Billrothstraße 58</span>
-
                     <span>1190 Wien, Österreich</span>
-
                     <a href="mailto:office@drloutfi.at">office@drloutfi.at</a>
-
                     <a href="tel:+4367763471705">+43 677 63471705</a>
                   </div>
                 </div>

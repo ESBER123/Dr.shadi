@@ -27,22 +27,15 @@ const DoctorInfo = ({
           <div className="doctor-index">{index}</div>
         </div>
       </div>
-
-      {/* CONTENT */}
       <div className="about-doctor-content">
         <span className="doctor-role">{role}</span>
-
         <h2>{name}</h2>
-
         <div className="content-line" />
-
         <div className="doctor-quote">
           <span className="quote-mark">“</span>
           <p>{quote}</p>
         </div>
-
         <p className="doctor-description">{description}</p>
-
         <div className="about-info">
           {languages.length > 0 && (
             <div className="info-block">
@@ -54,7 +47,6 @@ const DoctorInfo = ({
               </div>
             </div>
           )}
-
           {qualifications.length > 0 && (
             <div className="info-block">
               <h4>{t?.academic}</h4>
@@ -65,7 +57,6 @@ const DoctorInfo = ({
               </ul>
             </div>
           )}
-
           {memberships.length > 0 && (
             <div className="info-block">
               <h4>{t?.memberships}</h4>

@@ -8,21 +8,16 @@ import "../assets/styles/App.css";
 const Header = () => {
   const { language, toggleLanguage } = useLanguage();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
   const t = translations?.[language] ?? translations?.en ?? {};
   const closeMobileMenu = () => setMobileMenuOpen(false);
-
   return (
     <header className="navbar-floating-wrapper">
       <div className="navbar-card">
-        {/* الشعار في المنتصف */}
         <div className="logo-center">
           <NavLink to="/" onClick={closeMobileMenu}>
             <img src={LogoImage} alt="Kieferorthopädie Dr. Shadi Loutfi" />
           </NavLink>
         </div>
-
-        {/* زر القائمة للموبايل */}
         <button
           type="button"
           className="mobile-menu-toggle"
@@ -54,8 +49,6 @@ const Header = () => {
             </svg>
           )}
         </button>
-
-        {/* محتوى الهيدر (الروابط والأزرار) */}
         <div className={`header-center ${mobileMenuOpen ? "open" : ""}`}>
           <nav className="nav-links">
             <NavLink to="/" onClick={closeMobileMenu}>
@@ -74,7 +67,6 @@ const Header = () => {
               {language === "en" ? "Contact" : "Kontakt"}
             </NavLink>
           </nav>
-
           <div className="header-actions">
             <button
               type="button"
@@ -86,7 +78,6 @@ const Header = () => {
               <span className="language-divider">/</span>
               <span className={language === "de" ? "active" : ""}>DE</span>
             </button>
-
             <NavLink
               to="/booking"
               className="header-cta"

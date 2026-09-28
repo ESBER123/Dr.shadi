@@ -6,7 +6,6 @@ const GoogleReviews = () => {
   const { language } = useLanguage();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
-
   const content = {
     en: {
       tag: "PATIENT EXPERIENCES",
@@ -98,7 +97,6 @@ const GoogleReviews = () => {
         </h2>
         <p className="reviews-subtitle">{t.subtitle}</p>
       </div>
-
       <div className="reviews-container">
         <button
           className="carousel-btn prev-btn"
@@ -143,15 +141,12 @@ const GoogleReviews = () => {
                     </svg>
                   </div>
                 </div>
-
                 <div className="review-stars">{"★★★★★"}</div>
-
                 <p className="review-text">"{rev.review}"</p>
               </div>
             ))}
           </div>
         </div>
-
         <button
           className="carousel-btn next-btn"
           onClick={handleNext}
