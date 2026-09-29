@@ -1,3 +1,7 @@
+/* =========================
+   NAVBAR
+========================= */
+
 .navbar-floating-wrapper {
   width: 100%;
   padding: 12px 20px;
@@ -9,52 +13,75 @@
 }
 
 .navbar-card {
+  width: 100%;
   max-width: 1200px;
-  margin: auto;
+  margin: 0 auto;
+
   background-color: #f5f1ea;
   border: 1px solid #e8e1d8;
   border-radius: 30px;
+
   padding: 12px 25px;
+
   display: flex;
-  flex-direction: row;
   align-items: center;
   justify-content: space-between;
   gap: 20px;
+
+  box-sizing: border-box;
+
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
 }
+
+/* =========================
+   LOGO
+========================= */
 
 .logo-center {
   flex-shrink: 0;
 }
 
 .logo-center img {
-  height: 48px;
+  height: 52px;
   width: auto;
+  max-width: 100%;
   display: block;
 }
 
+/* =========================
+   NAVIGATION
+========================= */
+
 .header-center {
   flex: 1;
+  min-width: 0;
+
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  gap: 25px;
+
+  gap: 20px;
 }
 
 .nav-links {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 22px;
+
+  gap: 20px;
   margin: 0;
+
   white-space: nowrap;
 }
 
 .nav-links a {
   text-decoration: none;
   color: #252525;
-  font-size: 16px;
+
+  font-size: 15px;
   white-space: nowrap;
+
+  transition: color 0.2s ease;
 }
 
 .nav-links a:hover,
@@ -62,18 +89,25 @@
   color: #b89a62;
 }
 
+/* =========================
+   ACTIONS
+========================= */
+
 .header-actions {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
+
   flex-shrink: 0;
 }
 
 .language-switch {
   background-color: #e8e1d8;
   border: 1px solid #d5ccc0;
-  padding: 7px 12px;
+
+  padding: 7px 11px;
   border-radius: 20px;
+
   cursor: pointer;
   white-space: nowrap;
 }
@@ -86,100 +120,106 @@
 .header-cta {
   background-color: #303a34;
   color: white;
-  padding: 10px 18px;
+
+  padding: 10px 16px;
   border-radius: 25px;
+
   text-decoration: none;
   white-space: nowrap;
-  font-size: 14px;
+
+  font-size: 13px;
+
+  transition: background-color 0.2s ease;
 }
 
 .header-cta:hover {
   background-color: #b89a62;
 }
 
-.mobile-menu-toggle {
-  display: none;
-}
-
 /* =========================
-   TABLET / MOBILE
+   MOBILE / TABLET
+   EVERYTHING STAYS VISIBLE
 ========================= */
 
 @media screen and (max-width: 992px) {
   .navbar-floating-wrapper {
-    padding: 8px 10px;
+    padding: 7px 8px;
   }
 
   .navbar-card {
     width: 100%;
-    padding: 10px 12px;
-    border-radius: 20px;
+
+    padding: 9px 10px;
+    border-radius: 22px;
+
     gap: 10px;
-    flex-direction: row;
-    overflow: hidden;
+
+    overflow: visible;
   }
 
+  /* Bigger logo */
   .logo-center {
     flex-shrink: 0;
   }
 
   .logo-center img {
-    height: 32px;
+    height: 42px;
     width: auto;
+    max-width: 150px;
   }
 
   .header-center {
-    width: auto;
     flex: 1;
+    min-width: 0;
+
     display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: flex-end;
+
     gap: 8px;
-    min-width: 0;
   }
 
   .nav-links {
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-end;
-    gap: 10px;
-    margin: 0;
-    flex-shrink: 1;
+
+    gap: 9px;
+
     min-width: 0;
+    flex-shrink: 1;
+
+    overflow: hidden;
   }
 
   .nav-links a {
-    font-size: 11px;
+    font-size: 10px;
     white-space: nowrap;
   }
 
   .header-actions {
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 6px;
+
+    gap: 5px;
     flex-shrink: 0;
   }
 
   .language-switch {
     padding: 5px 7px;
-    font-size: 10px;
+    font-size: 9px;
   }
 
   .header-cta {
-    padding: 7px 10px;
-    font-size: 10px;
+    padding: 7px 9px;
+    font-size: 9px;
   }
 
+  /* No hamburger */
   .mobile-menu-toggle {
-    display: none;
+    display: none !important;
   }
 }
 
 /* =========================
-   VERY SMALL PHONES
+   SMALL PHONES
 ========================= */
 
 @media screen and (max-width: 600px) {
@@ -189,24 +229,27 @@
 
   .navbar-card {
     padding: 8px 9px;
-    gap: 7px;
-    border-radius: 17px;
+    border-radius: 19px;
+
+    gap: 8px;
   }
 
+  /* Logo stays clearly visible */
   .logo-center img {
-    height: 27px;
+    height: 38px;
+    max-width: 135px;
   }
 
   .header-center {
-    gap: 5px;
+    gap: 6px;
   }
 
   .nav-links {
-    gap: 7px;
+    gap: 6px;
   }
 
   .nav-links a {
-    font-size: 9px;
+    font-size: 8px;
   }
 
   .header-actions {
@@ -222,4 +265,55 @@
     padding: 6px 8px;
     font-size: 8px;
   }
+}
+
+/* =========================
+   VERY SMALL PHONES
+========================= */
+
+@media screen and (max-width: 380px) {
+  .navbar-floating-wrapper {
+    padding: 5px;
+  }
+
+  .navbar-card {
+    padding: 7px 8px;
+    border-radius: 18px;
+
+    gap: 6px;
+  }
+
+  .logo-center img {
+    height: 34px;
+    max-width: 115px;
+  }
+
+  .header-center {
+    gap: 4px;
+  }
+
+  .nav-links {
+    gap: 5px;
+  }
+
+  .nav-links a {
+    font-size: 7px;
+  }
+
+  .header-actions {
+    gap: 3px;
+  }
+
+  .language-switch {
+    padding: 3px 5px;
+    font-size: 7px;
+  }
+
+  .header-cta {
+    padding: 5px 6px;
+    font-size: 7px;
+  }
+}
+.mobile-menu-toggle {
+  display: none !important;
 }
