@@ -2,11 +2,23 @@ import { useEffect, useState } from "react";
 import { useLanguage } from "../context/LanguageContext";
 import faqTranslations from "../translat/faqTranslations";
 import "../assets/styles/FAQ.css";
-
+import SEO from "../components/SEO";
 const FAQ = () => {
   const { language } = useLanguage();
   const [openIndex, setOpenIndex] = useState(null);
   const t = faqTranslations[language] || faqTranslations.en;
+  const seo =
+    language === "de"
+      ? {
+          title: "FAQ zur Kieferorthopädie | Dr. Shadi Loutfi Wien",
+          description:
+            "Antworten auf häufige Fragen zur Kieferorthopädie, Behandlung, Zahnpflege und Nachsorge bei Dr. Shadi Loutfi in Wien.",
+        }
+      : {
+          title: "Orthodontic FAQ | Dr. Shadi Loutfi Vienna",
+          description:
+            "Answers to frequently asked questions about orthodontic treatment, dental care and aftercare at Dr. Shadi Loutfi in Vienna.",
+        };
   useEffect(() => {
     const elements = document.querySelectorAll(".animate-on-scroll");
     const observer = new IntersectionObserver(
@@ -29,6 +41,12 @@ const FAQ = () => {
 
   return (
     <main className="good-page">
+      <SEO
+        title={seo.title}
+        description={seo.description}
+        canonical="https://www.drloutfi.at/faq"
+      />
+
       {/* ================= HERO ================= */}
       <section className="good-hero">
         <div className="hero-overlay" />

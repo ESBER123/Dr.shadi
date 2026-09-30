@@ -4,7 +4,7 @@ import { aboutTranslations } from "../translat/aboutTranslations";
 import shadiImage from "../images/doctor.png";
 import claudiaImage from "../images/DrClaudiaAichingerPfandl.png";
 import "../assets/styles/About.css";
-
+import SEO from "../components/SEO";
 const DoctorInfo = ({
   index,
   image,
@@ -77,9 +77,25 @@ const About = () => {
   const { language } = useLanguage();
   const t = aboutTranslations[language] || aboutTranslations.en;
   const navigate = useNavigate();
-
+  const seo =
+    language === "de"
+      ? {
+          title: "Über uns | Kieferorthopädie Dr. Shadi Loutfi",
+          description:
+            "Lernen Sie Dr. Shadi Loutfi und das Team der kieferorthopädischen Praxis in Wien kennen. Persönliche Betreuung, moderne Diagnostik und individuelle Behandlungsplanung.",
+        }
+      : {
+          title: "About Us | Orthodontist Dr. Shadi Loutfi Vienna",
+          description:
+            "Meet Dr. Shadi Loutfi and the orthodontic team in Vienna. Personal care, modern diagnostics and individually planned orthodontic treatment.",
+        };
   return (
     <main className="about-page">
+      <SEO
+        title={seo.title}
+        description={seo.description}
+        canonical="https://www.drloutfi.at/about"
+      />{" "}
       {/* HERO */}
       <section className="about-hero">
         <div className="about-label">
@@ -95,7 +111,6 @@ const About = () => {
 
         <p>{t.heroText}</p>
       </section>
-
       {/* DOCTORS INTRO */}
       <section className="doctors-intro">
         <span>{t.doctorsLabel}</span>
@@ -106,7 +121,6 @@ const About = () => {
           <em>{t.doctorsHighlight}</em>
         </h2>
       </section>
-
       {/* SHADI */}
       <DoctorInfo
         index="01"
@@ -119,7 +133,6 @@ const About = () => {
         qualifications={t.shadiQualifications}
         t={t}
       />
-
       {/* CLAUDIA */}
       <DoctorInfo
         index="02"
@@ -140,7 +153,6 @@ const About = () => {
         reverse
         t={t}
       />
-
       {/* CTA */}
       <section className="about-cta">
         <span>{t.ctaLabel}</span>

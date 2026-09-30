@@ -1,6 +1,7 @@
 import "../assets/styles/Treatment.css";
 import { useLanguage } from "../context/LanguageContext.jsx";
 import treatmentTranslations from "../translat/treatment.js";
+import SEO from "../components/SEO";
 
 // =========================================================
 // IMAGES
@@ -30,7 +31,18 @@ const Treatment = () => {
 
   const t =
     treatmentTranslations?.[currentLanguage] ?? treatmentTranslations?.en;
-
+  const seo =
+    currentLanguage === "de"
+      ? {
+          title: "Kieferorthopädische Behandlungen | Dr. Shadi Loutfi Wien",
+          description:
+            "Kieferorthopädische Behandlungen in Wien für Kinder, Jugendliche und Erwachsene – von unsichtbaren Alignern und festen Zahnspangen bis zu moderner Diagnostik.",
+        }
+      : {
+          title: "Orthodontic Treatments | Dr. Shadi Loutfi Vienna",
+          description:
+            "Orthodontic treatments in Vienna for children, teenagers and adults, including invisible aligners, fixed braces and modern diagnostics.",
+        };
   // =========================================================
   // BOOKING
   // =========================================================
@@ -59,6 +71,12 @@ const Treatment = () => {
       : "Modern orthodontic consultation";
   return (
     <main className="tr-page" dir="ltr" lang={currentLanguage}>
+      <SEO
+        title={seo.title}
+        description={seo.description}
+        canonical="https://www.drloutfi.at/treatment"
+      />
+
       <section className="tr-hero">
         <div className="tr-hero-inner">
           <div className="tr-hero-content">

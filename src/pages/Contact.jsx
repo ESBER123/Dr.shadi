@@ -3,11 +3,23 @@ import "../assets/styles/Contact.css";
 
 import { useLanguage } from "../context/LanguageContext.jsx";
 import contactTranslations from "../translat/contactTranslations";
-
+import SEO from "../components/SEO";
 const Contact = () => {
   const { language } = useLanguage();
 
   const t = contactTranslations?.[language] ?? contactTranslations?.en ?? {};
+  const seo =
+    language === "de"
+      ? {
+          title: "Kontakt | Kieferorthopädie Dr. Shadi Loutfi Wien",
+          description:
+            "Kontaktieren Sie die kieferorthopädische Praxis Dr. Shadi Loutfi in 1190 Wien. Vereinbaren Sie einen Termin oder kontaktieren Sie uns telefonisch oder per E-Mail.",
+        }
+      : {
+          title: "Contact | Orthodontist Dr. Shadi Loutfi Vienna",
+          description:
+            "Contact Dr. Shadi Loutfi's orthodontic practice in 1190 Vienna. Book an appointment or contact us by phone or email.",
+        };
 
   useEffect(() => {
     document.documentElement.lang = language;
@@ -20,6 +32,11 @@ const Contact = () => {
   // RETURN
   return (
     <main className="contact-page">
+      <SEO
+        title={seo.title}
+        description={seo.description}
+        canonical="https://www.drloutfi.at/contact"
+      />
       {/* =========================================
           BACKGROUND DECORATION
       ========================================= */}
