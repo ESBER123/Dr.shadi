@@ -18,7 +18,7 @@ const contactTranslations = {
     openingHoursLabel: "OPENING HOURS",
 
     openingDays: "Monday — Thursday",
-    openingTime: "09:00 AM — 05:00 PM",
+    openingTime: "08:00 AM — 06:00 PM",
 
     bookingLabel: "YOUR NEXT STEP",
     bookingButton: "Book a Consultation",
@@ -63,8 +63,8 @@ const contactTranslations = {
     addressLabel: "ADRESSE",
     openingHoursLabel: "ÖFFNUNGSZEITEN",
 
-    openingDays: "Samstag — Donnerstag",
-    openingTime: "09:00 — 17:00 Uhr",
+    openingDays: "Montag - Donnerstag",
+    openingTime: "08:00 — 18:00 Uhr",
 
     bookingLabel: "BEREIT, WENN SIE ES SIND",
     bookingButton: "Termin vereinbaren ",
