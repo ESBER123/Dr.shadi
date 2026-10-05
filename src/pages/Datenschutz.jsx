@@ -7,7 +7,7 @@ const Section = ({ number, section }) => {
 
   return (
     <article className="ds-section">
-      <div className="ds-section-number">{number}</div>
+      <div className="ds-number">{number}</div>
 
       <div className="ds-section-content">
         <h2>{section.title}</h2>
@@ -146,11 +146,10 @@ const Section = ({ number, section }) => {
         {section.contact && <p>{section.contact}</p>}
 
         {section.provider && (
-          <div className="ds-provider">
+          <div className="ds-contact-card">
             <p>
               <strong>{section.provider.name}</strong>
               <br />
-
               <span className="ds-provider-address">
                 {section.provider.address}
               </span>
@@ -160,7 +159,7 @@ const Section = ({ number, section }) => {
 
         {section.link && section.linkUrl && (
           <a
-            className="ds-section-link"
+            className="ds-external-link"
             href={section.linkUrl}
             target="_blank"
             rel="noopener noreferrer"

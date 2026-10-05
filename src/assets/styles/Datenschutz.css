@@ -556,3 +556,33 @@
 .ds-provider-address {
   white-space: pre-line;
 }
+.ds-detail {
+  max-width: 760px;
+  margin: 28px 0;
+  padding: 24px 26px;
+  background: var(--ds-surface);
+  border-left: 2px solid var(--ds-gold);
+  border: 1px solid var(--ds-border);
+  border-left-width: 2px;
+}
+
+.ds-detail strong {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--ds-primary);
+  font-size: 0.92rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.ds-detail p {
+  margin-bottom: 14px;
+}
+
+.ds-detail p:last-child {
+  margin-bottom: 0;
+}
+
+.ds-detail ul {
+  margin: 16px 0 0;
+}
