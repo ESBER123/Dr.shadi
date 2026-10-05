@@ -27,67 +27,66 @@ const faqTranslations = {
 
       questions: [
         {
-          question: "Do braces cause caries and decalcification?",
+          question: "Do braces cause cavities or decalcification?",
           answer:
-            "Orthodontic appliances do not cause damage to the teeth in themselves, but they do encourage plaque and food residue to settle on the teeth. During treatment it is therefore very important to brush your teeth carefully after every meal. Loose brackets and bands increase the risk of caries. Please tell us immediately if a bracket or band has come loose.",
+            "Braces themselves do not cause cavities. However, plaque and food can collect more easily around brackets and wires. Good oral hygiene is therefore especially important during treatment.",
         },
         {
-          question: "Are there allergic reactions to braces?",
+          question: "Can braces cause allergic reactions?",
           answer:
-            "Allergic reactions to the materials we use are extremely rare.",
+            "Allergic reactions to orthodontic materials are rare. If you have any known allergies or sensitivities, please let us know before treatment.",
         },
         {
-          question:
-            "How often do I need a check-up during the brace treatment?",
+          question: "How often do I need a check-up during treatment?",
           answer:
-            "We schedule a check-up appointment roughly every four to eight weeks.",
+            "Check-ups are usually scheduled every four to eight weeks. The exact interval depends on your individual treatment.",
         },
         {
-          question: "Why do teeth sometimes have to be extracted?",
+          question: "Why do teeth sometimes need to be removed?",
           answer:
-            "Some patients have very large teeth but small jaw bones. Even in this situation it is possible to force all the teeth into a jaw that is too small. Often, however, it makes more sense to sacrifice one tooth or another. The remaining teeth are then surrounded by enough healthy bone and a strong periodontium, so they can be properly nourished and kept for a lifetime. Otherwise it can lead to receding gums, periodontitis and premature tooth loss later in life. Leaving the teeth in a jaw bone that is too small does not make sense aesthetically either: the teeth protrude too far and make it harder for the patient to close the lips.",
+            "If there is not enough space in the jaw for all the teeth, it may sometimes be necessary to remove one or more teeth. We make this decision individually after careful examination and treatment planning.",
         },
         {
-          question: "Is retention necessary after the fixed brace is removed?",
+          question: "Is retention necessary after braces are removed?",
           answer:
-            "Teeth tend to migrate back to their original position after the brace is removed. This is called a relapse. To prevent it, so-called retainers are used. They hold the teeth in their new position.",
+            "Yes. After treatment, teeth can gradually move again. Retainers help keep your teeth in their new position and maintain your treatment results long-term.",
         },
         {
-          question:
-            "Can root resorption occur during the orthodontic treatment?",
+          question: "Can root resorption occur during orthodontic treatment?",
           answer:
-            "Root resorption means the shortening of the tooth root. It is not possible to predict a patient’s tendency towards this complication. The occurrence of root resorption increases with the length of an orthodontic treatment. It is therefore very important that you cooperate reliably during the treatment, so that it stays as short as possible.",
+            "In rare cases, orthodontic treatment can cause some shortening of the tooth roots. Regular check-ups help us monitor your teeth and identify any changes early.",
         },
         {
-          question: "Is treatment with braces painful?",
+          question: "Is orthodontic treatment painful?",
           answer:
-            "Orthodontic appliances move the teeth with very light forces. Nevertheless, at the start of the treatment and after a wire change, the teeth and gums can hurt, which in our experience subsides after a few days. If the pain persists, the treating orthodontist should be contacted. In the first days of treatment brackets can cause small sore spots on the oral mucosa. You can cover these spots with soft wax. After a short time the mucosa normally gets used to the brackets.",
+            "Your teeth may feel sensitive for a few days when treatment begins or after adjustments. Brackets may also cause some temporary irritation inside the mouth. This usually improves after a short time.",
         },
         {
-          question: "Can I eat everything during the treatment with a brace?",
+          question: "Can I eat everything while wearing braces?",
           answer:
-            "It is sensible to avoid sweets between meals. I also advise against sugary chewing gum. Take care when eating hard food such as carrots, apples and hard crusts of bread. Parts of the brace can come loose.",
-        },
-        {
-          question:
-            "Are check-ups at the treating dentist necessary during the orthodontic treatment?",
-          answer:
-            "Regular caries checks and professional oral hygiene must be carried out at your dentist during the orthodontic treatment as well.",
+            "With fixed braces, very hard or sticky foods should be avoided because they can damage brackets or wires. Sugary foods and drinks should also be kept to a minimum.",
         },
         {
           question:
-            "What should I do about a broken wire or a loose bracket or band?",
-          answer: "Please contact the treating orthodontist immediately.",
+            "Do I still need regular dental check-ups during orthodontic treatment?",
+          answer:
+            "Yes. Regular dental check-ups and professional cleaning remain important throughout your orthodontic treatment.",
         },
         {
-          question: "May I chew gum during the orthodontic treatment?",
+          question:
+            "What should I do if a wire breaks or a bracket comes loose?",
           answer:
-            "Of course, but please use SUGAR FREE gum! There are studies showing that chewing gum can reduce the pain that occurs mainly in the first few days. The explanation is that the temporarily reduced blood flow in the periodontium, which causes the pain, is lessened by chewing gum.",
+            "Please contact us if a wire breaks or a bracket or band comes loose. We’ll let you know whether you need an earlier appointment.",
         },
         {
-          question: "Can braces cause inflammation of the gums?",
+          question: " Can I chew gum while wearing braces?",
           answer:
-            "Swollen gums are often a first sign of insufficient oral hygiene. The bacteria in plaque cause the inflammation of the gums: they swell, turn a deep red and bleed easily. This condition can lead to receding gums and the loss of the bone underneath (periodontitis). If gum problems cannot be brought under control, the orthodontic treatment has to be stopped.",
+            "With fixed braces, we recommend checking with us before chewing gum. If chewing gum is suitable for you, choose a sugar-free option.",
+        },
+        {
+          question: "Can braces cause gum inflammation?",
+          answer:
+            "Braces can make cleaning your teeth more difficult. If plaque builds up, the gums can become red, swollen or inflamed. Good oral hygiene helps prevent this.",
         },
       ],
     },
@@ -127,73 +126,73 @@ const faqTranslations = {
 
       questions: [
         {
-          question: "Verursachen Zahnspangen Karies oder Entkalkungen?",
+          question: " Verursachen Zahnspangen Karies oder Entkalkungen? ",
           answer:
-            "Kieferorthopädische Apparaturen verursachen an sich keine Schäden an den Zähnen. Sie begünstigen jedoch, dass sich Zahnbelag und Speisereste an den Zähnen ansammeln. Während der Behandlung ist es daher besonders wichtig, die Zähne nach jeder Mahlzeit gründlich zu putzen. Gelockerte Brackets und Bänder erhöhen das Kariesrisiko. Bitte informieren Sie uns sofort, wenn sich ein Bracket oder Band gelöst hat.",
+            "Zahnspangen selbst verursachen keine Karies. Durch Brackets und Drähte können sich jedoch Zahnbelag und Speisereste leichter ansammeln. Deshalb ist eine gründliche Mundhygiene während der Behandlung besonders wichtig.",
         },
         {
           question:
             "Kann es zu allergischen Reaktionen auf Zahnspangen kommen?",
           answer:
-            "Allergische Reaktionen auf die von uns verwendeten Materialien sind äußerst selten.",
+            "Allergische Reaktionen auf kieferorthopädische Materialien sind selten. Wenn Sie bekannte Allergien oder Unverträglichkeiten haben, informieren Sie uns bitte vor der Behandlung.",
         },
         {
           question:
             "Wie oft muss ich während der Behandlung zur Kontrolle kommen?",
           answer:
-            "Wir vereinbaren Kontrolltermine ungefähr alle vier bis acht Wochen.",
+            "In der Regel finden Kontrolltermine etwa alle vier bis acht Wochen statt. Die genauen Abstände hängen von Ihrer Behandlung ab.",
         },
         {
           question: "Warum müssen manchmal Zähne entfernt werden?",
           answer:
-            "Manche Patienten haben sehr große Zähne, aber kleine Kieferknochen. Auch in dieser Situation ist es möglich, alle Zähne in einen zu kleinen Kiefer zu bewegen. Häufig ist es jedoch sinnvoller, einen oder mehrere Zähne zu entfernen. Die verbleibenden Zähne sind dann von ausreichend gesundem Knochen und einem stabilen Zahnhalteapparat umgeben und können dadurch langfristig erhalten werden. Andernfalls kann es später zu Zahnfleischrückgang, Parodontitis und vorzeitigem Zahnverlust kommen. Auch aus ästhetischer Sicht ist es nicht sinnvoll, Zähne in einem zu kleinen Kiefer zu belassen, da sie zu weit nach vorne stehen können und das Schließen der Lippen erschweren.",
+            "Wenn im Kiefer nicht genügend Platz für alle Zähne vorhanden ist, kann es in bestimmten Fällen sinnvoll sein, einen oder mehrere Zähne zu entfernen. Ob dies notwendig ist, entscheiden wir individuell nach einer sorgfältigen Untersuchung und Behandlungsplanung.",
         },
         {
           question:
             "Ist eine Retention nach dem Entfernen der festen Zahnspange notwendig?",
           answer:
-            "Nach dem Entfernen der Zahnspange neigen Zähne dazu, in ihre ursprüngliche Position zurückzuwandern. Dies wird als Rezidiv bezeichnet. Um dies zu verhindern, werden sogenannte Retainer eingesetzt. Sie halten die Zähne in ihrer neuen Position.",
+            "Ja. Nach der Behandlung können sich Zähne wieder verschieben. Retainer helfen dabei, die Zähne in ihrer neuen Position zu halten und das Behandlungsergebnis langfristig zu stabilisieren.",
         },
         {
           question:
             "Kann es während der kieferorthopädischen Behandlung zu einer Wurzelresorption kommen?",
           answer:
-            "Eine Wurzelresorption bezeichnet die Verkürzung der Zahnwurzel. Es ist nicht möglich vorherzusagen, bei welchem Patienten diese Komplikation auftreten wird. Das Risiko einer Wurzelresorption steigt mit der Dauer der kieferorthopädischen Behandlung. Daher ist es besonders wichtig, während der Behandlung zuverlässig mitzuarbeiten, damit die Behandlungsdauer möglichst kurz bleibt.",
+            "Eine Verkürzung der Zahnwurzeln kann in seltenen Fällen während einer kieferorthopädischen Behandlung auftreten. Regelmäßige Kontrollen helfen uns, mögliche Veränderungen frühzeitig zu erkennen.",
         },
         {
           question: "Ist eine Behandlung mit einer Zahnspange schmerzhaft?",
           answer:
-            "Kieferorthopädische Apparaturen bewegen die Zähne mit sehr leichten Kräften. Trotzdem können die Zähne und das Zahnfleisch zu Beginn der Behandlung und nach einem Drahtwechsel empfindlich oder schmerzhaft sein. Nach unserer Erfahrung klingt dies nach einigen Tagen wieder ab. Wenn die Schmerzen anhalten, sollte der behandelnde Kieferorthopäde kontaktiert werden. In den ersten Tagen können Brackets außerdem kleine Druckstellen an der Mundschleimhaut verursachen. Diese Stellen können mit weichem Wachs abgedeckt werden. Nach kurzer Zeit gewöhnt sich die Schleimhaut normalerweise an die Brackets.",
+            "Zu Beginn der Behandlung oder nach Anpassungen können die Zähne für einige Tage empfindlich sein. Auch Brackets können anfangs etwas an der Mundschleimhaut reiben. Diese Beschwerden verschwinden normalerweise nach kurzer Zeit.",
         },
         {
           question:
             "Kann ich während der Behandlung mit einer Zahnspange alles essen?",
           answer:
-            "Es ist sinnvoll, Süßigkeiten zwischen den Mahlzeiten zu vermeiden. Auch von zuckerhaltigem Kaugummi wird abgeraten. Bei harten Lebensmitteln wie Karotten, Äpfeln und harten Brotrinden ist Vorsicht geboten, da sich Teile der Zahnspange lösen können.",
+            "Bei einer festen Zahnspange sollten sehr harte und klebrige Lebensmittel vermieden werden, da sie Brackets oder Drähte beschädigen können. Auch zuckerhaltige Lebensmittel und Getränke sollten möglichst reduziert werden.",
         },
         {
           question:
-            "Sind während der kieferorthopädischen Behandlung Kontrollen beim behandelnden Zahnarzt notwendig?",
+            "Sind während der kieferorthopädischen Behandlung Kontrollen beim Zahnarzt notwendig?",
           answer:
-            "Regelmäßige Kontrollen auf Karies sowie eine professionelle Zahnreinigung beziehungsweise Mundhygiene müssen auch während der kieferorthopädischen Behandlung bei Ihrem Zahnarzt durchgeführt werden.",
+            "Ja. Regelmäßige Kontrollen beim Zahnarzt und eine professionelle Mundhygiene bleiben auch während der kieferorthopädischen Behandlung wichtig.",
         },
         {
           question:
-            "Was soll ich bei einem gebrochenen Draht oder einem losen Bracket beziehungsweise Band tun?",
+            "Was soll ich bei einem gebrochenen Draht oder einem losen Bracket tun?",
           answer:
-            "Bitte kontaktieren Sie umgehend Ihren behandelnden Kieferorthopäden.",
+            "Kontaktieren Sie uns bitte, wenn ein Draht gebrochen ist oder sich ein Bracket oder Band gelöst hat. Wir sagen Ihnen, ob ein kurzfristiger Termin notwendig ist.",
         },
         {
           question:
             "Darf ich während der kieferorthopädischen Behandlung Kaugummi kauen?",
           answer:
-            "Natürlich, aber bitte verwenden Sie ZUCKERFREIEN Kaugummi! Studien zeigen, dass Kaugummikauen die Schmerzen reduzieren kann, die hauptsächlich in den ersten Tagen auftreten. Die Erklärung dafür ist, dass die durch die Behandlung vorübergehend verringerte Durchblutung des Zahnhalteapparates, die zu den Schmerzen beiträgt, durch das Kauen von Kaugummi vermindert wird.",
+            "Bei einer festen Zahnspange empfehlen wir, Kaugummi nur nach Rücksprache mit uns zu kauen. Wenn Kaugummi erlaubt ist, wählen Sie bitte eine zuckerfreie Variante.",
         },
         {
           question:
-            "Kann eine Zahnspange eine Zahnfleischentzündung verursachen?",
+            " Kann eine Zahnspange eine Zahnfleischentzündung verursachen?",
           answer:
-            "Geschwollenes Zahnfleisch ist häufig ein erstes Anzeichen für eine unzureichende Mundhygiene. Die Bakterien im Zahnbelag verursachen die Entzündung des Zahnfleisches: Es schwillt an, wird dunkelrot und blutet leicht. Dieser Zustand kann zu Zahnfleischrückgang und zum Verlust des darunterliegenden Knochens (Parodontitis) führen. Wenn die Zahnfleischprobleme nicht unter Kontrolle gebracht werden können, muss die kieferorthopädische Behandlung beendet werden.",
+            "Durch eine Zahnspange kann die Reinigung der Zähne schwieriger werden. Wenn sich Zahnbelag ansammelt, kann sich das Zahnfleisch entzünden. Eine gründliche Mundhygiene hilft, dies zu vermeiden.",
         },
       ],
     },

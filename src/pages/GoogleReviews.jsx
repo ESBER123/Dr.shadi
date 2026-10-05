@@ -41,7 +41,7 @@ const GoogleReviews = () => {
       name: "Hanna E.",
       time: "vor 7 Tagen",
       review:
-        "Ich bin sehr zufrieden mit meiner Behandlung bei Dr. Shadi Loutfi. Das Team ist freundlich, professionell, und man fühlt sich vom ersten Termin an gut aufgehoben. Das Ergebnis ist hervorragend und mein Lächeln hat sich deutlich verbessert.",
+        "Ich bin sehr zufrieden mit meiner Behandlung bei Dr. Shadi Loutfi. Das Team ist freundlich, professionell und man fühlt sich vom ersten Termin an gut aufgehoben. Das Ergebnis ist hervorragend und mein Lächeln hat sich deutlich verbessert.",
       initial: "L",
     },
     {

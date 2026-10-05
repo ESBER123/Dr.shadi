@@ -2,22 +2,197 @@ import { useLanguage } from "../context/LanguageContext";
 import translations from "../translat/datenschutzTranslations.js";
 import "../assets/styles/Datenschutz.css";
 
+const Section = ({ number, section }) => {
+  if (!section) return null;
+
+  return (
+    <article className="ds-section">
+      <div className="ds-section-number">{number}</div>
+
+      <div className="ds-section-content">
+        <h2>{section.title}</h2>
+
+        {section.intro && <p>{section.intro}</p>}
+        {section.text && <p>{section.text}</p>}
+        {section.text1 && <p>{section.text1}</p>}
+        {section.text2 && <p>{section.text2}</p>}
+        {section.text3 && <p>{section.text3}</p>}
+        {section.text4 && <p>{section.text4}</p>}
+        {section.text5 && <p>{section.text5}</p>}
+
+        {section.items && (
+          <ul>
+            {section.items.map((item, index) => (
+              <li key={index}>{item}</li>
+            ))}
+          </ul>
+        )}
+
+        {section.data && (
+          <div className="ds-detail">
+            <strong>{section.data.title}</strong>
+            <p>{section.data.text}</p>
+            {section.data.items && (
+              <ul>
+                {section.data.items.map((item, index) => (
+                  <li key={index}>{item}</li>
+                ))}
+              </ul>
+            )}
+
+            {section.data.summary && <p>{section.data.summary}</p>}
+          </div>
+        )}
+
+        {section.legal && (
+          <div className="ds-detail">
+            <strong>{section.legal.title}</strong>
+            <p>{section.legal.text}</p>
+
+            {section.legalItems && (
+              <ul>
+                {section.legalItems.map((item, index) => (
+                  <li key={index}>{item}</li>
+                ))}
+              </ul>
+            )}
+          </div>
+        )}
+
+        {section.storage && (
+          <div className="ds-detail">
+            <strong>{section.storage.title}</strong>
+            <p>{section.storage.text}</p>
+          </div>
+        )}
+
+        {section.tlsTitle && (
+          <div className="ds-detail">
+            <strong>{section.tlsTitle}</strong>
+
+            {section.tlsText && <p>{section.tlsText}</p>}
+            {section.tlsText2 && <p>{section.tlsText2}</p>}
+            {section.tlsText3 && <p>{section.tlsText3}</p>}
+            {section.tlsText4 && <p>{section.tlsText4}</p>}
+            {section.tlsText5 && <p>{section.tlsText5}</p>}
+          </div>
+        )}
+
+        {section.affectedTitle && (
+          <div className="ds-detail">
+            <strong>{section.affectedTitle}</strong>
+            <p>{section.affectedText}</p>
+          </div>
+        )}
+
+        {section.phoneTitle && (
+          <div className="ds-detail">
+            <strong>{section.phoneTitle}</strong>
+            <p>{section.phoneText}</p>
+          </div>
+        )}
+
+        {section.emailTitle && (
+          <div className="ds-detail">
+            <strong>{section.emailTitle}</strong>
+            <p>{section.emailText}</p>
+          </div>
+        )}
+
+        {section.formTitle && (
+          <div className="ds-detail">
+            <strong>{section.formTitle}</strong>
+            <p>{section.formText}</p>
+          </div>
+        )}
+
+        {section.processorTitle && (
+          <div className="ds-detail">
+            <strong>{section.processorTitle}</strong>
+            <p>{section.processorText}</p>
+          </div>
+        )}
+
+        {section.contentTitle && (
+          <div className="ds-detail">
+            <strong>{section.contentTitle}</strong>
+
+            {section.contentText && <p>{section.contentText}</p>}
+
+            {section.contentItems && (
+              <ul>
+                {section.contentItems.map((item, index) => (
+                  <li key={index}>{item}</li>
+                ))}
+              </ul>
+            )}
+          </div>
+        )}
+
+        {section.duties && (
+          <div className="ds-detail">
+            <strong>{section.duties}</strong>
+
+            {section.dutyItems && (
+              <ul>
+                {section.dutyItems.map((item, index) => (
+                  <li key={index}>{item}</li>
+                ))}
+              </ul>
+            )}
+          </div>
+        )}
+
+        {section.contact && <p>{section.contact}</p>}
+
+        {section.provider && (
+          <div className="ds-provider">
+            <p>
+              <strong>{section.provider.name}</strong>
+              <br />
+
+              <span className="ds-provider-address">
+                {section.provider.address}
+              </span>
+            </p>
+          </div>
+        )}
+
+        {section.link && section.linkUrl && (
+          <a
+            className="ds-section-link"
+            href={section.linkUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {section.link}
+          </a>
+        )}
+      </div>
+    </article>
+  );
+};
+
 const Datenschutz = () => {
   const { language } = useLanguage();
   const t = translations[language] || translations.en;
+
   return (
     <main className="ds-page" lang={language}>
       {/* HERO */}
       <section className="ds-hero">
         <div className="ds-container">
           <span className="ds-eyebrow">{t.hero.label}</span>
+
           <h1>
             {t.hero.title}
             <span>{t.hero.accent}</span>
           </h1>
+
           <p>{t.hero.description}</p>
         </div>
       </section>
+
       {/* CONTENT */}
       <section className="ds-content">
         <div className="ds-container">
@@ -26,255 +201,39 @@ const Datenschutz = () => {
             <aside className="ds-sidebar">
               <div className="ds-sidebar-card">
                 <span className="ds-sidebar-label">{t.responsible.label}</span>
+
                 <strong>Dr. Shadi Loutfi</strong>
+
                 <span>{t.responsible.practice}</span>
-                <span>Billrothstraße 58</span>
+
+                <span>Billrothstraße 58/DG</span>
+
                 <span>1190 Wien, Österreich</span>
+
                 <a href="mailto:office@drloutfi.at">office@drloutfi.at</a>
+
+                <a href="tel:+4367763471705">+43 677 63471705</a>
               </div>
             </aside>
 
             {/* MAIN */}
             <div className="ds-main">
-              {/* 01 */}
-              <section className="ds-section">
-                <div className="ds-number">01</div>
-                <div>
-                  <h2>{t.sections.introduction.title}</h2>
-                  <p>{t.sections.introduction.text1}</p>
-                  <p>{t.sections.introduction.text2}</p>
-                </div>
-              </section>
-
-              {/* 02 */}
-              <section className="ds-section">
-                <div className="ds-number">02</div>
-                <div>
-                  <h2>{t.sections.responsible.title}</h2>
-                  <p>{t.sections.responsible.intro}</p>
-                  <div className="ds-contact-card">
-                    <strong>Dr. Shadi Loutfi</strong>
-                    <span>Kieferorthopädische Praxis</span>
-                    <span>Billrothstraße 58</span>
-                    <span>1190 Wien, Österreich</span>
-                    <a href="mailto:office@drloutfi.at">office@drloutfi.at</a>
-                    <a href="tel:+4367763471705">+43 677 63471705</a>
-                  </div>
-                </div>
-              </section>
-
-              {/* 03 */}
-              <section className="ds-section">
-                <div className="ds-number">03</div>
-
-                <div>
-                  <h2>{t.sections.legal.title}</h2>
-
-                  <p>{t.sections.legal.intro}</p>
-
-                  <ul>
-                    {t.sections.legal.items.map((item, index) => (
-                      <li key={index}>{item}</li>
-                    ))}
-                  </ul>
-
-                  <p>{t.sections.legal.austria}</p>
-                </div>
-              </section>
-
-              {/* 04 */}
-              <section className="ds-section">
-                <div className="ds-number">04</div>
-
-                <div>
-                  <h2>{t.sections.retention.title}</h2>
-
-                  <p>{t.sections.retention.text1}</p>
-
-                  <p>{t.sections.retention.text2}</p>
-                </div>
-              </section>
-
-              {/* 05 */}
-              <section className="ds-section">
-                <div className="ds-number">05</div>
-
-                <div>
-                  <h2>{t.sections.rights.title}</h2>
-
-                  <p>{t.sections.rights.intro}</p>
-
-                  <ul>
-                    {t.sections.rights.items.map((item, index) => (
-                      <li key={index}>{item}</li>
-                    ))}
-                  </ul>
-
-                  <p>{t.sections.rights.contact}</p>
-
-                  <a href="mailto:office@drloutfi.at" className="ds-email-link">
-                    office@drloutfi.at
-                  </a>
-                </div>
-              </section>
-
-              {/* 06 */}
-              <section className="ds-section">
-                <div className="ds-number">06</div>
-
-                <div>
-                  <h2>{t.sections.security.title}</h2>
-
-                  <p>{t.sections.security.text}</p>
-                </div>
-              </section>
-
-              {/* 07 */}
-              <section className="ds-section">
-                <div className="ds-number">07</div>
-
-                <div>
-                  <h2>{t.sections.communication.title}</h2>
-
-                  <p>{t.sections.communication.text}</p>
-
-                  <h3>{t.sections.communication.emailTitle}</h3>
-
-                  <p>{t.sections.communication.emailText}</p>
-
-                  <h3>{t.sections.communication.phoneTitle}</h3>
-
-                  <p>{t.sections.communication.phoneText}</p>
-                </div>
-              </section>
-
-              {/* 08 */}
-              <section className="ds-section">
-                <div className="ds-number">08</div>
-
-                <div>
-                  <h2>{t.sections.hosting.title}</h2>
-
-                  <p>{t.sections.hosting.text}</p>
-
-                  <p>
-                    <strong>World4You Internet Services GmbH</strong>
-                    <br />
-                    Hafenstraße 35
-                    <br />
-                    4020 Linz, Österreich
-                  </p>
-
-                  <p>{t.sections.hosting.storage}</p>
-
-                  <a
-                    href="https://www.world4you.com/de/unternehmen/datenschutzerklaerung.html"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="ds-external-link"
-                  >
-                    {t.sections.hosting.link}
-                    <span>↗</span>
-                  </a>
-                </div>
-              </section>
-
-              {/* 09 */}
-              <section className="ds-section">
-                <div className="ds-number">09</div>
-
-                <div>
-                  <h2>{t.sections.cookies.title}</h2>
-
-                  <p>{t.sections.cookies.text1}</p>
-
-                  <p>{t.sections.cookies.text2}</p>
-                </div>
-              </section>
-
-              {/* 10 */}
-              <section className="ds-section">
-                <div className="ds-number">10</div>
-
-                <div>
-                  <h2>{t.sections.docfinder.title}</h2>
-
-                  <p>{t.sections.docfinder.text}</p>
-
-                  <p>{t.sections.docfinder.data}</p>
-
-                  <p>{t.sections.docfinder.legal}</p>
-
-                  <a
-                    href="https://www.docfinder.at/"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="ds-external-link"
-                  >
-                    {t.sections.docfinder.link}
-                    <span>↗</span>
-                  </a>
-                </div>
-              </section>
-
-              {/* 11 */}
-              <section className="ds-section">
-                <div className="ds-number">11</div>
-
-                <div>
-                  <h2>{t.sections.googleMaps.title}</h2>
-
-                  <p>{t.sections.googleMaps.text}</p>
-
-                  <p>{t.sections.googleMaps.data}</p>
-                </div>
-              </section>
-
-              {/* 12 */}
-              <section className="ds-section">
-                <div className="ds-number">12</div>
-
-                <div>
-                  <h2>{t.sections.whatsapp.title}</h2>
-
-                  <p>{t.sections.whatsapp.text}</p>
-
-                  <p>{t.sections.whatsapp.data}</p>
-                </div>
-              </section>
-
-              {/* 13 */}
-              <section className="ds-section">
-                <div className="ds-number">13</div>
-
-                <div>
-                  <h2>{t.sections.authority.title}</h2>
-
-                  <p>{t.sections.authority.text}</p>
-
-                  <p>
-                    <strong>Österreichische Datenschutzbehörde</strong>
-                    <br />
-                    Barichgasse 40-42
-                    <br />
-                    1030 Wien
-                    <br />
-                    +43 1 52 152-0
-                    <br />
-                    dsb@dsb.gv.at
-                  </p>
-
-                  <a
-                    href="https://www.dsb.gv.at/"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="ds-external-link"
-                  >
-                    {t.sections.authority.link}
-                    <span>↗</span>
-                  </a>
-                </div>
-              </section>
+              <Section number="01" section={t.sections.introduction} />
+              <Section number="02" section={t.sections.legal} />
+              <Section number="03" section={t.sections.responsible} />
+              <Section number="04" section={t.sections.retention} />
+              <Section number="05" section={t.sections.rights} />
+              <Section number="06" section={t.sections.security} />
+              <Section number="07" section={t.sections.communication} />
+              <Section number="08" section={t.sections.processors} />
+              <Section number="09" section={t.sections.cookies} />
+              <Section number="10" section={t.sections.hosting} />
+              <Section number="11" section={t.sections.webAnalytics} />
+              <Section number="12" section={t.sections.googleAnalytics} />
+              <Section number="13" section={t.sections.onlineMarketing} />
+              <Section number="14" section={t.sections.eTermin} />
+              <Section number="15" section={t.sections.googleAds} />
+              <Section number="16" section={t.sections.authority} />
 
               {/* UPDATED */}
               <div className="ds-updated">

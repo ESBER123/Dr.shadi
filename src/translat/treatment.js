@@ -108,7 +108,7 @@ const treatmentTranslations = {
     hero: {
       eyebrow: "IHRE BEHANDLUNG",
       title: "Behandlungen,",
-      titleAccent: "die zu Ihnen passen.",
+      titleAccent: " die zu Ihnen passen.",
       description:
         "Jedes Lächeln ist einzigartig. Wir entwickeln individuelle kieferorthopädische Lösungen, die auf Ihre Bedürfnisse, Ihren Lebensstil und Ihre persönliche Situation abgestimmt sind.",
       button: "Behandlungen entdecken",
@@ -151,7 +151,7 @@ const treatmentTranslations = {
     diagnostics: {
       eyebrow: "PRÄZISION & TECHNOLOGIE",
       title: "Moderne Diagnostik.",
-      titleAccent: "Präzise Planung.",
+      titleAccent: " Präzise Planung.",
       description:
         "Moderne Technologie ermöglicht eine präzise Analyse Ihrer Zähne und Ihres Kiefers und bildet die Grundlage für einen individuell abgestimmten Behandlungsplan.",
 
@@ -201,7 +201,7 @@ const treatmentTranslations = {
     cta: {
       eyebrow: "IHR NÄCHSTER SCHRITT",
       title: "Lassen Sie uns die",
-      titleAccent: "richtige Behandlung",
+      titleAccent: " richtige Behandlung",
       titleEnd: "für Sie finden.",
       description:
         "In einem persönlichen Beratungsgespräch besprechen wir Ihre Wünsche, beurteilen Ihre individuelle Situation und zeigen Ihnen die Behandlungsmöglichkeiten, die zu Ihnen passen.",

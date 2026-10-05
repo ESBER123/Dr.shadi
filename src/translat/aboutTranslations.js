@@ -77,7 +77,7 @@ export const aboutTranslations = {
       "„Menschen dabei zu helfen, ihr Lächeln zu lieben, ist einer der schönsten Aspekte meiner Arbeit.",
 
     shadiDescription:
-      "Ich nehme mir gerne Zeit für meine Patienten, gehe auf ihre individuellen Wünsche ein und begleite sie persönlich durch die Behandlung. Zu sehen, wie ein neues Lächeln das Selbstvertrauen stärkt, macht die Kieferorthopädie für mich besonders erfüllend,Dabei verbinde ich moderne kieferorthopädische Methoden, präzise Diagnostik und persönliche Betreuung, um für jeden Patienten eine individuelle Behandlungslösung zu entwickeln.",
+      "Ich nehme mir gerne Zeit für meine Patienten, gehe auf ihre individuellen Wünsche ein und begleite sie persönlich durch die Behandlung. Zu sehen, wie ein neues Lächeln das Selbstvertrauen stärkt, macht die Kieferorthopädie für mich besonders erfüllend. Dabei verbinde ich moderne kieferorthopädische Methoden, präzise Diagnostik und persönliche Betreuung, um für jeden Patienten eine individuelle Behandlungslösung zu entwickeln.",
 
     academic: "Akademischer Werdegang",
 
