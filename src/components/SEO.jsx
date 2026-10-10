@@ -1,34 +1,40 @@
 import { useEffect } from "react";
 
-const SEO = ({ title, description, canonical }) => {
+const SEO = ({ title, description, canonical, ogTitle }) => {
   useEffect(() => {
-    document.title = title;
-
-    let metaDescription = document.querySelector('meta[name="description"]');
-    if (!metaDescription) {
-      metaDescription = document.createElement("meta");
-      metaDescription.setAttribute("name", "description");
-      document.head.appendChild(metaDescription);
+    if (title) {
+      document.title = title;
     }
-    metaDescription.setAttribute("content", description);
 
-    let ogTitle = document.querySelector('meta[property="og:title"]');
-    if (!ogTitle) {
-      ogTitle = document.createElement("meta");
-      ogTitle.setAttribute("property", "og:title");
-      document.head.appendChild(ogTitle);
-    }
-    ogTitle.setAttribute("content", title);
+    const setMeta = (selector, attribute, key, content) => {
+      if (!content) return;
 
-    let ogDescription = document.querySelector(
-      'meta[property="og:description"]',
+      let element = document.querySelector(selector);
+
+      if (!element) {
+        element = document.createElement("meta");
+        element.setAttribute(attribute, key);
+        document.head.appendChild(element);
+      }
+
+      element.setAttribute("content", content);
+    };
+
+    setMeta('meta[name="description"]', "name", "description", description);
+
+    setMeta(
+      'meta[property="og:title"]',
+      "property",
+      "og:title",
+      ogTitle || title,
     );
-    if (!ogDescription) {
-      ogDescription = document.createElement("meta");
-      ogDescription.setAttribute("property", "og:description");
-      document.head.appendChild(ogDescription);
-    }
-    ogDescription.setAttribute("content", description);
+
+    setMeta(
+      'meta[property="og:description"]',
+      "property",
+      "og:description",
+      description,
+    );
 
     if (canonical) {
       let canonicalLink = document.querySelector('link[rel="canonical"]');
@@ -41,7 +47,7 @@ const SEO = ({ title, description, canonical }) => {
 
       canonicalLink.setAttribute("href", canonical);
     }
-  }, [title, description, canonical]);
+  }, [title, description, canonical, ogTitle]);
 
   return null;
 };

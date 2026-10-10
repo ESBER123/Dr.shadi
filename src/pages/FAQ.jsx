@@ -12,7 +12,7 @@ const FAQ = () => {
       ? {
           title: "FAQ zur Kieferorthopädie | Dr. Shadi Loutfi Wien",
           description:
-            "Antworten auf häufige Fragen zur Kieferorthopädie, Behandlung, Zahnpflege und Nachsorge bei Dr. Shadi Loutfi in Wien.",
+            "Häufige Fragen zur Kieferorthopädie, Zahnspangen und Alignern bei Dr. Shadi Loutfi in Wien. Antworten zu Behandlung, Ablauf und Terminvereinbarung.",
         }
       : {
           title: "Orthodontic FAQ | Dr. Shadi Loutfi Vienna",

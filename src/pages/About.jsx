@@ -80,9 +80,9 @@ const About = () => {
   const seo =
     language === "de"
       ? {
-          title: "Über uns | Kieferorthopädie Dr. Shadi Loutfi",
+          title: "Dr. Shadi Loutfi | Kieferorthopäde in Wien",
           description:
-            "Lernen Sie Dr. Shadi Loutfi und das Team der kieferorthopädischen Praxis in Wien kennen. Persönliche Betreuung, moderne Diagnostik und individuelle Behandlungsplanung.",
+            "Erfahren Sie mehr über Dr. Shadi Loutfi, Fachzahnarzt für Kieferorthopädie in Wien, seine Erfahrung und seinen persönlichen Behandlungsansatz.",
         }
       : {
           title: "About Us | Orthodontist Dr. Shadi Loutfi Vienna",

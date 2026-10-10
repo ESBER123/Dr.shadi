@@ -34,9 +34,9 @@ const Treatment = () => {
   const seo =
     currentLanguage === "de"
       ? {
-          title: "Kieferorthopädische Behandlungen | Dr. Shadi Loutfi Wien",
+          title: "Kieferorthopädie Wien-Döbling | Invisalign & Zahnspangen",
           description:
-            "Kieferorthopädische Behandlungen in Wien für Kinder, Jugendliche und Erwachsene – von unsichtbaren Alignern und festen Zahnspangen bis zu moderner Diagnostik.",
+            "Kieferorthopädie in Wien-Döbling für Kinder und Erwachsene. Invisalign, unsichtbare Aligner und feste Zahnspangen. Termin online vereinbaren.",
         }
       : {
           title: "Orthodontic Treatments | Dr. Shadi Loutfi Vienna",
@@ -74,6 +74,7 @@ const Treatment = () => {
       <SEO
         title={seo.title}
         description={seo.description}
+        ogTitle={seo.title}
         canonical="https://www.drloutfi.at/treatment"
       />
 
@@ -82,8 +83,11 @@ const Treatment = () => {
           <div className="tr-hero-content">
             <span className="tr-eyebrow">{t.hero.eyebrow}</span>
             <h1 className="tr-hero-title">
-              <span className="tr-hero-title-main">{t.hero.title}</span>
-              <span className="tr-hero-title-accent">{t.hero.titleAccent}</span>
+              <span className="tr-hero-title-main">
+                {currentLanguage === "de"
+                  ? "Kieferorthopädie in Wien-Döbling"
+                  : t.hero.title}
+              </span>
             </h1>
             <p className="tr-hero-description">{t.hero.description}</p>
             <a href="#tr-treatments" className="tr-hero-link">
