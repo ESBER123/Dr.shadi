@@ -121,17 +121,18 @@ const Home = () => {
           {/* HERO IMAGE */}
           <div className="hm-hero-image-wrapper">
             <div className="hm-hero-image-decoration"></div>
-            <img
-              src={FirstImage}
-              srcSet={`${FirstMobileImage} 658w, ${FirstImage} 1402w`}
-              sizes="100vw"
-              alt="Orthodontic clinic reception and treatment rooms"
-              className="hm-hero-image"
-              width={1402}
-              height={1122}
-              fetchPriority="high"
-              decoding="async"
-            />
+            <picture>
+              <source media="(max-width: 768px)" srcSet={FirstMobileImage} />
+              <img
+                src={FirstImage}
+                alt="Orthodontic clinic reception and treatment rooms"
+                className="hm-hero-image"
+                width={1402}
+                height={1122}
+                fetchPriority="high"
+                decoding="async"
+              />
+            </picture>
 
             {/* HERO BADGE */}
             <div className="hm-hero-badge">
