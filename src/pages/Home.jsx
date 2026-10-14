@@ -316,6 +316,8 @@ const Home = () => {
                     alt={t.dvtTitle}
                     className="hm-diagnostic-image"
                     loading="lazy"
+                    width={1010}
+                    height={673}
                   />
                 </div>
                 <div className="hm-diagnostic-content">
