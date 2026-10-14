@@ -1091,3 +1091,10 @@
     width: 100%;
   }
 }
+/* Keep the hero image ready to render */
+.hm-hero-image {
+  content-visibility: visible;
+  opacity: 1;
+  transform: none;
+  animation: none;
+}
