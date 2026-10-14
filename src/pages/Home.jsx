@@ -124,7 +124,7 @@ const Home = () => {
             <img
               src={FirstImage}
               srcSet={`${FirstMobileImage} 658w, ${FirstImage} 1402w`}
-              sizes="(max-width: 768px) 658px, 1402px"
+              sizes="100vw"
               alt="Orthodontic clinic reception and treatment rooms"
               className="hm-hero-image"
               width={1402}
