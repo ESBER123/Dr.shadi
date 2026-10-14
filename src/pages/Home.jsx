@@ -4,13 +4,13 @@ import "../assets/styles/Home.css";
 import { useLanguage } from "../context/LanguageContext.jsx";
 import translations from "../translat/translations";
 import FirstImage from "../images/First.webp";
-import DoctorImage from "../images/doctorshadi.png";
-import AlignersImage from "../images/Invisiblealigner.jpg";
-import FixedBracesImage from "../images/FixedBraces.png";
-import ChildrenImage from "../images/ChildrenTeenagers.jpg";
-import DigitalScanningImage from "../images/Digitaler3DScanner.png";
-import ModJawImage from "../images/Modjaw.png";
-import DVTImage from "../images/3DImagingDVT.png";
+import DoctorImage from "../images/optimized/doctor.webp";
+import AlignersImage from "../images/optimized/invisible-aligner.webp";
+import FixedBracesImage from "../images/optimized/fixed-braces.webp";
+import ChildrenImage from "../images/optimized/children-teenagers.webp";
+import DigitalScanningImage from "../images/optimized/digital-scanner.webp";
+import ModJawImage from "../images/optimized/modjaw.webp";
+import DVTImage from "../images/optimized/3d-imaging-dvt.webp";
 import GoogleReviews from "./GoogleReviews.jsx";
 import SEO from "../components/SEO";
 const Home = () => {
@@ -120,13 +120,17 @@ const Home = () => {
           {/* HERO IMAGE */}
           <div className="hm-hero-image-wrapper">
             <div className="hm-hero-image-decoration"></div>
+
             <img
               src={FirstImage}
-              alt="..."
-              loading="eager"
+              alt="Orthodontic clinic reception and treatment rooms"
+              className="hm-hero-image"
+              width={1402}
+              height={1122}
               fetchPriority="high"
               decoding="async"
             />
+
             {/* HERO BADGE */}
             <div className="hm-hero-badge">
               <div>
@@ -161,6 +165,9 @@ const Home = () => {
                 src={DoctorImage}
                 alt="Dr. Shadi Loutfi"
                 className="hm-doctor-image"
+                loading="lazy"
+                width={804}
+                height={1019}
               />
             </div>
           </div>
@@ -186,6 +193,8 @@ const Home = () => {
                   alt={t.treatmentAlignersTitle}
                   className="hm-treatment-image"
                   loading="lazy"
+                  width={1204}
+                  height={958}
                 />
                 <span className="hm-card-arrow" aria-hidden="true">
                   ↗
@@ -207,6 +216,8 @@ const Home = () => {
                   alt={t.treatmentFixedBracesTitle}
                   className="hm-treatment-image"
                   loading="lazy"
+                  width={404}
+                  height={301}
                 />
                 <span className="hm-card-arrow" aria-hidden="true">
                   ↗
@@ -230,6 +241,8 @@ const Home = () => {
                   alt={t.treatmentChildrenTitle}
                   className="hm-treatment-image"
                   loading="lazy"
+                  width={1204}
+                  height={1204}
                 />
                 <span className="hm-card-arrow" aria-hidden="true">
                   ↗
@@ -262,6 +275,8 @@ const Home = () => {
                     alt={t.digitalScanningTitle}
                     className="hm-diagnostic-image"
                     loading="lazy"
+                    width={1010}
+                    height={673}
                   />
                 </div>
 
@@ -281,6 +296,8 @@ const Home = () => {
                     alt={t.modJawTitle}
                     className="hm-diagnostic-image"
                     loading="lazy"
+                    width={1010}
+                    height={673}
                   />
                 </div>
                 <div className="hm-diagnostic-content">

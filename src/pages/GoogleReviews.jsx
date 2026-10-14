@@ -14,6 +14,7 @@ const GoogleReviews = () => {
       subtitle:
         "Real experiences from patients who trusted us with their smiles.",
       readAll: "Read all reviews on Google →",
+      basedOn: "",
     },
     de: {
       tag: "PATIENTENERFAHRUNGEN",
@@ -22,6 +23,7 @@ const GoogleReviews = () => {
       subtitle:
         "Echte Erfahrungen von Patientinnen und Patienten, die uns ihr Lächeln anvertraut haben.",
       readAll: "Alle Bewertungen auf Google ansehen →",
+      basedOn: "",
     },
   };
 
@@ -117,7 +119,7 @@ const GoogleReviews = () => {
                   <div className="reviewer-info">
                     <div className="reviewer-avatar">{rev.initial}</div>
                     <div>
-                      <h4 className="reviewer-name">{rev.name}</h4>
+                      <p className="reviewer-name">{rev.name}</p>
                     </div>
                   </div>
                   <div className="google-icon-badge">

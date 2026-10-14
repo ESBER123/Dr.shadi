@@ -194,6 +194,21 @@ const faqTranslations = {
           answer:
             "Durch eine Zahnspange kann die Reinigung der Zähne schwieriger werden. Wenn sich Zahnbelag ansammelt, kann sich das Zahnfleisch entzünden. Eine gründliche Mundhygiene hilft, dies zu vermeiden.",
         },
+        {
+          question: "Was kostet eine Zahnspange in Wien?",
+          answer:
+            "Die Kosten einer Zahnspange hängen von der Art der Zahnspange, der Behandlungsdauer und der individuellen Situation ab. Nach der Untersuchung und Behandlungsplanung erhalten Sie eine persönliche Kosteninformation. Kosten: Preis auf Anfrage. Etwaige anrechenbare Kosten werden bei Behandlungsbeginn gutgeschrieben.",
+        },
+        {
+          question: "Wann sollte mein Kind zum Kieferorthopäden?",
+          answer:
+            "Eine erste kieferorthopädische Kontrolle kann bereits im Kindesalter sinnvoll sein. So können Zahn- und Kieferfehlstellungen frühzeitig erkannt und die weitere Entwicklung beobachtet werden. Ob und wann eine Behandlung notwendig ist, wird individuell bei der Untersuchung beurteilt.",
+        },
+        {
+          question: "Wie lange dauert eine kieferorthopädische Behandlung?",
+          answer:
+            "Die Behandlungsdauer ist individuell und hängt unter anderem von der Zahn- und Kieferstellung sowie der gewählten Behandlungsmethode ab. Nach der Untersuchung können wir die voraussichtliche Behandlungsdauer genauer einschätzen.",
+        },
       ],
     },
 
