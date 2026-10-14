@@ -4,6 +4,7 @@ import "../assets/styles/Home.css";
 import { useLanguage } from "../context/LanguageContext.jsx";
 import translations from "../translat/translations";
 import FirstImage from "../images/First.webp";
+import FirstMobileImage from "../images/First-mobile.webp";
 import DoctorImage from "../images/optimized/doctor.webp";
 import AlignersImage from "../images/optimized/invisible-aligner.webp";
 import FixedBracesImage from "../images/optimized/fixed-braces.webp";
@@ -120,9 +121,10 @@ const Home = () => {
           {/* HERO IMAGE */}
           <div className="hm-hero-image-wrapper">
             <div className="hm-hero-image-decoration"></div>
-
             <img
               src={FirstImage}
+              srcSet={`${FirstMobileImage} 658w, ${FirstImage} 1402w`}
+              sizes="(max-width: 768px) 100vw, 1402px"
               alt="Orthodontic clinic reception and treatment rooms"
               className="hm-hero-image"
               width={1402}
