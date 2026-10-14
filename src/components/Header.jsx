@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import LogoImage from "../images/Logoo.png";
+import LogoImage from "../images/optimized/logo.webp";
 import { useLanguage } from "../context/LanguageContext.jsx";
 import translations from "../translat/translations";
 import "../assets/styles/App.css";
