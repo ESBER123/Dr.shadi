@@ -12,6 +12,25 @@
     />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Preload hero image for mobile -->
+    <link
+      rel="preload"
+      as="image"
+      href="/assets/First-mobile-ByVPYIcK.webp"
+      media="(max-width: 768px)"
+      fetchpriority="high"
+    />
+
+    <!-- Preload hero image for desktop -->
+    <link
+      rel="preload"
+      as="image"
+      href="/assets/First-DfE7hYM1.webp"
+      media="(min-width: 769px)"
+      fetchpriority="high"
+    />
+
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag() {
@@ -28,10 +47,12 @@
       gtag("config", "G-LVX59VFLPJ");
       gtag("config", "AW-18408577072");
     </script>
+
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=G-LVX59VFLPJ"
     ></script>
+
     <title>Kieferorthopädie Dr. Shadi Loutfi | Wien</title>
 
     <meta
@@ -66,6 +87,7 @@
       }
     </script>
   </head>
+
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
