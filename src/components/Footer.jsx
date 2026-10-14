@@ -1,4 +1,3 @@
-import { Container, Row, Col } from "react-bootstrap";
 import {
   FaTooth,
   FaPhoneAlt,
@@ -15,17 +14,19 @@ import "../assets/styles/Footer.css";
 const Footer = () => {
   const { language } = useLanguage();
   const t = translations[language];
+
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
       behavior: "smooth",
     });
   };
+
   return (
     <footer className="clinic-footer">
-      <Container>
-        <Row className="footer-main">
-          <Col lg={5} md={6} className="footer-brand">
+      <div className="footer-container">
+        <div className="footer-main">
+          <div className="footer-brand">
             <div className="footer-logo">
               <div className="footer-logo-icon">
                 <FaTooth />
@@ -47,9 +48,11 @@ const Footer = () => {
                 <FaFacebookF />
               </a>
             </div>
-          </Col>
-          <Col lg={4} md={6} className="footer-contact">
+          </div>
+
+          <div className="footer-contact">
             <h4>{t.footer.contact}</h4>
+
             <a href="tel:+4367763471705" className="footer-contact-item">
               <span className="contact-icon">
                 <FaPhoneAlt />
@@ -59,6 +62,7 @@ const Footer = () => {
                 +43 677 63471705
               </span>
             </a>
+
             <a href="mailto:office@drloutfi.at" className="footer-contact-item">
               <span className="contact-icon">
                 <FaEnvelope />
@@ -68,6 +72,7 @@ const Footer = () => {
                 office@drloutfi.at
               </span>
             </a>
+
             <div className="footer-contact-item">
               <span className="contact-icon">
                 <FaMapMarkerAlt />
@@ -87,22 +92,23 @@ const Footer = () => {
                       {t.footer.city}
                     </strong>
                   </div>
-
                   <span className="info-arrow">→</span>
                 </a>
               </span>
             </div>
-          </Col>
-          <Col lg={3} md={12} className="footer-links">
+          </div>
+
+          <div className="footer-links">
             <h4>{t.footer.quickLinks}</h4>
             <a href="/about">{t.footer.about}</a>
             <a href="/treatment">{t.footer.treatments}</a>
             <a href="/faq">{t.footer.whyUs}</a>
             <a href="/booking">{t.footer.appointment}</a>
-          </Col>
-        </Row>
+          </div>
+        </div>
 
-        <div className="footer-divider"></div>
+        <div className="footer-divider" />
+
         <div className="footer-bottom">
           <p>
             © 2026 <strong>Dr. Shadi Loutfi</strong>. {t.footer.rights}
@@ -112,6 +118,7 @@ const Footer = () => {
             <a href="/datenschutz">{t.footer.privacy}</a>
             <a href="/impressum">{t.footer.imprint}</a>
           </div>
+
           <button
             className="back-to-top"
             onClick={scrollToTop}
@@ -120,7 +127,7 @@ const Footer = () => {
             <FaArrowUp />
           </button>
         </div>
-      </Container>
+      </div>
     </footer>
   );
 };
