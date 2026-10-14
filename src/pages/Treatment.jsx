@@ -190,7 +190,12 @@ const Treatment = () => {
       </section>
       <section className="tr-cta" id="tr-contact">
         <div className="tr-cta-image">
-          <img src={ConsultationImage} alt={consultationAlt} loading="lazy" />
+          <img
+            src={ConsultationImage}
+            alt={consultationAlt}
+            loading="lazy"
+            decoding="async"
+          />
         </div>
         {/* CTA CONTENT */}
         <div className="tr-cta-content">

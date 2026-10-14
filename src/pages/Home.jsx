@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import "../assets/styles/Home.css";
 import { useLanguage } from "../context/LanguageContext.jsx";
 import translations from "../translat/translations";
-import FirstImage from "../images/First.png";
+import FirstImage from "../images/First.webp";
 import DoctorImage from "../images/doctorshadi.png";
 import AlignersImage from "../images/Invisiblealigner.jpg";
 import FixedBracesImage from "../images/FixedBraces.png";
@@ -122,8 +122,10 @@ const Home = () => {
             <div className="hm-hero-image-decoration"></div>
             <img
               src={FirstImage}
-              alt={t.heroImageAlt}
-              className="hm-hero-image"
+              alt="..."
+              loading="eager"
+              fetchPriority="high"
+              decoding="async"
             />
             {/* HERO BADGE */}
             <div className="hm-hero-badge">
