@@ -30,6 +30,7 @@
       media="(min-width: 769px)"
       fetchpriority="high"
     />
+
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag() {
@@ -75,6 +76,7 @@
 
     <meta property="og:type" content="website" />
 
+    <!-- Existing WebSite JSON-LD: preserved -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -83,6 +85,53 @@
         "url": "https://www.drloutfi.at/",
         "name": "Kieferorthopädie Dr. Shadi Loutfi",
         "alternateName": "Dr. Shadi Loutfi"
+      }
+    </script>
+
+    <!-- New Dentist JSON-LD -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Dentist",
+        "@id": "https://www.drloutfi.at/#practice",
+        "name": "Kieferorthopädie Dr. Shadi Loutfi",
+        "description": "Kieferorthopädische Praxis in Wien-Döbling für Kinder, Jugendliche und Erwachsene. Behandlung mit Alignern, Invisalign und festen Zahnspangen.",
+        "url": "https://www.drloutfi.at/",
+        "logo": "https://www.drloutfi.at/assets/logo-DAX069sC.webp",
+        "telephone": "+4367763471705",
+        "email": "office@drloutfi.at",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Billrothstraße 58/DG",
+          "postalCode": "1190",
+          "addressLocality": "Wien",
+          "addressCountry": "AT"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 48.241061,
+          "longitude": 16.349258
+        },
+        "medicalSpecialty": "https://schema.org/Dentistry",
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "https://schema.org/Monday",
+            "https://schema.org/Tuesday",
+            "https://schema.org/Wednesday",
+            "https://schema.org/Thursday"
+          ],
+          "opens": "08:00",
+          "closes": "18:00"
+        },
+        "potentialAction": {
+          "@type": "ReserveAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://www.drloutfi.at/booking"
+          },
+          "name": "Termin buchen"
+        }
       }
     </script>
   </head>

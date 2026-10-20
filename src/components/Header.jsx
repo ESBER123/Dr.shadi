@@ -26,9 +26,34 @@ const Header = () => {
               {language === "en" ? "Home" : "Startseite"}
             </NavLink>
 
-            <NavLink to="/treatment">
-              {language === "en" ? "Treatments" : "Behandlungen"}
-            </NavLink>
+            {/* TREATMENTS DROPDOWN */}
+            <div className="treatment-dropdown">
+              <NavLink
+                to="/treatment"
+                className="treatment-dropdown-trigger"
+                aria-haspopup="true"
+              >
+                {language === "en" ? "Treatments" : "Behandlungen"}
+              </NavLink>
+
+              <div className="treatment-dropdown-menu">
+                <NavLink to="/invisalign-aligner-wien">
+                  {language === "en"
+                    ? "Invisible Aligners"
+                    : "Unsichtbare Aligner"}
+                </NavLink>
+
+                <NavLink to="/treatment">
+                  {language === "en" ? "Fixed Braces" : "Feste Zahnspangen"}
+                </NavLink>
+
+                <NavLink to="/kieferorthopaedie-kinder-wien">
+                  {language === "en"
+                    ? "Children & Teens"
+                    : "Kinder & Jugendliche"}
+                </NavLink>
+              </div>
+            </div>
 
             <NavLink to="/about">
               {language === "en" ? "About" : "Über uns"}

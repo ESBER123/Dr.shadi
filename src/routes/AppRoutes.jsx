@@ -9,6 +9,8 @@ import Booking from "../pages/Booking";
 import Impressum from "../pages/Impressum";
 import Datenschutz from "../pages/Datenschutz";
 import AppointmentConfirmed from "../pages/AppointmentConfirmed";
+import InvisalignAligner from "../pages/InvisalignAligner";
+import ChildrenOrthodontics from "../pages/ChildrenOrthodontics";
 
 const AppRoutes = () => {
   return (
@@ -20,6 +22,14 @@ const AppRoutes = () => {
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/booking" element={<Booking />} />
+          <Route
+            path="/kieferorthopaedie-kinder-wien"
+            element={<ChildrenOrthodontics />}
+          />
+          <Route
+            path="/invisalign-aligner-wien"
+            element={<InvisalignAligner />}
+          />
           <Route
             path="/appointment-confirmed"
             element={<AppointmentConfirmed />}

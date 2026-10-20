@@ -9,7 +9,7 @@ const SEO = ({ title, description, canonical, ogTitle }) => {
     const setMeta = (selector, attribute, key, content) => {
       if (!content) return;
 
-      let element = document.querySelector(selector);
+      let element = document.head.querySelector(selector);
 
       if (!element) {
         element = document.createElement("meta");
@@ -18,6 +18,20 @@ const SEO = ({ title, description, canonical, ogTitle }) => {
       }
 
       element.setAttribute("content", content);
+    };
+
+    const setCanonical = (href) => {
+      if (!href) return;
+
+      let element = document.head.querySelector('link[rel="canonical"]');
+
+      if (!element) {
+        element = document.createElement("link");
+        element.setAttribute("rel", "canonical");
+        document.head.appendChild(element);
+      }
+
+      element.setAttribute("href", href);
     };
 
     setMeta('meta[name="description"]', "name", "description", description);
@@ -36,16 +50,10 @@ const SEO = ({ title, description, canonical, ogTitle }) => {
       description,
     );
 
+    setMeta('meta[property="og:type"]', "property", "og:type", "website");
+
     if (canonical) {
-      let canonicalLink = document.querySelector('link[rel="canonical"]');
-
-      if (!canonicalLink) {
-        canonicalLink = document.createElement("link");
-        canonicalLink.setAttribute("rel", "canonical");
-        document.head.appendChild(canonicalLink);
-      }
-
-      canonicalLink.setAttribute("href", canonical);
+      setCanonical(canonical);
     }
   }, [title, description, canonical, ogTitle]);
 
