@@ -1017,8 +1017,10 @@
 /* Fix the first treatment-step image */
 .ia-step .ia-step-image-doctor {
   width: 100%;
+  aspect-ratio: 4 / 3;
   height: 100%;
   object-fit: cover;
   object-position: center 25%;
-  border-radius: inherit;
+  border-radius: 5px;
+  display: block;
 }

@@ -1,5 +1,6 @@
 /* =========================================
    CHILDREN ORTHODONTICS — CLINIC BRAND
+   Clean, responsive stylesheet
    ========================================= */
 
 .co-page {
@@ -41,10 +42,7 @@
   max-width: 100%;
 }
 
-/* =========================================
-   EYEBROW LABELS
-   ========================================= */
-
+/* Eyebrow labels */
 .co-eyebrow {
   display: flex;
   align-items: center;
@@ -66,10 +64,7 @@
   background: currentColor;
 }
 
-/* =========================================
-   BREADCRUMB
-   ========================================= */
-
+/* Breadcrumb */
 .co-breadcrumb {
   display: flex;
   flex-wrap: wrap;
@@ -96,15 +91,14 @@
   color: var(--co-green);
 }
 
-.co-breadcrumb a:focus-visible {
-  outline: 2px solid var(--co-gold);
-  outline-offset: 3px;
+.co-breadcrumb a:focus-visible,
+.co-button:focus-visible,
+.co-text-link:focus-visible {
+  outline: 3px solid var(--co-gold);
+  outline-offset: 4px;
 }
 
-/* =========================================
-   HERO
-   ========================================= */
-
+/* Hero */
 .co-hero {
   position: relative;
   display: grid;
@@ -173,10 +167,7 @@
   transform: scale(1.02);
 }
 
-/* =========================================
-   BUTTONS
-   ========================================= */
-
+/* Buttons */
 .co-button {
   display: inline-flex;
   align-items: center;
@@ -215,16 +206,19 @@
   transform: translateX(3px);
 }
 
-.co-button:focus-visible,
-.co-text-link:focus-visible {
-  outline: 3px solid var(--co-gold);
-  outline-offset: 4px;
+.co-button-light {
+  border-color: var(--co-white);
+  background: var(--co-white);
+  color: var(--co-green);
 }
 
-/* =========================================
-   GENERAL SECTIONS
-   ========================================= */
+.co-button-light:hover {
+  border-color: var(--co-gold);
+  background: var(--co-gold);
+  color: var(--co-green-deep);
+}
 
+/* General sections */
 .co-section {
   width: 100%;
   max-width: 1240px;
@@ -255,10 +249,7 @@
   line-height: 1.85;
 }
 
-/* =========================================
-   INTRODUCTION
-   ========================================= */
-
+/* Introduction */
 .co-intro {
   display: grid;
   grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
@@ -276,7 +267,6 @@
 }
 
 .co-intro-image img {
-  display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -296,10 +286,7 @@
   margin-bottom: 0;
 }
 
-/* =========================================
-   SECTION HEADINGS
-   ========================================= */
-
+/* Section headings */
 .co-section-heading {
   max-width: 780px;
   margin: 0 auto 2.5rem;
@@ -315,10 +302,7 @@
   margin: 0 auto;
 }
 
-/* =========================================
-   BENEFIT CARDS
-   ========================================= */
-
+/* Benefit cards */
 .co-benefits-section {
   padding-top: 1rem;
 }
@@ -397,100 +381,113 @@
   line-height: 1.75;
 }
 
-/* =========================================
-   TREATMENT PROCESS — PREMIUM CARDS
-   ========================================= */
-
+/* Treatment process — compatible with current JSX:
+   .co-step > .co-step-number + img + h3 + p */
 .co-process-section {
   background:
     radial-gradient(
       circle at 95% 10%,
-      rgba(184, 154, 98, 0.1),
+      rgba(184, 154, 98, 0.08),
       transparent 30%
     ),
     var(--co-muted);
 }
 
 .co-process-inner {
-  max-width: 1320px;
+  max-width: 1240px;
 }
 
 .co-process {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  align-items: stretch;
-  gap: 1.1rem;
+  align-items: start;
+  gap: 28px;
+  overflow: visible;
 }
 
 .co-step {
-  display: flex;
-  flex-direction: column;
+  position: relative;
   min-width: 0;
-  min-height: 100%;
-  padding: 1.25rem;
-  overflow: hidden;
-  border: 1px solid rgba(184, 154, 98, 0.2);
-  border-radius: 9px;
-  background: var(--co-white);
-  box-shadow: 0 8px 25px rgba(37, 37, 37, 0.035);
-  transition:
-    transform 0.25s ease,
-    box-shadow 0.25s ease,
-    border-color 0.25s ease;
+  padding: 0;
+  overflow: visible;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
 }
 
 .co-step:hover {
-  transform: translateY(-4px);
-  border-color: rgba(184, 154, 98, 0.55);
-  box-shadow: 0 16px 35px rgba(37, 37, 37, 0.09);
+  transform: none;
+  border-color: transparent;
+  box-shadow: none;
 }
 
 .co-step-number {
+  position: absolute;
+  z-index: 2;
+  top: -9px;
+  left: -9px;
   display: grid;
   place-items: center;
-  flex-shrink: 0;
-  width: 42px;
-  height: 42px;
-  margin-bottom: 1rem;
-  border: 1px solid var(--co-gold);
+  width: 29px;
+  height: 29px;
+  margin: 0;
+  border: 1px solid rgba(255, 254, 250, 0.7);
   border-radius: 50%;
-  background: var(--co-green);
-  color: white;
+  background: var(--co-gold);
+  color: var(--co-white);
   font-family: Georgia, "Times New Roman", serif;
-  font-size: 1.1rem;
+  font-size: 0.88rem;
+  font-weight: 700;
+  box-shadow: 0 2px 7px rgba(37, 37, 37, 0.1);
 }
 
-.co-step img {
+.co-step > img {
   display: block;
   width: 100%;
   height: 155px;
-  flex-shrink: 0;
-  margin-bottom: 1rem;
-  border-radius: 5px;
+  margin: 0 0 1rem;
+  border-radius: 6px;
   object-fit: cover;
   object-position: center;
   background: var(--co-muted);
-  transition: transform 0.35s ease;
+  box-shadow: 0 4px 14px rgba(37, 37, 37, 0.06);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
-.co-step:hover img {
-  transform: scale(1.02);
-}
-
-.co-step-1 img {
+.co-step-1 > img {
   object-position: center 25%;
 }
 
-.co-step-2 img {
+.co-step-2 > img {
   object-position: center;
 }
 
-.co-step-3 img {
+.co-step-3 > img {
   object-position: center;
 }
 
-.co-step-4 img {
+.co-step-4 > img {
   object-position: center 35%;
+}
+
+.co-step:hover > img {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(37, 37, 37, 0.12);
+}
+
+.co-step:not(:last-child)::after {
+  position: absolute;
+  top: 66px;
+  right: -21px;
+  content: "→";
+  color: var(--co-gold);
+  font-size: 1.2rem;
+  font-weight: 500;
+  transform: translateX(50%);
+  pointer-events: none;
 }
 
 .co-step h3 {
@@ -509,10 +506,7 @@
   line-height: 1.75;
 }
 
-/* =========================================
-   TIMING SECTION
-   ========================================= */
-
+/* Timing section */
 .co-timing-section {
   padding-top: clamp(3.5rem, 6vw, 5rem);
   padding-bottom: clamp(3.5rem, 6vw, 5rem);
@@ -558,10 +552,7 @@
   transform: translateX(3px);
 }
 
-/* =========================================
-   LOCAL PRACTICE / DOCTOR
-   ========================================= */
-
+/* Local practice / doctor */
 .co-local {
   display: grid;
   grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
@@ -573,7 +564,7 @@
   padding: 1rem clamp(1.5rem, 4vw, 3rem) clamp(4rem, 7vw, 6rem);
 }
 
-.co-local img {
+.co-local > img {
   width: 100%;
   height: 430px;
   border-radius: 4px 55px 4px 4px;
@@ -582,7 +573,7 @@
   transition: transform 0.45s ease;
 }
 
-.co-local img:hover {
+.co-local > img:hover {
   transform: scale(1.015);
 }
 
@@ -603,10 +594,7 @@
   font-size: 1.03rem;
 }
 
-/* =========================================
-   FINAL BOOKING CTA
-   ========================================= */
-
+/* Final booking CTA */
 .co-final-cta {
   position: relative;
   isolation: isolate;
@@ -639,22 +627,7 @@
   line-height: 1.8;
 }
 
-.co-button-light {
-  border-color: var(--co-white);
-  background: var(--co-white);
-  color: var(--co-green);
-}
-
-.co-button-light:hover {
-  border-color: var(--co-gold);
-  background: var(--co-gold);
-  color: var(--co-green-deep);
-}
-
-/* =========================================
-   TABLET
-   ========================================= */
-
+/* Tablet */
 @media (max-width: 1050px) {
   .co-hero {
     gap: 2rem;
@@ -668,21 +641,28 @@
 
   .co-process {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px 24px;
   }
 
-  .co-step img {
+  .co-step > img {
     height: 180px;
   }
 
-  .co-local img {
+  .co-step:not(:last-child)::after {
+    top: 90px;
+    right: -18px;
+  }
+
+  .co-step:nth-child(2)::after {
+    display: none;
+  }
+
+  .co-local > img {
     height: 360px;
   }
 }
 
-/* =========================================
-   MOBILE / SMALL TABLET
-   ========================================= */
-
+/* Mobile / small tablet */
 @media (max-width: 760px) {
   .co-hero {
     grid-template-columns: minmax(0, 1fr);
@@ -756,22 +736,28 @@
 
   .co-process {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 0.85rem;
+    gap: 26px 22px;
   }
 
-  .co-step {
-    padding: 1.1rem;
+  .co-step > img {
+    height: clamp(125px, 28vw, 180px);
   }
 
-  .co-step img {
-    height: 150px;
+  .co-step:not(:last-child)::after {
+    top: 50%;
+    right: -16px;
+    font-size: 1.05rem;
+  }
+
+  .co-step:nth-child(2)::after {
+    display: none;
   }
 
   .co-local {
     padding: 0 1.25rem 3.5rem;
   }
 
-  .co-local img {
+  .co-local > img {
     height: 320px;
   }
 
@@ -780,10 +766,7 @@
   }
 }
 
-/* =========================================
-   SMALL PHONES
-   ========================================= */
-
+/* Small phones */
 @media (max-width: 420px) {
   .co-hero {
     padding-top: 1.8rem;
@@ -798,196 +781,24 @@
     letter-spacing: 0.12em;
   }
 
-  .co-benefits,
-  .co-process {
+  .co-benefits {
     grid-template-columns: minmax(0, 1fr);
+  }
+
+  .co-process {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px 16px;
   }
 
   .co-intro-image {
     height: 240px;
   }
 
-  .co-card,
-  .co-step {
+  .co-card {
     padding: 1.4rem;
   }
 
-  .co-step img {
-    height: 190px;
-  }
-
-  .co-local img {
-    height: 270px;
-  }
-
-  .co-button {
-    width: 100%;
-  }
-}
-
-/* =========================================
-   REDUCED MOTION ACCESSIBILITY
-   ========================================= */
-
-@media (prefers-reduced-motion: reduce) {
-  .co-page *,
-  .co-page *::before,
-  .co-page *::after {
-    scroll-behavior: auto !important;
-    transition-duration: 0.01ms !important;
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-  }
-}
-
-/* =========================================
-   TREATMENT PROCESS — HORIZONTAL IMAGE FLOW
-   ========================================= */
-
-.co-process-section {
-  background:
-    radial-gradient(
-      circle at 95% 10%,
-      rgba(184, 154, 98, 0.08),
-      transparent 30%
-    ),
-    var(--co-muted);
-}
-
-.co-process-inner {
-  max-width: 1240px;
-}
-
-.co-process {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  align-items: center;
-  gap: 28px;
-  overflow: visible;
-}
-
-.co-step {
-  position: relative;
-  min-width: 0;
-  padding: 0;
-  overflow: visible;
-  border: 0;
-  border-radius: 0;
-  background: transparent;
-  box-shadow: none;
-}
-
-.co-step:hover {
-  transform: none;
-  border-color: transparent;
-  box-shadow: none;
-}
-
-/* Image wrapper */
-.co-step-visual {
-  position: relative;
-  width: 100%;
-  height: 112px;
-  overflow: visible;
-  border-radius: 8px;
-  background: #e8e1d8;
-}
-
-.co-step-visual img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  border-radius: 8px;
-  object-fit: cover;
-  object-position: center;
-  box-shadow: 0 4px 14px rgba(37, 37, 37, 0.06);
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
-}
-
-.co-step:hover .co-step-visual img {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(37, 37, 37, 0.12);
-}
-
-/* Gold number badge */
-.co-step-number {
-  position: absolute;
-  z-index: 2;
-  top: -9px;
-  left: -9px;
-  display: grid;
-  place-items: center;
-  width: 29px;
-  height: 29px;
-  margin: 0;
-  border: 1px solid rgba(255, 254, 250, 0.7);
-  border-radius: 50%;
-  background: var(--co-gold);
-  color: #fffefa;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 0.88rem;
-  font-weight: 700;
-  box-shadow: 0 2px 7px rgba(37, 37, 37, 0.1);
-}
-
-/* Arrow between stages */
-.co-step:not(:last-child)::after {
-  position: absolute;
-  top: 50%;
-  right: -21px;
-  content: "→";
-  color: var(--co-gold);
-  font-size: 1.25rem;
-  font-weight: 500;
-  transform: translate(50%, -50%);
-}
-
-/* Keep translated descriptions accessible */
-.co-step-title-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
-}
-
-/* Tablet */
-@media (max-width: 760px) {
-  .co-process {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 26px 22px;
-  }
-
-  .co-step-visual {
-    height: clamp(105px, 23vw, 155px);
-  }
-
-  .co-step:not(:last-child)::after {
-    right: -16px;
-    font-size: 1.05rem;
-  }
-
-  /* No arrows between rows */
-  .co-step:nth-child(2)::after {
-    display: none;
-  }
-}
-
-/* Small phones */
-@media (max-width: 420px) {
-  .co-process {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 22px 16px;
-  }
-
-  .co-step-visual {
+  .co-step > img {
     height: 105px;
   }
 
@@ -999,7 +810,17 @@
     font-size: 0.82rem;
   }
 
+  .co-step h3 {
+    font-size: 1rem;
+  }
+
+  .co-step p {
+    font-size: 0.86rem;
+    line-height: 1.65;
+  }
+
   .co-step:not(:last-child)::after {
+    top: 52px;
     right: -12px;
     font-size: 0.95rem;
   }
@@ -1007,13 +828,249 @@
   .co-step:nth-child(2)::after {
     display: none;
   }
+
+  .co-local > img {
+    height: 270px;
+  }
+
+  .co-button {
+    width: 100%;
+  }
 }
 
-/* Fix the first treatment-step image */
-.co-step:nth-child(1) > img {
+/* Reduced motion accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .co-page *,
+  .co-page *::before,
+  .co-page *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
+
+/* FINAL OVERRIDE: force identical treatment-step image sizes */
+.co-page .co-process .co-step > img {
+  display: block !important;
+  width: 100% !important;
+  height: 155px !important;
+  min-height: 155px !important;
+  max-height: 155px !important;
+  aspect-ratio: auto !important;
+  margin: 0 0 1rem !important;
+  object-fit: cover !important;
+}
+
+@media (max-width: 1050px) {
+  .co-page .co-process .co-step > img {
+    height: 180px !important;
+    min-height: 180px !important;
+    max-height: 180px !important;
+  }
+}
+
+@media (max-width: 760px) {
+  .co-page .co-process .co-step > img {
+    height: 140px !important;
+    min-height: 140px !important;
+    max-height: 140px !important;
+  }
+}
+
+@media (max-width: 420px) {
+  .co-page .co-process .co-step > img {
+    height: 110px !important;
+    min-height: 110px !important;
+    max-height: 110px !important;
+  }
+}
+
+/* =========================================
+   DEFINITIVE FIX — CURRENT JSX STRUCTURE
+   Images are nested inside .co-step-visual
+   ========================================= */
+
+.co-page .co-process {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  align-items: start;
+  gap: 28px;
+}
+
+.co-page .co-process .co-step {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: 0;
+  overflow: visible;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.co-page .co-process .co-step-visual {
+  position: relative;
+  display: block;
   width: 100%;
   height: 155px;
+  flex: 0 0 155px;
+  margin: 0 0 12px;
+  overflow: visible;
+  border-radius: 6px;
+  background: var(--co-muted);
+}
+
+.co-page .co-process .co-step-visual img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  max-height: none;
+  margin: 0;
+  aspect-ratio: auto;
   object-fit: cover;
+  object-position: center;
+  border-radius: 6px;
+  box-shadow: 0 4px 14px rgba(37, 37, 37, 0.06);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.co-page .co-process .co-step-1 .co-step-visual img {
   object-position: center 25%;
-  border-radius: 5px;
+}
+
+.co-page .co-process .co-step-4 .co-step-visual img {
+  object-position: center 35%;
+}
+
+.co-page .co-process .co-step-number {
+  position: absolute;
+  z-index: 3;
+  top: -9px;
+  left: -9px;
+  display: grid;
+  place-items: center;
+  width: 29px;
+  height: 29px;
+  margin: 0;
+  border: 1px solid rgba(255, 254, 250, 0.7);
+  border-radius: 50%;
+  background: var(--co-gold);
+  color: var(--co-white);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 0.88rem;
+  font-weight: 700;
+  box-shadow: 0 2px 7px rgba(37, 37, 37, 0.1);
+}
+
+.co-page .co-process .co-step h3 {
+  margin: 0 0 8px;
+  color: var(--co-green);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.15rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.co-page .co-process .co-step p {
+  margin: 0;
+  color: #62645d;
+  font-size: 0.92rem;
+  line-height: 1.75;
+}
+
+.co-page .co-process .co-step:hover .co-step-visual img {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(37, 37, 37, 0.12);
+}
+
+.co-page .co-process .co-step:not(:last-child)::after {
+  position: absolute;
+  top: 65px;
+  right: -21px;
+  content: "→";
+  color: var(--co-gold);
+  font-size: 1.2rem;
+  font-weight: 500;
+  transform: translateX(50%);
+  pointer-events: none;
+}
+
+@media (max-width: 1050px) {
+  .co-page .co-process {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px 24px;
+  }
+
+  .co-page .co-process .co-step-visual {
+    height: 180px;
+    flex-basis: 180px;
+  }
+
+  .co-page .co-process .co-step:nth-child(2)::after {
+    display: none;
+  }
+
+  .co-page .co-process .co-step:not(:last-child)::after {
+    top: 78px;
+    right: -18px;
+  }
+}
+
+@media (max-width: 760px) {
+  .co-page .co-process {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px 20px;
+  }
+
+  .co-page .co-process .co-step-visual {
+    height: 140px;
+    flex-basis: 140px;
+  }
+
+  .co-page .co-process .co-step:not(:last-child)::after {
+    top: 60px;
+    right: -13px;
+    font-size: 1rem;
+  }
+
+  .co-page .co-process .co-step:nth-child(2)::after {
+    display: none;
+  }
+}
+
+@media (max-width: 420px) {
+  .co-page .co-process {
+    gap: 24px 16px;
+  }
+
+  .co-page .co-process .co-step-visual {
+    height: 110px;
+    flex-basis: 110px;
+  }
+
+  .co-page .co-process .co-step-number {
+    top: -7px;
+    left: -6px;
+    width: 27px;
+    height: 27px;
+  }
+
+  .co-page .co-process .co-step h3 {
+    font-size: 1rem;
+  }
+
+  .co-page .co-process .co-step p {
+    font-size: 0.86rem;
+    line-height: 1.65;
+  }
+
+  .co-page .co-process .co-step:not(:last-child)::after {
+    top: 48px;
+  }
 }

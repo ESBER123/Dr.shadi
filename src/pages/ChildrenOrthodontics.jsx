@@ -21,8 +21,6 @@ const ChildrenOrthodontics = () => {
     ScannerImage,
     FixedBracesImage,
     ModernDentalClinicImage,
-
-    null,
   ];
 
   return (
@@ -132,20 +130,27 @@ const ChildrenOrthodontics = () => {
 
           <div className="co-process">
             {t.process.items.map((step, index) => (
-              <article className="co-step" key={step.title}>
-                <span className="co-step-number">{index + 1}</span>
+              <article
+                className={`co-step co-step-${index + 1}`}
+                key={step.title}
+              >
+                <div className="co-step-visual">
+                  <span
+                    className="co-step-number"
+                    aria-label={`Step ${index + 1}`}
+                  >
+                    {index + 1}
+                  </span>
 
-                {stepImages[index] && (
-                  <img
-                    src={stepImages[index]}
-                    alt={
-                      isGerman
-                        ? "Digitaler Scan für die kieferorthopädische Planung"
-                        : "Digital scan for orthodontic treatment planning"
-                    }
-                    loading="lazy"
-                  />
-                )}
+                  {stepImages[index] && (
+                    <img
+                      src={stepImages[index]}
+                      alt={step.title}
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  )}
+                </div>
 
                 <h3>{step.title}</h3>
                 <p>{step.text}</p>
