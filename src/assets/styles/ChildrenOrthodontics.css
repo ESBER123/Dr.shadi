@@ -1008,3 +1008,12 @@
     display: none;
   }
 }
+
+/* Fix the first treatment-step image */
+.co-step:nth-child(1) > img {
+  width: 100%;
+  height: 155px;
+  object-fit: cover;
+  object-position: center 25%;
+  border-radius: 5px;
+}

@@ -9,8 +9,7 @@ import ScannerImage from "../images/optimized/digital-scanner.webp";
 import BracesSmileImage from "../images/optimized/braces-smile.webp";
 import translations from "../translat/childrenOrthodontics";
 import FixedBracesImage from "../images/optimized/fixed-braces.webp";
-import OrthodonticCheckupImage from "../images/optimized/orthodontic-checkup.webp";
-
+import ModernDentalClinicImage from "../images/optimized/Modern_Dental_Clinic_in_Action.webp";
 const ChildrenOrthodontics = () => {
   const { language } = useLanguage();
   const t = translations[language] ?? translations.de;
@@ -21,7 +20,7 @@ const ChildrenOrthodontics = () => {
     DoctorImage,
     ScannerImage,
     FixedBracesImage,
-    OrthodonticCheckupImage,
+    ModernDentalClinicImage,
 
     null,
   ];

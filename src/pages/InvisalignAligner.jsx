@@ -10,6 +10,7 @@ import DoctorImage from "../images/optimized/doctor.webp";
 import AlignerModelImage from "../images/optimized/aligner-model.webp";
 import RetentionImage from "../images/optimized/retention.webp";
 import AlignerVideo from "../videos/aligner-video.webm";
+import ModernDentalClinicImage from "../images/optimized/Modern_Dental_Clinic_in_Action.webp";
 
 const InvisalignAligner = () => {
   const { language } = useLanguage();
@@ -128,7 +129,7 @@ const InvisalignAligner = () => {
               DoctorImage,
               ScannerImage,
               AlignerModelImage,
-              AlignersImage,
+              ModernDentalClinicImage,
               RetentionImage,
             ];
 

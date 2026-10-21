@@ -485,3 +485,23 @@
     font-size: 38px;
   }
 }
+
+/* Claudia portrait: improve head positioning */
+.image-frame .doctor-photo-02 {
+  object-fit: cover;
+  object-position: center 20%;
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+  .image-frame .doctor-photo-02 {
+    object-position: center 15%;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .image-frame .doctor-photo-02 {
+    object-position: center 12%;
+  }
+}
