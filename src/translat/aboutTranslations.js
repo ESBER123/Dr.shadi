@@ -24,6 +24,7 @@ export const aboutTranslations = {
     shadiLanguages: [],
 
     shadiQualifications: [
+      "Member of the Austrian Association of Orthodontists (VÖK)",
       "Bachelor of Dentistry DDS – UOK",
       "Dentistry Nostrification – University of Vienna",
       "MSc Orthodontics – University of Krems",
@@ -84,6 +85,7 @@ export const aboutTranslations = {
     shadiLanguages: [],
 
     shadiQualifications: [
+      "Mitglied im Verband Österreichischer Kieferorthopäden (VÖK)",
       "DDS – Bachelor of Dentistry, UOK ",
       "Nostrifizierung des Zahnmedizinstudiums – Universität Wien",
       "MSc Kieferorthopädie – Universität Krems ",
